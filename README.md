@@ -9,6 +9,7 @@ Sequences](https://oeis.org/).
 | OEIS entries | Project | Result |
 | --- | --- | --- |
 | [A242239](https://oeis.org/A242239), [A242235](https://oeis.org/A242235) | [Window-covering words](projects/a242239-window-covering-words/) | Exact generating function, column recurrence, stable rows, and Mathar's identity |
+| [A242322](https://oeis.org/A242322) | [Two-slack window-covering words](projects/a242322-two-slack-covering-words/) | Triangular age automaton, exact transfer recurrence, and stable quartic rows; review draft |
 
 ## Repository conventions
 

@@ -1,0 +1,459 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=30mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\hypersetup{
+  pdftitle={Two-slack window-covering words and a triangular age automaton},
+  pdfauthor={Nicolo Pandolfo},
+  pdfsubject={Exact transfer enumeration of OEIS A242322},
+  pdfkeywords={combinatorics on words, finite automata, transfer matrices, OEIS A242322}
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\T}{\mathcal T}
+\newcommand{\E}{\mathcal E}
+\newcommand{\one}{\boldsymbol 1}
+
+\title{\textbf{Two-slack window-covering words}\\
+\large A triangular last-occurrence automaton for OEIS A242322}
+\author{Nicol\`o Pandolfo}
+\date{July 23, 2026\\\small Draft for independent mathematical review}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For integers $n,k\geq1$, OEIS A242322 counts canonical words of length
+$n+k+2$ over $\{0,1,\ldots,k\}$ in which every consecutive block of length
+$k+3$ contains every symbol.  We encode a valid prefix by the two missing
+values among the possible ages of the most recent symbol occurrences.  This
+gives an exact transfer matrix $A_k$ with
+\[
+ \binom{k+2}{2}
+\]
+states, explaining the triangular column orders observed in the OEIS entry.
+If $w_k$ is an explicit initial vector, then
+\[
+ T(n,k)=w_k^{\mathsf T}A_k^{\,n-1}\one,\qquad
+ \sum_{n\geq1}T(n,k)x^n
+ =xw_k^{\mathsf T}(I-xA_k)^{-1}\one.
+\]
+The matrix is unimodular, so its characteristic recurrence has order exactly
+$\binom{k+2}{2}$.  We also prove the stable-row formula
+\[
+ T(n,k)=\frac{a_n}{8}k^4+\frac{b_n}{12}k^3
+       +\frac{c_n}{8}k^2+\frac{12n+19}{12}k+1
+ \qquad (k\geq\max\{1,n-4\}),
+\]
+where
+\[
+\begin{aligned}
+ a_n&=4\cdot3^{n-1}-2^{n+1}+1,\\
+ b_n&=-4\cdot3^n+(6n+9)2^n-6n-1,\\
+ c_n&=4\cdot3^{n-1}+(12-4n)2^n+4n^2-5.
+\end{aligned}
+\]
+Thus the previously empirical triangular recurrences and quartic
+stabilization have a common finite-state explanation.
+\end{abstract}
+
+\section{Introduction}
+
+Let $\Sigma_k=\{0,1,\ldots,k\}$.  A word over $\Sigma_k$ is
+\emph{canonical} if its new symbols are introduced in the order
+$0,1,\ldots,k$; equivalently, it is a restricted-growth word.  Define
+\begin{equation}\label{eq:def}
+ T(n,k)=\#\left\{
+ w\in\Sigma_k^{\,n+k+2}:
+ \begin{array}{l}
+ w\text{ is canonical, and}\\
+ \text{every factor of length }k+3\text{ contains }\Sigma_k
+ \end{array}\right\}.
+\end{equation}
+This is the table A242322 \cite{oeisA242322}.  Its entry records empirical
+column recurrence orders
+\[
+ 3,6,10,15,21,28
+\]
+for $k=1,\ldots,6$, and empirical quartic formulas for its first fifteen
+rows.  The orders are the triangular numbers $\binom{k+2}{2}$.
+
+The main point of this paper is that the triangular numbers are not a numerical
+coincidence.  At any time, record the age of the most recent occurrence of
+each symbol.  A valid prefix has $k+1$ distinct ages among the $k+3$ possible
+ages $0,1,\ldots,k+2$, and age zero is always present.  Exactly two positive
+ages are therefore missing.  Those two missing ages form a complete state
+description.
+
+This produces a transfer system substantially smaller than the literal suffix
+automaton.  It also retains enough structure to evaluate all fixed rows in the
+stable range.  The resulting proofs use only finite-state enumeration, exact
+linear algebra, and finite sums.
+
+\section{Relabeling and last-occurrence ages}
+
+Put
+\[
+ q=k+1,\qquad r=k+2=q+1.
+\]
+The alphabet has $q=r-1$ symbols and the required window length is $r+1$.
+
+\begin{lemma}[Relabeling orbits]\label{lem:orbits}
+Every valid labelled word uses all $q$ symbols.  Relabeling by the symmetric
+group $S_q$ acts freely, and every orbit contains exactly one canonical word.
+Consequently, canonical words may be counted as labelled words divided by
+$q!$.
+\end{lemma}
+
+\begin{proof}
+The first window contains every symbol.  A relabeling that fixes the word
+therefore fixes all symbols, so the action is free.  Relabeling the symbols by
+their order of first appearance produces the unique canonical representative
+of each orbit.
+\end{proof}
+
+For a valid prefix ending at position $t$, let
+\[
+ \alpha_t(s)=t-\max\{u\leq t:w_u=s\}
+\]
+be the \emph{age} of symbol $s$.  The ages are distinct, age zero is present,
+and validity is equivalent to $\alpha_t(s)\leq r$ for every symbol.
+
+\begin{lemma}[Triangular state space]\label{lem:states}
+After the first complete window, the age set has the form
+\[
+ \{0,1,\ldots,r\}\setminus\{i,j\},
+ \qquad 1\leq i<j\leq r.
+\]
+Thus the quotient state space is
+\[
+ \E_r=\{(i,j):1\leq i<j\leq r\},
+ \qquad |\E_r|=\binom r2=\binom{k+2}{2}.
+\]
+\end{lemma}
+
+\begin{proof}
+There are $q=r-1$ symbols, hence $r-1$ distinct ages.  They lie among the
+$r+1$ integers $0,\ldots,r$, and zero occurs as the age of the final symbol.
+Their complement therefore consists of exactly two positive integers.
+\end{proof}
+
+\begin{lemma}[Transitions]\label{lem:transitions}
+The successors of $(i,j)\in\E_r$ are as follows.
+\begin{enumerate}
+\item If $j<r$, the unique successor is $(i+1,j+1)$.
+\item If $j=r$, put $v=i+1$.  The successors are all pairs incident with $v$:
+\[
+ \bigl\{(\min\{v,u\},\max\{v,u\}):1\leq u\leq r,\ u\neq v\bigr\}.
+\]
+\end{enumerate}
+Every listed edge is realized by exactly one appended symbol.
+\end{lemma}
+
+\begin{proof}
+If $j<r$, age $r$ is present.  Its symbol must be appended, since otherwise
+its age would become $r+1$.  Resetting that age to zero and increasing all
+other ages shifts the two missing ages to $i+1,j+1$.
+
+If $j=r$, all current ages are at most $r-1$, so any symbol may be appended.
+Its current age $a$ ranges over $\{0,\ldots,r-1\}\setminus\{i\}$.  After the
+update, the missing ages are $i+1$ and $a+1$.  As $a$ varies, $a+1$ takes
+every value in $\{1,\ldots,r\}\setminus\{i+1\}$ exactly once.
+\end{proof}
+
+Let $A_k$ be the $\binom r2$ square matrix indexed by $\E_r$, with
+\[
+ (A_k)_{e,f}=
+ \begin{cases}
+ 1,&e\longrightarrow f\text{ in \cref{lem:transitions}},\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\]
+
+\begin{lemma}[Initial vector]\label{lem:initial}
+The number of canonical first windows whose terminal age state is $(i,j)$ is
+\[
+ w_k(i,j)=i(j-1).
+\]
+\end{lemma}
+
+\begin{proof}
+A first window has length $r+1$ and contains all $q=r-1$ symbols.  Fix the
+set of last-occurrence ages, namely $\{0,\ldots,r\}\setminus\{i,j\}$.
+Assigning the $q$ labels to these last-occurrence positions contributes $q!$.
+At the non-last position of age $i$, its symbol may have any of the $i$ last
+occurrences of smaller age.  At age $j$, there are $j-1$ choices, since age
+$i$ is not a last-occurrence position.  These choices are independent.
+There are therefore $q!i(j-1)$ labelled windows.  Divide by $q!$ using
+\cref{lem:orbits}.
+\end{proof}
+
+\section{Exact transfer formula and column recurrences}
+
+\begin{theorem}[Exact transfer enumeration]\label{thm:transfer}
+For all $n,k\geq1$,
+\begin{equation}\label{eq:transfer}
+ T(n,k)=w_k^{\mathsf T}A_k^{\,n-1}\one,
+\end{equation}
+where $w_k(i,j)=i(j-1)$ and $\one$ is the all-one column vector.  Hence
+\begin{equation}\label{eq:gf}
+ \mathcal T_k(x):=\sum_{n\geq1}T(n,k)x^n
+ =xw_k^{\mathsf T}(I-xA_k)^{-1}\one.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+\Cref{lem:initial} counts the possible first windows by state.
+\Cref{lem:transitions} gives a one-to-one correspondence between appended
+symbols and state edges.  A word counted by $T(n,k)$ has $n-1$ transitions
+after its first window, and its final state is unrestricted.  This proves
+\eqref{eq:transfer}; summing the matrix geometric series proves \eqref{eq:gf}.
+\end{proof}
+
+Define
+\[
+ D_k(x)=\det(I-xA_k)=\sum_{\ell=0}^{N}d_{k,\ell}x^\ell,
+ \qquad N=\binom{k+2}{2}.
+\]
+
+\begin{proposition}[Unimodularity]\label{prop:unimodular}
+The matrix $A_k$ is unimodular.  In particular,
+$d_{k,0}=1$, $|d_{k,N}|=1$, and $D_k$ has degree exactly $N$.
+\end{proposition}
+
+\begin{proof}
+Order first the rows $(i,j)$ with $j<r$, then the boundary rows $(i,r)$.
+Order first the columns $(u,v)$ with $2\leq u<v\leq r$, then the columns
+$(1,v)$.
+
+The interior transition $(i,j)\mapsto(i+1,j+1)$ is a bijection from the
+interior rows to the first group of columns.  The corresponding block is a
+permutation matrix, and the upper-right block is zero.  In boundary row
+$(i,r)$, the only target in the second column group is $(1,i+1)$.  The
+lower-right block is therefore an identity matrix.  The reordered matrix is
+block lower triangular with unimodular diagonal blocks.
+\end{proof}
+
+\begin{corollary}[Triangular-order recurrence]\label{cor:recurrence}
+For every $k\geq1$, the column $T(n,k)$ satisfies
+\begin{equation}\label{eq:recurrence}
+ \sum_{\ell=0}^{N}d_{k,\ell}T(n-\ell,k)=0
+ \qquad(n\geq N+1),
+ \qquad N=\binom{k+2}{2}.
+\end{equation}
+Thus A242322 has a characteristic recurrence of the triangular order displayed
+empirically on OEIS.
+\end{corollary}
+
+\begin{proof}
+Cayley--Hamilton gives
+$\sum_{\ell=0}^{N}d_{k,\ell}A_k^{N-\ell}=0$.
+Multiplication by the initial and terminal vectors gives
+\eqref{eq:recurrence}.  The final coefficient is nonzero by
+\cref{prop:unimodular}.
+\end{proof}
+
+\begin{remark}
+The result asserts a recurrence with nonzero endpoints and order $N$; it does
+not require a claim that $N$ is the minimal scalar order for every $k$.
+Exact computation shows no scalar cancellation for $1\leq k\leq10$.
+\end{remark}
+
+For example, exact characteristic-polynomial calculation gives
+\begin{align*}
+ D_1(x)&=1-x-x^2-x^3,\\
+ D_2(x)&=1-x-2x^2-2x^3-2x^4+x^5+x^6,\\
+ D_3(x)&=1-x-2x^2-3x^3-5x^4-6x^5+x^6+x^7+x^9+x^{10}.
+\end{align*}
+The first two agree with the recurrences printed on A242322.
+
+\section{Stable rows}
+
+We now evaluate \eqref{eq:transfer} when the alphabet is sufficiently large
+relative to the number of transitions.
+
+Use distance coordinates
+\[
+ a=r-j,\qquad b=r-i,\qquad 0\leq a<b\leq r-1.
+\]
+Let $H_m(a,b)$ be the number of length-$m$ walks starting at this state, with
+unrestricted endpoint, and put $G_m(b)=H_m(0,b)$.  Then $H_0(a,b)=1$, and the
+transition rules give
+\begin{align}
+ H_m(a,b)&=H_{m-1}(a-1,b-1) &&(a>0),\label{eq:Hinterior}\\
+ G_m(b)&=\sum_{\substack{0\leq c\leq r-1\\c\neq b-1}}
+ H_{m-1}\bigl(\min\{b-1,c\},\max\{b-1,c\}\bigr).
+ \label{eq:Gboundary}
+\end{align}
+
+\begin{lemma}[Boundary walks]\label{lem:boundary}
+Suppose $s\geq1$ and $r\geq s-1$.  For every $1\leq b\leq r-1$,
+\[
+ G_s(b)=
+ \begin{cases}
+ 2^{s-1}(r-2)+1,&b\geq s,\\[2mm]
+ 2^{b-1}3^{p-1}r^2+
+ \bigl(2^{p-1}+2^{s-1}-5\cdot2^{b-1}3^{p-1}\bigr)r\\
+ \qquad{}+2^b3^p-2^s-2^p+1,
+ &b<s,\quad p=s-b.
+ \end{cases}
+\]
+\end{lemma}
+
+\begin{proof}
+We use strong induction on $s$.  Repeated application of
+\eqref{eq:Hinterior} gives
+\[
+ H_m(a,b)=
+ \begin{cases}
+ 1,&m\leq a,\\
+ G_{m-a}(b-a),&m>a.
+ \end{cases}
+\]
+Substitution into \eqref{eq:Gboundary} yields, for $b<s$ and $p=s-b$,
+\begin{equation}\label{eq:Grec}
+ G_s(b)=\sum_{e=1}^{b-1}G_{p+e}(e)
+       +\sum_{e=1}^{r-b}G_p(e).
+\end{equation}
+For $b\geq s$, the same decomposition has only the constant branch and gives
+\[
+ G_s(b)=r-1+\sum_{t=1}^{s-1}
+ \bigl(2^{t-1}(r-2)+1-1\bigr)
+ =2^{s-1}(r-2)+1.
+\]
+
+For the second sum in \eqref{eq:Grec}, the induction hypothesis and geometric
+sums give, for every $R\geq p-1$,
+\[
+ \sum_{e=1}^{R}G_p(e)
+ =R\bigl(2^{p-1}(r-2)+1\bigr)+U_p(r),
+\]
+where
+\[
+\begin{aligned}
+ U_p(r)={}&(3^{p-1}-2^{p-1})r^2\\
+ &+(-5\cdot3^{p-1}+3\cdot2^p-1)r
+   +2\cdot3^p-4\cdot2^p+2.
+\end{aligned}
+\]
+The first sum in \eqref{eq:Grec} uses the nonconstant induction branch.
+Summing its three coefficients over $e=1,\ldots,b-1$, then adding the preceding
+display with $R=r-b$, gives exactly the stated expression.  The same
+calculation remains valid at the limiting value $r=s-1$, where $R=p-1$.
+\end{proof}
+
+\begin{theorem}[Stable quartic rows]\label{thm:rows}
+For $n,k\geq1$ with $k\geq\max\{1,n-4\}$,
+\begin{equation}\label{eq:row}
+ T(n,k)=\frac{a_n}{8}k^4+\frac{b_n}{12}k^3
+       +\frac{c_n}{8}k^2+\frac{12n+19}{12}k+1,
+\end{equation}
+where
+\begin{align*}
+ a_n&=4\cdot3^{n-1}-2^{n+1}+1,\\
+ b_n&=-4\cdot3^n+(6n+9)2^n-6n-1,\\
+ c_n&=4\cdot3^{n-1}+(12-4n)2^n+4n^2-5.
+\end{align*}
+The uniform boundary cannot be lowered: at $(n,k)=(6,1)$ the true value is
+$149$, whereas the polynomial gives $151$.
+\end{theorem}
+
+\begin{proof}
+Put $m=n-1$.  In distance coordinates, the initial weight from
+\cref{lem:initial} is
+\[
+ (r-b)(r-a-1).
+\]
+Consequently,
+\begin{equation}\label{eq:rowsum}
+ T(n,k)=\sum_{0\leq a<b\leq r-1}
+ (r-b)(r-a-1)H_m(a,b).
+\end{equation}
+The hypothesis $k\geq n-4$ is exactly $r\geq m-1$, so
+\cref{lem:boundary} applies to every nontrivial term after
+\eqref{eq:Hinterior} is iterated.  Substitute that lemma into
+\eqref{eq:rowsum}, split the sum at $b-a=m-a$, and use
+\[
+ \sum_{u=1}^{M}u=\frac{M(M+1)}2,\quad
+ \sum_{u=1}^{M}u^2=\frac{M(M+1)(2M+1)}6,\quad
+ \sum_{u=1}^{M}2^u=2^{M+1}-2.
+\]
+Collecting powers of $k=r-2$ gives, respectively,
+\[
+ \frac{a_n}{8},\quad\frac{b_n}{12},\quad
+ \frac{c_n}{8},\quad\frac{12n+19}{12},\quad1,
+\]
+which proves \eqref{eq:row}.  Direct enumeration at $(6,1)$ gives the final
+boundary statement.
+\end{proof}
+
+\section{Verification, scope, and disclosure}
+
+No proof step depends on fitting numerical data.  Two standard-library-only
+programs accompany the manuscript.  The feasibility verifier implements an
+equality-pattern quotient, a raw labelled suffix DFA, and literal
+restricted-growth enumeration.  The theorem verifier independently implements
+the age automaton, exact characteristic polynomials, the boundary-walk lemma,
+and the stable-row formula.  Together they check:
+\begin{enumerate}
+\item the triangular state classification and every transition;
+\item agreement of four enumeration routes;
+\item the first $10\times10$ values displayed on A242322;
+\item characteristic recurrences and unimodularity through $k=10$;
+\item the boundary-walk formula, including its limiting case;
+\item the stable-row theorem by matrix walks through $n=40$, and independently
+      by direct summation of the boundary lemma through $n=100$.
+\end{enumerate}
+Finite checks support the audit but do not replace the proofs.
+
+The matrix formula is an exact generating function for every column.  The
+paper does not claim a closed coefficient formula for $D_k(x)$, nor does it
+claim that its degree is always the minimal scalar recurrence order.  The
+literature search found the empirical statements on A242322 but no prior proof
+of the age-state reduction; this is a qualified status report rather than an
+absolute priority claim.
+
+AI systems were used during exploration, adversarial checking, and drafting.
+The mathematical evidence consists of the explicit arguments and deterministic
+verification programs, not AI output.  This draft is marked for independent
+mathematical review.
+
+\section*{Acknowledgment}
+The definition, numerical table, and empirical formulas originate with R. H.
+Hardin and the contributors to OEIS A242322.
+
+\begin{thebibliography}{9}
+
+\bibitem{oeisA242322}
+OEIS Foundation Inc.,
+\emph{A242322: Window-covering canonical arrays with two extra positions},
+\url{https://oeis.org/A242322}, accessed July 23, 2026.
+
+\bibitem{stanley}
+R. P. Stanley,
+\emph{Enumerative Combinatorics, Volume 1}, 2nd ed.,
+Cambridge University Press, 2012, Section 4.7.
+
+\bibitem{flajolet}
+P. Flajolet and R. Sedgewick,
+\emph{Analytic Combinatorics},
+Cambridge University Press, 2009, Chapters I and V.
+
+\end{thebibliography}
+
+\end{document}

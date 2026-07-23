@@ -1,6 +1,8 @@
 # SPDX-License-Identifier: MIT
 
-PROJECTS := projects/a242239-window-covering-words
+PROJECTS := \
+	projects/a242239-window-covering-words \
+	projects/a242322-two-slack-covering-words
 
 .PHONY: all verify pdf check clean
 

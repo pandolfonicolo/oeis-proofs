@@ -1,0 +1,9 @@
+PASS  triangular age-state classification and transitions (k=1..40)
+PASS  age automaton vs independent equality-pattern quotient (k=1..12, n=1..50)
+PASS  age automaton vs raw DFA and literal canonical enumeration
+PASS  first 10 x 10 displayed values of OEIS A242322
+PASS  characteristic recurrences, unimodularity, and BM comparison (k=1..10)
+PASS  column k=1 and k=2 recurrences displayed on OEIS
+PASS  closed boundary-walk lemma including r=steps-1 (r=3..30)
+PASS  stable-row theorem via matrix and closed-lemma sums (through n=100; uniform boundary is sharp)
+ALL 8 THEOREM-ORIENTED VERIFICATION LAYERS PASSED

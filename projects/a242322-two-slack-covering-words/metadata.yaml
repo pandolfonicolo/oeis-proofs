@@ -1,0 +1,13 @@
+title: Two-slack window-covering words and a triangular age automaton
+primary_oeis_entry: A242322
+author: Nicolò Pandolfo
+status: draft-in-preparation
+claim_status: exact-transfer-theorem-under-internal-verification
+review_status: internal-review-complete-external-review-pending
+version: 0.1.0
+repository: https://github.com/pandolfonicolo/oeis-proofs
+licenses:
+  code: MIT
+  content: CC-BY-4.0
+manuscript: manuscript/two_slack_covering_words.pdf
+verification: verification/verify_a242322_theorems.py

@@ -1,0 +1,38 @@
+INTERNAL MATHEMATICAL NOTES - NOT OEIS SUBMISSION PROSE
+
+Primary entry: A242322.
+
+Let r=k+2 and E_r={(i,j): 1<=i<j<=r}.  State (i,j) records the two
+missing positive last-occurrence ages among 0,...,r.
+
+Transitions:
+- if j<r, (i,j) -> (i+1,j+1);
+- if j=r, let v=i+1; successors are every pair incident with v.
+
+Initial state weight:
+    w(i,j)=i*(j-1).
+
+Exact count and generating function:
+    T(n,k)=w^T A_k^(n-1) 1,
+    sum_{n>=1} T(n,k)x^n = x w^T (I-x A_k)^(-1) 1.
+
+The matrix has N=binomial(k+2,2) states and determinant +/-1.  If
+det(I-xA_k)=sum_{ell=0}^N d_ell x^ell, then
+    sum_{ell=0}^N d_ell T(n-ell,k)=0
+for n>=N+1.
+
+Stable rows, for k>=max(1,n-4):
+    T(n,k)=a_n*k^4/8+b_n*k^3/12+c_n*k^2/8+(12*n+19)*k/12+1,
+where
+    a_n=4*3^(n-1)-2^(n+1)+1,
+    b_n=-4*3^n+(6*n+9)*2^n-6*n-1,
+    c_n=4*3^(n-1)+(12-4*n)*2^n+4*n^2-5.
+
+The boundary is uniformly sharp: T(6,1)=149, whereas the polynomial gives
+151.
+
+Human-submission requirement:
+These notes organize the mathematics but must not be pasted into OEIS.  Any
+eventual contributor must personally verify the formulas, understand the age
+automaton and proof, and write the final OEIS text independently in accordance
+with the current OEIS AI policy.
