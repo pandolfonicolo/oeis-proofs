@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+
 PROJECTS := projects/a242239-window-covering-words
 
 .PHONY: all verify pdf check clean

@@ -27,6 +27,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) before adding another project.
 Citation metadata is available in [CITATION.cff](CITATION.cff). Cite the
 specific manuscript when using a result from an individual project.
 
+## License
+
+Code and build tooling are available under MIT. Original manuscripts, notes,
+data, and documentation are available under CC BY 4.0. See
+[LICENSE.md](LICENSE.md) for the exact scope.
+
 ## Reproduce everything
 
 ```bash

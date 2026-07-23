@@ -9,6 +9,9 @@ repository-code: https://github.com/pandolfonicolo/oeis-proofs
 url: https://github.com/pandolfonicolo/oeis-proofs
 version: 0.1.0
 date-released: 2026-07-23
+license:
+  - MIT
+  - CC-BY-4.0
 keywords:
   - OEIS
   - enumerative combinatorics

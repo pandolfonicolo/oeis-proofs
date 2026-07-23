@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+
 """Independent verification for Hardin's window-covering words (OEIS A242239).
 
 The script uses only the Python standard library.  It checks the closed

@@ -4,11 +4,14 @@ related_oeis_entries:
   - A242235
   - A145113
   - A004767
-author: Nicolo Pandolfo
+author: Nicolò Pandolfo
 status: draft-for-independent-review
 review_status: internal-review-complete-external-review-pending
 version: 0.1.0
 repository: https://github.com/pandolfonicolo/oeis-proofs
+licenses:
+  code: MIT
+  content: CC-BY-4.0
 manuscript: manuscript/hardin_window_covering_words.pdf
 verification: verification/verify_hardin_family.py
-oeis_notes: oeis/submission_notes.txt
+oeis_notes: oeis/mathematical_summary.txt
