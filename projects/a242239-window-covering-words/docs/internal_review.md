@@ -52,5 +52,5 @@ same checked formula, and the integrity manifest matches the final artifacts.
 - This review cannot count as an independent human review.
 - The literature-status statement is necessarily qualified; no search can
   establish absolute priority.
-- A public archival URL and license are still required before OEIS submission
-  and DOI publication.
+- OEIS account approval, human-authored submission prose, and editorial review
+  remain pending.

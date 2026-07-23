@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+
 .PHONY: all verify pdf clean
 
 SOURCE_DATE_EPOCH ?= 1784764800

@@ -1,4 +1,12 @@
-A242239 — proposed FORMULA section
+INTERNAL WORKING NOTES — DO NOT PASTE VERBATIM INTO OEIS
+
+OEIS policy prohibits using AI to generate the full text of comments and
+prohibits pasting AI-generated text into Pink Boxes. These notes collect
+formulas and proof checkpoints only. The human contributor must personally
+verify every claim and write the final OEIS text independently.
+
+
+A242239 — formula and proof checkpoints
 
 For k >= 1,
 
@@ -23,7 +31,7 @@ transitions, and counting all-start, all-end walks gives the rational generating
 function above. - Nicolò Pandolfo, Jul 23 2026
 
 
-A242235 — proposed FORMULA section
+A242235 — formula and proof checkpoints
 
 G.f.:
 
@@ -44,7 +52,7 @@ At n=1 the polynomial formula remains valid, but A004767(n-2) is outside the
 ordinary index range. - Nicolò Pandolfo, Jul 23 2026
 
 
-Proposed LINKS entry for both sequences
+Possible LINKS entry for both sequences
 
 Nicolò Pandolfo, Window-covering words and a bouquet of cycles.
 [Add the public manuscript or DOI URL before submission.]

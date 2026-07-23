@@ -1,4 +1,12 @@
-A242239 suggested formula/proof note
+INTERNAL MATHEMATICAL SUMMARY — NOT OEIS SUBMISSION TEXT
+
+This file records checked formulas and proof points. OEIS policy requires the
+human contributor to verify every claim and prohibits AI-generated full
+comments and Pink Box responses. Write any eventual OEIS contribution
+independently rather than pasting this text.
+
+
+A242239 formula/proof summary
 
 For k>=1,
 
@@ -18,7 +26,7 @@ The stable rows also satisfy
 
 T(n,k)=((2^n-1)/2)*k^2+((2*n+1)/2)*k+1 for k>=n-3.
 
-A242235 suggested formula/proof note
+A242235 formula/proof summary
 
 For k=4,
 

@@ -27,3 +27,13 @@ project Makefile. A project is ready to commit when:
 
 Keep exploratory scratch files outside the repository. Do not commit LaTeX
 intermediates, Python caches, credentials, or editor metadata.
+
+New source code and build automation use MIT; new original research content,
+notes, and documentation use CC BY 4.0. Record third-party provenance and
+license restrictions explicitly.
+
+Before preparing an OEIS contribution, read the current
+[OEIS AI policy](https://oeis.org/wiki/Use_of_AI_for_OEIS_Submissions). Do not
+paste AI-generated comments or Pink Box responses. The human contributor must
+personally verify every term, formula, program, and statement and write the
+final submission text.

@@ -31,4 +31,6 @@ Review and publication materials:
 
 - [internal adversarial review](docs/internal_review.md);
 - [independent-review request](docs/review_request.md);
-- [copy-ready OEIS changes](oeis/proposed_changes.txt).
+- [OEIS policy and compliance checklist](docs/oeis_policy_review.md);
+- [internal OEIS working notes](oeis/internal_working_notes.txt);
+- [internal mathematical summary](oeis/mathematical_summary.txt).
