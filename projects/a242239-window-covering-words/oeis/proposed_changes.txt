@@ -1,0 +1,50 @@
+A242239 — proposed FORMULA section
+
+For k >= 1,
+
+Sum_{n>=1} T(n,k)*x^n =
+  Sum_{j=1..k+1} ((k+2-j)*(k*j+2)/2)*x^j
+  / (1-x-x^2-...-x^(k+1)).
+
+Consequently,
+
+T(n,k) = Sum_{i=1..k+1} T(n-i,k) for n >= k+2,
+
+and
+
+T(n,k) = ((2^n-1)/2)*k^2 + ((2*n+1)/2)*k + 1
+
+for k >= n-3.
+
+Proof: modulo relabeling, valid canonical words are walks on a directed bouquet
+of cycles of lengths 1,2,...,k+1. A length-(k+1) block is either rainbow or has
+one doubled symbol in positions (i,j). The covering condition gives the bouquet
+transitions, and counting all-start, all-end walks gives the rational generating
+function above. - Nicolò Pandolfo, Jul 23 2026
+
+
+A242235 — proposed FORMULA section
+
+G.f.:
+
+x*(15+20*x+21*x^2+18*x^3+11*x^4)
+  / (1-x-x^2-x^3-x^4-x^5).
+
+Therefore a(n)=a(n-1)+...+a(n-5) for n >= 6.
+
+Using the recorded generating function of A145113,
+
+a(n) = 16*A145113(n-1) + 4*n - 5 for n >= 1.
+
+For n >= 2 this is Mathar's conjectured identity
+
+a(n) = 16*A145113(n-1) + A004767(n-2).
+
+At n=1 the polynomial formula remains valid, but A004767(n-2) is outside the
+ordinary index range. - Nicolò Pandolfo, Jul 23 2026
+
+
+Proposed LINKS entry for both sequences
+
+Nicolò Pandolfo, Window-covering words and a bouquet of cycles.
+[Add the public manuscript or DOI URL before submission.]

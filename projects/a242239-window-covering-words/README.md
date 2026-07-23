@@ -26,3 +26,9 @@ To verify artifact integrity:
 ```bash
 make check
 ```
+
+Review and publication materials:
+
+- [internal adversarial review](docs/internal_review.md);
+- [independent-review request](docs/review_request.md);
+- [copy-ready OEIS changes](oeis/proposed_changes.txt).

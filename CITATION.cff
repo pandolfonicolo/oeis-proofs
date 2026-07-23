@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: If you use this repository, please cite the specific project and manuscript.
+title: OEIS proofs
+type: software
+authors:
+  - family-names: Pandolfo
+    given-names: Nicolò
+repository-code: https://github.com/pandolfonicolo/oeis-proofs
+url: https://github.com/pandolfonicolo/oeis-proofs
+version: 0.1.0
+date-released: 2026-07-23
+keywords:
+  - OEIS
+  - enumerative combinatorics
+  - reproducible research
+  - generating functions
+preferred-citation:
+  type: article
+  title: Window-covering words and a bouquet of cycles
+  authors:
+    - family-names: Pandolfo
+      given-names: Nicolò
+  year: 2026
+  url: https://github.com/pandolfonicolo/oeis-proofs

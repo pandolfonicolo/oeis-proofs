@@ -22,6 +22,11 @@ Each directory under `projects/` is a self-contained reproducibility package:
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) before adding another project.
 
+## Citation
+
+Citation metadata is available in [CITATION.cff](CITATION.cff). Cite the
+specific manuscript when using a result from an individual project.
+
 ## Reproduce everything
 
 ```bash

@@ -6,6 +6,9 @@ related_oeis_entries:
   - A004767
 author: Nicolo Pandolfo
 status: draft-for-independent-review
+review_status: internal-review-complete-external-review-pending
+version: 0.1.0
+repository: https://github.com/pandolfonicolo/oeis-proofs
 manuscript: manuscript/hardin_window_covering_words.pdf
 verification: verification/verify_hardin_family.py
 oeis_notes: oeis/submission_notes.txt
