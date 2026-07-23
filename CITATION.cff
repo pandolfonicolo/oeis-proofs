@@ -7,7 +7,7 @@ authors:
     given-names: Nicolò
 repository-code: https://github.com/pandolfonicolo/oeis-proofs
 url: https://github.com/pandolfonicolo/oeis-proofs
-version: 0.1.0
+version: 0.2.1
 date-released: 2026-07-23
 license:
   - MIT
@@ -18,10 +18,11 @@ keywords:
   - reproducible research
   - generating functions
 preferred-citation:
-  type: article
+  type: unpublished
   title: Window-covering words and a bouquet of cycles
   authors:
     - family-names: Pandolfo
       given-names: Nicolò
   year: 2026
-  url: https://github.com/pandolfonicolo/oeis-proofs
+  version: 0.2.1
+  url: https://github.com/pandolfonicolo/oeis-proofs/releases/tag/v0.2.1

@@ -26,6 +26,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) before adding another project.
 
 Citation metadata is available in [CITATION.cff](CITATION.cff). Cite the
 specific manuscript when using a result from an individual project.
+Versioned public snapshots are archived through Zenodo from GitHub releases.
 
 ## License
 
