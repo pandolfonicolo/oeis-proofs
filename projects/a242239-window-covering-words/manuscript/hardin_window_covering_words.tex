@@ -1,0 +1,460 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=30mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\hypersetup{
+  pdftitle={Window-covering words and a bouquet of cycles},
+  pdfauthor={Nicolo Pandolfo},
+  pdfsubject={Exact enumeration of OEIS A242239},
+  pdfkeywords={combinatorics on words, finite automata, generating functions, OEIS A242239}
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\SigmaK}{\Sigma_k}
+\newcommand{\W}{\mathcal W}
+\newcommand{\B}{\mathcal B}
+\newcommand{\Rstate}{\mathsf R}
+\newcommand{\GF}{\mathcal A}
+
+\title{\textbf{Window-covering words and a bouquet of cycles}\\
+\large Exact enumeration of the OEIS family A242239}
+\author{Nicol\`o Pandolfo}
+\date{July 23, 2026\\\small Draft for independent mathematical review}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For integers $k,n\geq 1$, let $T(n,k)$ be the number of canonical words of length
+$n+k+1$ over $\{0,1,\ldots,k\}$ such that every consecutive block of length
+$k+2$ contains every symbol.  This is the table OEIS A242239.  We prove that
+these words, modulo relabeling, are encoded by length-$n$ walks on a directed
+bouquet whose cycle lengths are exactly $1,2,\ldots,k+1$.  Consequently,
+\[
+ \sum_{n\geq 1}T(n,k)x^n
+ =\frac{\displaystyle\sum_{j=1}^{k+1}
+       \frac{(k+2-j)(kj+2)}{2}x^j}
+      {1-x-x^2-\cdots-x^{k+1}}.
+\]
+This proves the empirical $(k+1)$-bonacci recurrence recorded for every column
+of A242239, with exact starting index $n=k+2$, and also proves the stable-row
+formula
+\[
+ T(n,k)=\frac{2^n-1}{2}k^2+\frac{2n+1}{2}k+1
+ \qquad (k\geq n-3).
+\]
+For $k=4$ the result proves the empirical recurrence and generating function
+of A242235.  Using the already known generating function of A145113, it also
+proves Mathar's conjectured identity for that sequence.
+\end{abstract}
+
+\section{Introduction and main result}
+
+Set $\SigmaK=\{0,1,\ldots,k\}$, so $|\SigmaK|=k+1$.  A word over
+$\SigmaK$ is called \emph{canonical} if the first occurrences of its distinct
+symbols appear in the order $0,1,2,\ldots$; equivalently, it is a restricted
+growth word.  The table A242239 is defined by
+\begin{equation}\label{eq:defT}
+ T(n,k)=\#\left\{
+ w\in\SigmaK^{n+k+1}:
+ \begin{array}{l}
+ w\text{ is canonical, and}\\
+ \text{every }(k+2)\text{-factor of }w\text{ contains }\SigmaK
+ \end{array}
+ \right\}.
+\end{equation}
+The OEIS entry records, as empirical observations, both a $(k+1)$-step
+Fibonacci recurrence for each column and a quadratic formula for each row once
+$k$ is sufficiently large \cite{oeisA242239}.  The special column $k=4$ is
+A242235; its recurrence and generating function are likewise marked empirical,
+and an identity proposed by Mathar is marked conjectural \cite{oeisA242235}.
+
+The main result gives the complete ordinary generating function in closed form.
+
+\begin{theorem}[Exact generating function]\label{thm:main}
+For every $k\geq 1$, define
+\[
+ D_k(x)=1-x-x^2-\cdots-x^{k+1}
+\]
+and
+\[
+ N_k(x)=\sum_{j=1}^{k+1}c_{k,j}x^j,
+ \qquad
+ c_{k,j}=\frac{(k+2-j)(kj+2)}{2}.
+\]
+Then
+\begin{equation}\label{eq:mainGF}
+ \GF_k(x):=\sum_{n\geq1}T(n,k)x^n=\frac{N_k(x)}{D_k(x)}.
+\end{equation}
+\end{theorem}
+
+The coefficients $c_{k,j}$ are positive integers.  The integrality is immediate:
+if $k$ or $j$ is even then $kj+2$ is even, while if both are odd then
+$k+2-j$ is even.
+
+\begin{corollary}[Column recurrence]\label[corollary]{cor:recurrence}
+For every $k\geq1$,
+\[
+ T(n,k)=\sum_{i=1}^{k+1}T(n-i,k)
+ \qquad (n\geq k+2).
+\]
+This range is exact: with the convention $T(m,k)=0$ for $m\leq0$, the same
+relation fails for every $1\leq n\leq k+1$, because its residual is the positive
+coefficient $c_{k,n}$.
+\end{corollary}
+
+\begin{corollary}[Stable rows]\label[corollary]{cor:rows}
+For $n,k\geq1$ with $k\geq n-3$,
+\begin{equation}\label{eq:rowformula}
+ T(n,k)=\frac{2^n-1}{2}k^2+\frac{2n+1}{2}k+1.
+\end{equation}
+\end{corollary}
+
+As of the access date in the bibliography, these formulas remain labelled
+empirical on A242239 and its relevant column entries.  We are not aware of a
+previous proof; this statement is a qualified literature-status report, not a
+claim that an exhaustive priority search is possible.
+
+\section{From words to a defect-pair automaton}
+
+Put $q=k+1$.  A block of length $q$ is \emph{rainbow} if all its letters are
+distinct.  Otherwise, a valid block will have one repeated symbol.  If its two
+copies occur in positions $1\leq i<j\leq q$, call its type $(i,j)$.
+
+\begin{lemma}[Relabeling orbits]\label[lemma]{lem:orbits}
+Let $N\geq q+1$, and let $\W_k(N)$ be the set of labelled words of length $N$
+over $\SigmaK$ satisfying the sliding-window condition in \eqref{eq:defT}.
+The symmetric group $S_q$ acts freely on $\W_k(N)$ by relabeling, and every
+orbit contains exactly one canonical word.  Hence
+\[
+ T(n,k)=\frac{|\W_k(n+q)|}{q!}.
+\]
+\end{lemma}
+
+\begin{proof}
+The first window of length $q+1$ contains every symbol, so every word uses all
+$q$ symbols.  A permutation fixing the word therefore fixes every symbol and
+is the identity.  In each orbit, relabel the symbols by their first-occurrence
+order; this produces exactly one canonical representative.
+\end{proof}
+
+\begin{lemma}[Block classification]\label[lemma]{lem:block}
+Every length-$q$ block occurring in a word of $\W_k(N)$ contains at least
+$q-1$ distinct symbols.  It is therefore either rainbow or has a unique type
+$(i,j)$ and misses exactly one symbol.
+\end{lemma}
+
+\begin{proof}
+Any length-$q$ block extends to a valid length-$(q+1)$ window, to the right
+unless it is the final block and to the left otherwise.  Deleting one letter
+from a window containing all $q$ symbols leaves at least $q-1$ distinct symbols.
+A non-rainbow block consequently contains exactly one doubled symbol and misses
+exactly one symbol.
+\end{proof}
+
+\begin{lemma}[Transitions]\label[lemma]{lem:transitions}
+Let $B=b_1\cdots b_q$ be the final block of a valid prefix.
+\begin{enumerate}
+\item[\textup{(a)}] If $B$ is rainbow, every symbol may be appended.  Appending $b_1$
+      gives another rainbow block, while appending $b_{p+1}$ gives type
+      $(p,q)$ for $1\leq p\leq q-1$.
+\item[\textup{(b)}] If $B$ has type $(i,j)$ and misses $m$, the only legal appended symbol
+      is $m$.  The new block is rainbow when $i=1$, and has type
+      $(i-1,j-1)$ when $i>1$.
+\end{enumerate}
+Each listed transition is realized by exactly one appended symbol.
+\end{lemma}
+
+\begin{proof}
+The newly created window is $Bx$, and it is valid precisely when the symbols
+in $B$ together with $x$ cover $\SigmaK$.  In the rainbow case, shifting removes
+$b_1$ and appending a copy of $b_r$ either replaces the removed symbol ($r=1$)
+or creates a doubled symbol in positions $(r-1,q)$.  In the defect case, the
+missing symbol is forced; shifting either removes the first copy of the doubled
+symbol or shifts both copies one position to the left.
+\end{proof}
+
+The quotient graph has a rainbow state $\Rstate$ and one state $(i,j)$ for each
+$1\leq i<j\leq q$.  The transitions in \cref{lem:transitions} reveal a simpler
+structure.  For each $\ell=2,\ldots,q$, the states
+\[
+ (\ell-1,q),(\ell-2,q-1),\ldots,(1,q-\ell+2)
+\]
+form, together with $\Rstate$, a directed cycle of length $\ell$.  Different
+values of $\ell$ give disjoint non-hub vertices, and $\Rstate$ also has a
+self-loop.  Thus the quotient graph is the directed bouquet
+\[
+ \B_q=C_1\vee C_2\vee\cdots\vee C_q,
+\]
+where the cycles share only the hub $\Rstate$.
+
+\begin{proposition}[Bouquet encoding]\label[proposition]{prop:bouquet}
+For every $n,k\geq1$, $T(n,k)$ is the number of directed walks of length $n$ in
+$\B_{k+1}$, with every vertex allowed as a starting vertex and every vertex
+allowed as an ending vertex.
+\end{proposition}
+
+\begin{proof}
+Choose the initial block of length $q$ and record its type.  By
+\cref{lem:transitions}, a state walk determines each subsequently appended
+letter uniquely, and every state edge is realizable.  Hence labelled words are
+in bijection with pairs consisting of a concrete initial block and a state walk
+of length $n$.
+
+For each state type, the set of concrete blocks has exactly one $S_q$-orbit.
+There are $q!$ rainbow blocks.  For a fixed defect type $(i,j)$, choose the
+doubled symbol and then injectively assign the remaining $q-2$ positions from
+the other $q-1$ symbols; again there are $q!$ blocks.  Relabeling changes the
+concrete block but not the state walk.  Applying \cref{lem:orbits} therefore
+leaves one initial orbit for every vertex of $\B_q$, proving the result.
+\end{proof}
+
+\section{Enumeration of walks on the bouquet}
+
+Let
+\begin{equation}\label{eq:H}
+ H_k(x)=1+\sum_{j=1}^{k}(k+1-j)x^j,
+ \qquad
+ s_k=1+\frac{k(k+1)}2=\frac{k^2+k+2}{2}.
+\end{equation}
+The number $s_k$ is the number of vertices of $\B_{k+1}$.
+
+Let $P_k(x)$ be the generating function for walks that start at the hub
+$\Rstate$ and may end anywhere.  Such a walk consists uniquely of a sequence of
+complete returns to the hub, followed by a proper prefix of one cycle.  The
+complete return lengths are $1,2,\ldots,k+1$, one of each length.  A proper
+prefix of length $j\geq1$ can be chosen in $k+1-j$ ways.  Therefore
+\begin{equation}\label{eq:Pk}
+ P_k(x)=\frac{H_k(x)}{D_k(x)}.
+\end{equation}
+
+A vertex at forced distance $i$ from the hub contributes
+\[
+ 1+x+\cdots+x^{i-1}+x^iP_k(x),
+\]
+and there are $k+1-i$ such vertices.  Summing over all vertices, including the
+hub, gives the generating function for walks of all lengths:
+\begin{equation}\label{eq:walkall}
+ \sum_{n\geq0}T_0(n,k)x^n
+ =H_k(x)P_k(x)+G_k(x),
+\end{equation}
+where $T_0(0,k)=s_k$, $T_0(n,k)=T(n,k)$ for $n\geq1$, and
+\[
+ G_k(x)=\sum_{i=1}^{k}(k+1-i)(1+x+\cdots+x^{i-1})
+       =\frac{s_k-H_k(x)}{1-x}.
+\]
+The elementary identity
+\begin{equation}\label{eq:keyidentity}
+ (1-x)H_k(x)=D_k(x)+kx
+\end{equation}
+now removes the only apparent extra denominator.  From
+\eqref{eq:Pk}--\eqref{eq:walkall},
+\begin{align*}
+ \GF_k(x)
+ &=\frac{H_k(x)^2}{D_k(x)}+\frac{s_k-H_k(x)}{1-x}-s_k\\
+ &=\frac{H_k(x)^2}{D_k(x)}+\frac{s_kx-H_k(x)}{1-x}.
+\end{align*}
+Consequently,
+\begin{align}
+ D_k(x)\GF_k(x)
+ &=\frac{(1-x)H_k(x)^2+D_k(x)(s_kx-H_k(x))}{1-x}\notag\\
+ &=\frac{x\bigl(kH_k(x)+s_kD_k(x)\bigr)}{1-x}.
+ \label{eq:Nintermediate}
+\end{align}
+The polynomial inside the last quotient vanishes at $x=1$, since
+$H_k(1)=s_k$ and $D_k(1)=-k$.  Thus the division by $1-x$ is exact.
+
+For completeness, let $N_k(x)=\sum_{j=1}^{k+1}c_{k,j}x^j$.  Dividing
+\eqref{eq:Nintermediate} by taking partial sums of coefficients gives
+\begin{align*}
+ c_{k,j}
+ &=k+s_k+\sum_{r=1}^{j-1}\bigl(k(k+1-r)-s_k\bigr)\\
+ &=\frac{(k+2-j)(kj+2)}2,
+ \qquad 1\leq j\leq k+1.
+\end{align*}
+This proves \cref{thm:main}, and \cref{cor:recurrence} follows by coefficient
+comparison in $D_k(x)\GF_k(x)=N_k(x)$.
+
+\begin{table}[ht]
+\centering
+\small
+\caption{The first numerator polynomials, generated directly from
+$c_{k,j}=((k+2-j)(kj+2))/2$.}
+\label{tab:numerators}
+\resizebox{\textwidth}{!}{\input{generated_numerators.tex}}
+\end{table}
+
+\section{The stable-row formula}
+
+We prove \cref{cor:rows} directly from the bouquet.  Let
+\[
+ r_m=[x^m]P_k(x)
+\]
+be the number of length-$m$ walks starting at the hub.  From
+$D_k(x)P_k(x)=H_k(x)$, a short induction gives
+\begin{equation}\label{eq:hubcounts}
+ r_0=1,
+ \qquad
+ r_m=k2^{m-1}+1\quad(1\leq m\leq k+2),
+\end{equation}
+and at the next index
+\begin{equation}\label{eq:hubboundary}
+ r_{k+3}=k2^{k+2}-k+1.
+\end{equation}
+Indeed, for $1\leq m\leq k$, the recurrence for $r_m$ has forcing term
+$k+1-m$; summing the earlier values in \eqref{eq:hubcounts} gives the claimed
+value.  The cases $m=k+1,k+2,k+3$ then follow from the homogeneous recurrence
+with the appropriate $k+1$ preceding terms.
+
+A vertex at distance $i$ from the hub has exactly one length-$n$ continuation
+if $n\leq i$, and otherwise reaches the hub after $i$ steps and has
+$r_{n-i}$ continuations.  Therefore
+\begin{equation}\label{eq:rowwalksum}
+ T(n,k)=r_n+\sum_{i=1}^{k}(k+1-i)
+ \begin{cases}
+  1,& n\leq i,\\
+  r_{n-i},& n>i.
+ \end{cases}
+\end{equation}
+If $n\leq k$, substituting \eqref{eq:hubcounts} into
+\eqref{eq:rowwalksum} gives
+\begin{align*}
+ T(n,k)
+ &=k2^{n-1}+1
+   +\sum_{i=1}^{n-1}(k+1-i)(k2^{n-i-1}+1)
+   +\sum_{i=n}^{k}(k+1-i)\\
+ &=\frac{2^n-1}{2}k^2+\frac{2n+1}{2}k+1.
+\end{align*}
+For $n=k+1$ and $n=k+2$, the same substitution applies with the final sum
+empty.  For $n=k+3$, use \eqref{eq:hubboundary} for the first term and
+\eqref{eq:hubcounts} for every term in the remaining sum.  The same
+simplification results.  These four cases are exactly $n\leq k+3$, proving
+\cref{cor:rows}.
+
+\section{The column A242235 and Mathar's identity}
+
+Taking $k=4$ in \cref{thm:main} gives
+\begin{equation}\label{eq:A242235GF}
+ \sum_{n\geq1}T(n,4)x^n
+ =\frac{x(15+20x+21x^2+18x^3+11x^4)}
+ {1-x-x^2-x^3-x^4-x^5}.
+\end{equation}
+Thus A242235 satisfies the pentanacci recurrence from $n=6$, with initial
+values
+\[
+ 15,35,71,139,271.
+\]
+This proves the empirical formulas recorded on the OEIS entry
+\cite{oeisA242235}.
+
+Let $b(m)$ be A145113, the number of length-$m$ binary words with fewer than
+five zeros between consecutive ones.  Its generating function is already
+recorded on that entry as
+\begin{equation}\label{eq:A145113GF}
+ B(x)=\sum_{m\geq0}b(m)x^m
+ =\frac{1-x+x^6}{1-3x+2x^2+x^6-x^7}
+ =\frac{1-x+x^6}{(1-x)^2D_4(x)}.
+\end{equation}
+See \cite{oeisA145113}.  It can also be obtained from the standard seven-state
+automaton that records the number of zeros since the most recent one.
+
+Combining \eqref{eq:A242235GF} and \eqref{eq:A145113GF} and clearing the common
+denominator gives the exact identity
+\begin{equation}\label{eq:MatharGF}
+ \GF_4(x)=16xB(x)+\frac{4x}{(1-x)^2}-\frac{5x}{1-x}.
+\end{equation}
+Hence
+\begin{equation}\label{eq:Mathar}
+ T(n,4)=16b(n-1)+4n-5\qquad(n\geq1).
+\end{equation}
+For $n\geq2$, this is precisely Mathar's conjecture
+$T(n,4)=16\,\mathrm{A145113}(n-1)+\mathrm{A004767}(n-2)$, because
+A004767$(m)=4m+3$ \cite{oeisA004767}.  At $n=1$, \eqref{eq:Mathar} remains
+valid, but the A004767 notation requires polynomially extending $4m+3$ to
+$m=-1$; it is not an ordinary in-range OEIS sequence evaluation.
+
+\section{Scope, verification, and disclosure}
+
+The bouquet reduction depends critically on the window length being exactly
+one larger than the alphabet size.  In that regime, deleting one letter from a
+covering window leaves either a rainbow block or a block with one doubled and
+one missing symbol.  For longer windows, multiple defects can occur, and the
+same state space does not apply without further work.
+
+No step of the proof relies on numerical evidence.  The accompanying verification program is
+\path{verification/verify_hardin_family.py}.  It uses only the Python standard library and
+independently checks:
+\begin{enumerate}
+\item the closed numerator formula against walks on the bouquet;
+\item a raw last-block DFA constructed only from the defining window condition;
+\item direct enumeration of canonical restricted-growth words for small cases;
+\item the first $10\times8$ values displayed on A242239;
+\item the column recurrence, stable-row formula, A242235, A145113, and the exact
+      polynomial identity underlying \eqref{eq:MatharGF}.
+\end{enumerate}
+The script also generates \cref{tab:numerators}, preventing manual
+transcription from becoming part of the verification chain.
+
+AI systems were used during exploration, adversarial checking, and drafting.
+The mathematical deliverable is the explicit proof above together with a
+deterministic, inspectable verification program; no AI output is treated as an
+oracle or as evidence by itself.
+
+\section*{Acknowledgment}
+The definitions, numerical data, and empirical conjectures originate with the
+contributors to the cited OEIS entries, in particular R. H. Hardin, R. J.
+Mathar, and Colin Barker.
+
+\begin{thebibliography}{9}
+
+\bibitem{oeisA242239}
+OEIS Foundation Inc.,
+\emph{A242239: Number of length $n+k+1$ arrays with every value appearing in
+every consecutive $k+2$ elements},
+\url{https://oeis.org/A242239}, accessed July 23, 2026.
+
+\bibitem{oeisA242235}
+OEIS Foundation Inc.,
+\emph{A242235},
+\url{https://oeis.org/A242235}, accessed July 23, 2026.
+
+\bibitem{oeisA145113}
+OEIS Foundation Inc.,
+\emph{A145113: Binary words with fewer than five zeros between consecutive
+ones},
+\url{https://oeis.org/A145113}, accessed July 23, 2026.
+
+\bibitem{oeisA004767}
+OEIS Foundation Inc.,
+\emph{A004767: $a(n)=4n+3$},
+\url{https://oeis.org/A004767}, accessed July 23, 2026.
+
+\bibitem{stanley}
+R. P. Stanley,
+\emph{Enumerative Combinatorics, Volume 1}, 2nd ed.,
+Cambridge University Press, 2012, Section 4.7.
+
+\bibitem{flajolet}
+P. Flajolet and R. Sedgewick,
+\emph{Analytic Combinatorics},
+Cambridge University Press, 2009, Chapter I.
+
+\end{thebibliography}
+
+\end{document}

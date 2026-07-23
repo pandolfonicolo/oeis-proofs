@@ -1,0 +1,12 @@
+PASS  exact numerator formula: integrality, positivity, endpoint coefficients
+PASS  bouquet automaton vs. exact generating function (k=1..20, n=1..60)
+PASS  raw last-block DFA vs. formula (k=1..5, n=1..20)
+PASS  direct canonical-word enumeration vs. formula (k=1..4, n=1..7)
+PASS  first 10 x 8 displayed values of OEIS A242239
+PASS  (k+1)-bonacci recurrence and exact start n=k+2
+PASS  stable-row formula for k>=n-3; sharp defect k^2 at k=n-4
+PASS  A242235 initial terms and pentanacci recurrence through n=210
+PASS  A145113 automaton and exact Mathar rational-function identity
+
+ALL 9 VERIFICATION LAYERS PASSED
+WROTE manuscript/generated_numerators.tex

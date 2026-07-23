@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.pdf binary
+
+**/generated_numerators.tex linguist-generated=true
+**/verification_output.txt linguist-generated=true

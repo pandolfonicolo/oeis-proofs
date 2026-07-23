@@ -1,0 +1,11 @@
+title: Window-covering words and a bouquet of cycles
+primary_oeis_entry: A242239
+related_oeis_entries:
+  - A242235
+  - A145113
+  - A004767
+author: Nicolo Pandolfo
+status: draft-for-independent-review
+manuscript: manuscript/hardin_window_covering_words.pdf
+verification: verification/verify_hardin_family.py
+oeis_notes: oeis/submission_notes.txt
