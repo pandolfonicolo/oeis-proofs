@@ -26,7 +26,11 @@ independent review.
 - `verification/verify_a242322_feasibility.py` - independent discovery and
   definition-only checks;
 - `verification/verify_a242322_theorems.py` - proof-oriented exact checks;
+- `verification/explore_minimality.py` - exploratory exact checks for the
+  unresolved minimal scalar-order question;
 - `docs/` - acceptance criteria, research log, and adversarial review;
+- `docs/minimality_research.md` - the proved reduction and the remaining
+  determinant conjecture;
 - `oeis/` - internal mathematical notes, not submission prose.
 
 ## Reproduce
@@ -38,3 +42,12 @@ make check
 
 The verifiers use only the Python standard library.  The manuscript build also
 requires `latexmk` and a standard LaTeX installation.
+
+The separate exploratory minimality check can be reproduced with
+
+```bash
+python3 verification/explore_minimality.py --max-k 15
+```
+
+Passing that finite check is evidence for the determinant formula recorded in
+`docs/minimality_research.md`, not a proof of it.
