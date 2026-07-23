@@ -14,16 +14,18 @@
 - Repository publication is approved.
 - Licensing is selected: MIT for code and build tooling; CC BY 4.0 for original
   manuscripts, notes, data, and documentation.
+- `v0.1.0` is retained as a superseded review snapshot.
+- `v0.2.0` is retained as the first public licensed prerelease.
+- The OEIS A242239 link-only update has been proposed for editor review.
 
 ## Public release procedure
 
-1. Apply the chosen licenses and update repository metadata.
-2. Make the repository public and confirm links work without authentication.
-3. Keep `v0.1.0` labeled as an unreviewed prerelease.
-4. Obtain an independent human review if a reviewed-release claim is desired.
-5. Tag the reviewed commit as `v1.0.0`.
-6. Create a GitHub release containing the manuscript PDF and checksums.
-7. Enable the GitHub repository in Zenodo and create a DOI-backed release.
-8. Add the DOI to `CITATION.cff`, the manuscript, and the repository README.
-9. After account approval, submit human-written changes to A242239 and A242235.
-10. Record OEIS review outcomes in the project revision notes.
+1. Enable the public GitHub repository in Zenodo.
+2. Tag the metadata-aligned snapshot as `v0.2.1`.
+3. Create a GitHub release containing the manuscript PDF, checksums, and license
+   scope so Zenodo archives it.
+4. Add the resulting concept DOI to `CITATION.cff` and the repository README.
+5. Record the OEIS editor outcome in the project revision notes.
+6. Obtain an independent human review only if a reviewed-release claim is
+   desired.
+7. Tag a reviewed commit as `v1.0.0`.

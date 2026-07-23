@@ -1,0 +1,21 @@
+{
+  "title": "OEIS proofs: Window-covering words and a bouquet of cycles",
+  "description": "A reproducible research package for OEIS A242239 and related sequences, including a manuscript, deterministic verification code, recorded outputs, and integrity checks. Code and build tooling are licensed under MIT; original manuscripts, notes, data, and documentation are licensed under CC BY 4.0.",
+  "creators": [
+    {
+      "name": "Pandolfo, Nicolò"
+    }
+  ],
+  "version": "0.2.1",
+  "keywords": [
+    "OEIS",
+    "enumerative combinatorics",
+    "combinatorics on words",
+    "generating functions",
+    "reproducible research"
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng"
+}
