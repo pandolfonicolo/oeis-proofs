@@ -1,0 +1,34 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run all mathematical verification layers
+        run: make verify
+
+      - name: Confirm generated verification artifacts are current
+        run: |
+          git diff --exit-code -- \
+            projects/a242239-window-covering-words/manuscript/generated_numerators.tex \
+            projects/a242239-window-covering-words/verification/verification_output.txt
+
+      - name: Validate artifact checksums
+        run: make check

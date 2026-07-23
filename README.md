@@ -31,4 +31,5 @@ make check
 
 The current verification code uses only the Python standard library. Building
 the manuscript additionally requires `latexmk` and a standard LaTeX
-installation.
+installation. GitHub Actions reruns the mathematical verifier and integrity
+checks on every push and pull request.
