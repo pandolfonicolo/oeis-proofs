@@ -1,0 +1,8 @@
+PASS  explicit equality-pattern classification (q=2..30)
+PASS  literal restricted-growth enumeration vs quotient (k=1..3, n=1..6)
+PASS  raw labeled DFA vs quotient (k=1..4, n=1..15)
+PASS  first 10 x 10 displayed values of OEIS A242322
+PASS  rational BM fit on n=1..60 and disjoint hold-out n=61..100; orders=[3, 6, 10, 15, 21, 28]
+PASS  candidate stable-row quarticity with four held-out k-values (n=1..12, k>=max(1,n-4))
+PASS  all 6 feasibility checks
+STATUS feasibility checks only; theorem status is audited separately
