@@ -73,8 +73,10 @@ result and creates no obligation to submit or publish.
 - Definition and provenance: passed internally.
 - Independent computation: passed with four enumeration routes.
 - Anti-overfitting: passed for the discovery stage.
-- Proof obligations: passed internally for the transfer and stable-row
-  theorems.
+- Proof obligations: passed internally for the transfer, stable-row, and
+  general scalar minimality theorems. The October 23, 2026 minimality proof
+  covers every `k >= 1` and eventual recurrences; it does not assume the
+  conjectured closed determinant formula.
 - Proof verification: passed internally with exact arithmetic.
 - Publication gate: internal adversarial review passed; independent
   mathematical review remains pending.

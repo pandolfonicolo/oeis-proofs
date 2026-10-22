@@ -1,0 +1,10 @@
+PASS m=2, k=1: reflection algebra, boundary Schur complement, coordinate action
+PASS m=3, k=2: reflection algebra, boundary Schur complement, coordinate action
+PASS m=4, k=3: reflection algebra, boundary Schur complement, coordinate action
+PASS m=5, k=4: reflection algebra, boundary Schur complement, coordinate action
+PASS m=6, k=5: reflection algebra, boundary Schur complement, coordinate action
+PASS m=7, k=6: reflection algebra, boundary Schur complement, coordinate action
+PASS m=8, k=7: reflection algebra, boundary Schur complement, coordinate action
+PASS m=9, k=8: reflection algebra, boundary Schur complement, coordinate action
+PASS m=10, k=9: reflection algebra, boundary Schur complement, coordinate action
+PASS all exact consistency checks; the general proof is supplied separately in the manuscript

@@ -1,10 +1,39 @@
 # Minimal scalar order: research note
 
-Date: 2026-07-23
+Exploration begun: 2026-07-23. Updated: 2026-10-23.
 
-Status: partial structural result and a strongly supported determinant
-conjecture.  This note is not a proof of general minimality and must not be
-cited as one.
+Status: **general minimal scalar order is now proved** by the boundary
+reflection argument in [general_minimality_proof.md](general_minimality_proof.md)
+and the revised manuscript. It gives homogeneous constant-coefficient
+recurrence order exactly `binomial(k+2,2)` for every `k>=1`, even when the
+recurrence is required to hold only eventually. The proof has been audited
+internally; external mathematical review remains pending.
+
+The determinant evaluation and Smith normal form patterns below remain
+conjectures. They are preserved as exploratory context and are not needed
+for the completed minimality proof. Finite computations do not prove those
+stronger formulas.
+
+## The completed argument
+
+The new proof establishes cyclicity without evaluating the controllability
+determinant. For a boundary left nullvector `v M_m(z)=0`, put
+`V(t)=sum v_d t^d`. Reflection under `t -> z/t` proves that `V(z)` cannot
+vanish for a nonzero nullvector. A differentiated polynomial identity gives
+
+```text
+(2z-1-z^(m+2)) V(1) = (m-2)(z-1) V(z).
+```
+
+For `m=k+1>=3`, a nullvector annihilating the all-one input would therefore
+force `z=1`. An elementary prefix-sum induction excludes a nullvector at
+that point. Unimodularity excludes eigenvalue zero, and `k=1` is checked by
+an explicit three-by-three determinant equal to one. The reversal form
+below transfers cyclicity to observability. Every shifted Hankel matrix is
+then invertible, excluding even shorter eventual recurrences.
+
+The complete proof spells out each reduction and every exceptional case;
+the argument is not an extrapolation from the determinant data below.
 
 ## Question
 
@@ -80,8 +109,9 @@ then
 O_k^T = J_k C_k
 ```
 
-and `abs(det(O_k)) = abs(det(C_k))`.  General scalar minimality therefore
-reduces to the single claim `det(C_k) != 0`.
+and `abs(det(O_k)) = abs(det(C_k))`. General scalar minimality therefore
+reduces to the single claim `det(C_k) != 0`, now established by the boundary
+reflection proof.
 
 ## Determinant conjecture
 
@@ -266,11 +296,13 @@ q_d - 2z q_(d-1) + z^d q_(m+2-d) = (1-z)D_m
 These identities provide a concrete route to an induction or a
 fraction-free polynomial elimination.
 
-The unresolved step is now precise: prove that the coefficient matrix of the
-`p_(d,s)` family is nonsingular for every `m`, or evaluate its determinant
-from the sparse reflected system above.  The calculations through `k=15`
-give the conjectured value in the preceding section, but the sparse reduction
-alone does not yet establish its nonvanishing.
+This was the final open step in the original exploration: prove that the
+coefficient matrix of the `p_(d,s)` family is nonsingular for every `m`, or
+evaluate its determinant from the sparse reflected system above. The new
+boundary reflection proof establishes nonsingularity by a different route.
+The calculations through `k=15` give the conjectured determinant value in the
+preceding section, but neither those calculations nor the sparse reduction
+alone prove its exact evaluation.
 
 ## Additional exact evidence
 
@@ -293,13 +325,19 @@ final block
 This Smith pattern implies the determinant conjecture, but it is itself only
 computational evidence at present.
 
-## What a complete proof would yield
+## Resolved minimality and the remaining stronger conjectures
 
-A proof of the determinant formula, or merely of its nonvanishing, combined
-with the time-reversal form above would prove that the scalar recurrence for
-every column of A242322 has minimal order exactly
-`binomial(k+2,2)`.  Until that last step is supplied, the manuscript's current
-distinction remains necessary:
+The boundary reflection argument proves nonvanishing of the controllability
+determinant for every `k>=1`. Combined with the time-reversal form, this
+proves that every column of A242322 has minimal homogeneous
+constant-coefficient recurrence order exactly `binomial(k+2,2)`, even if a
+recurrence is required to hold only eventually.
 
-- characteristic recurrence of triangular order: proved for every `k`;
-- minimal scalar order: checked for a finite range, not proved in general.
+- Characteristic recurrence of triangular order: proved for every `k`.
+- Minimal scalar order of triangular size, even eventually: proved for every
+  `k` by the new general argument.
+- The displayed exact determinant evaluation: still conjectural.
+- The displayed Smith normal form pattern: still conjectural.
+
+The latter two arithmetic conjectures are independent follow-up questions;
+the completed minimality theorem does not assume them.

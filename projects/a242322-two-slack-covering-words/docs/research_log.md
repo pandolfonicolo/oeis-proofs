@@ -47,3 +47,17 @@ checks.
 
 Current status: draft for independent mathematical review.  No OEIS update has
 been prepared or proposed from this project.
+
+## 2026-10-23 — general scalar minimality proved
+
+A boundary Schur complement and reflection identity prove controllability
+for every parameter. A symmetric unimodular reversal form proves
+observability, and unimodularity of the transition matrix makes every
+shifted Hankel matrix invertible. Consequently the minimal scalar order is
+exactly `binomial(k+2,2)`, including recurrences that hold only eventually.
+The manuscript and a separate internal audit contain the full argument.
+
+Exact symbolic checks exercise the reflection identity and reversal form;
+they supplement the general proof. The stronger closed determinant and
+Smith normal form patterns remain conjectures. External human review is
+pending.
