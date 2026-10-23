@@ -64,6 +64,17 @@ finite arithmetic sieve. The sieve requires no theorem about reciprocal
 primes in an arithmetic progression.
 \end{abstract}
 
+\noindent\textbf{Prior work.}
+Lien-Hung Su's earlier preprint~\cite{su}, version~1 of October~10, 2026,
+establishes the overlapping primitive and total arithmetic formulas and
+fixed-point classification in Theorems~3.1 and~3.4. Its Theorem~3.6 proves
+the stronger asymptotic $S(x)\sim Cx/\sqrt{\log x}$, with an explicit
+positive constant, for the number $S(x)$ of fixed points up to $x$.
+We acknowledge this prior contribution. The present work supplies a separate
+explicit lattice-neighbor derivation, a finite-CRT proof of density zero,
+and a complete Lean formalization of the conclusions stated here.
+The sharper asymptotic is outside our formalized scope.
+
 \section{Definitions and proof dependencies}
 
 For $n\geq1$, let $\mathcal Q_n$ be the set of ordered quadruples
@@ -540,6 +551,12 @@ OEIS Foundation Inc., \emph{A354766},
 \bibitem{oeis-primitive}
 OEIS Foundation Inc., \emph{A278085},
 \url{https://oeis.org/A278085}.
+
+\bibitem{su}
+Lien-Hung Su,
+\emph{Integral Quadruples, Three-Square Representations, and Fixed-Point Density},
+version~1, Zenodo preprint, October~10, 2026,
+\href{https://doi.org/10.5281/zenodo.23272293}{doi:10.5281/zenodo.23272293}.
 
 \bibitem{minkowski}
 H. Minkowski, \emph{Geometrie der Zahlen}, B. G. Teubner, Leipzig, 1896.

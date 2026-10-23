@@ -8,6 +8,18 @@ only `propext`, `Classical.choice`, and `Quot.sound`; no admitted result, added
 axiom, or native compiler oracle is a dependency of the final conclusions.
 Independent external human mathematical review remains pending.
 
+The overlapping arithmetic formulas and fixed-point classification were
+already proved in Lien-Hung Su's earlier preprint,
+[*Integral Quadruples, Three-Square Representations, and Fixed-Point Density*,
+version 1, October 10, 2026](https://doi.org/10.5281/zenodo.23272293),
+Theorems 3.1 and 3.4. His Theorem 3.6 gives the stronger asymptotic
+`S(x) ~ C*x/sqrt(log x)` for the number of fixed points up to `x`, with an
+explicit positive constant. We acknowledge this prior contribution. This
+project supplies a separate explicit prime-neighbor derivation, a finite-CRT
+density-zero argument, and complete Lean proofs of the stated conclusions.
+It makes no priority claim for the shared results and does not formalize
+the stronger asymptotic.
+
 ## Results and normalization
 
 For positive `n`, a standard quadruple is an ordered integer quadruple with
@@ -95,10 +107,14 @@ excluded. No dependency cache or generated Lean binary is shipped.
 
 ## OEIS publication and review
 
-The OEIS entries retrieved on 2026-10-23 still described the relevant
-arithmetic claims as conjectures; this package does not claim that an OEIS
-update has been accepted. The mathematical completion and kernel checks are
-distinct from human review and editorial acceptance.
+The publicly approved OEIS entries checked on 2026-10-23 still described the
+relevant arithmetic claims as conjectures. The authenticated A354766 draft
+already credits Su's October 12 contribution. Our additional comment and
+links were saved as revision 54, followed by proposed revision 55, on
+October 22 EDT / October 23 local time. Those edits preserve the earlier
+contributor credits and are pending editorial acceptance. A278085 revisions
+48–49 are also proposed for review. Mathematical completion and kernel
+checks are distinct from human review and editorial acceptance.
 
 Before submitting any OEIS update, the human contributor must understand and
 personally verify its content and write the final submission prose. Follow
