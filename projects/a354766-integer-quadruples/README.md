@@ -107,14 +107,15 @@ excluded. No dependency cache or generated Lean binary is shipped.
 
 ## OEIS publication and review
 
-The publicly approved OEIS entries checked on 2026-10-23 still described the
-relevant arithmetic claims as conjectures. The authenticated A354766 draft
-already credits Su's October 12 contribution. Our additional comment and
-links were saved as revision 54, followed by proposed revision 55, on
-October 22 EDT / October 23 local time. Those edits preserve the earlier
-contributor credits and are pending editorial acceptance. A278085 revisions
-48–49 are also proposed for review. Mathematical completion and kernel
-checks are distinct from human review and editorial acceptance.
+The publicly approved entries checked on 2026-10-23 still described the
+relevant arithmetic claims as conjectures. Our A354766 comment and links
+were submitted in revisions 54–55, then reverted by Andrew Howroyd in
+revisions 56–57 because another contributor's edit was already pending.
+He asked us to wait until that draft is complete. The current A354766 draft
+retains Su's earlier contribution and preprint link; our additions are not
+in the current proposal. No further edit or discussion reply was posted.
+A278085 revisions 48–49 remain proposed for review. Mathematical completion
+and kernel checks are distinct from editorial acceptance and external review.
 
 Before submitting any OEIS update, the human contributor must understand and
 personally verify its content and write the final submission prose. Follow

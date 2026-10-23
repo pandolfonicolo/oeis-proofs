@@ -4,7 +4,7 @@
 | --- | --- | --- | --- |
 | A242239: one extra position | Generating function, column recurrence, stable rows, Mathar identity for A242235 | Written proof and exact Python checks | Existing public manuscript and OEIS manuscript/source links |
 | A242322: two extra positions | Transfer construction and quartic rows; general minimal recurrence order binomial(k+2,2), even eventually; merged in PR #7 | Written proof and exact symbolic checks | Public manuscript with minimality; merged [PR #7](https://github.com/pandolfonicolo/oeis-proofs/pull/7); OEIS revisions 24–25 proposed |
-| A354766/A278085: four integers and three squares | Primitive product, normalized multiplicativity and prime powers, equality characterization, natural density zero; overlapping conclusions previously established by Su | All 43 modules compiled; 14 final dependency reports use only propext, Classical.choice, Quot.sound | Public reproducible project; A354766 revisions 54–55 and A278085 revisions 48–49 proposed for review |
+| A354766/A278085: four integers and three squares | Primitive product, normalized multiplicativity and prime powers, equality characterization, natural density zero; overlapping conclusions previously established by Su | All 43 modules compiled; 14 final dependency reports use only propext, Classical.choice, Quot.sound | Public reproducible project; A278085 revisions 48–49 proposed; A354766 additions 54–55 reverted by editor 56–57 pending completion of the existing draft |
 
 The ten fixed-column sequences attached to the first two general families
 are specializations, not ten additional independent research projects.
@@ -48,7 +48,11 @@ conjectures as checked on 2026-10-23. The proposed updates link the complete
 public source and manuscript. The authenticated A354766 draft already
 credits Su's October 12 contribution. Our additional comment and links
 were saved as revision 54, followed by proposed revision 55, on October 22
-EDT / October 23 local time; neither is represented as editorial acceptance.
+EDT / October 23 local time. Andrew Howroyd then reverted our A354766
+additions in revisions 56–57 and asked us to wait until the existing draft
+is complete, citing the policy on interfering edits. The current A354766
+draft retains Su's earlier contributions but not our comment or links. No
+further A354766 edit or discussion reply has been posted.
 The earlier contributor credits are preserved. A278085 revisions 48–49 are
 also proposed for review. A242322 revisions 24–25 update the existing signed
 comment to the proved minimal order and pin its links to the minimality revision; the draft is
@@ -59,5 +63,6 @@ The current [OEIS AI policy](https://oeis.org/wiki/Use_of_AI_for_OEIS_Submission
 prohibits AI-generated full comments and editorial replies. The submitted
 comments use human-provided English text with notation and
 reference corrections; existing contributor credits are preserved. No
-editorial reply was posted. The submissions remain proposals pending OEIS
-editorial acceptance.
+editorial reply was posted. A278085 and A242322 remain proposals pending
+OEIS editorial acceptance; A354766 requires waiting for the existing draft
+to finish before a separate contribution can be considered.

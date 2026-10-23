@@ -63,14 +63,16 @@ through 40, with direct three-square checks up to 25. None of these finite
 checks is used as a proof of the general theorem.
 
 The OEIS AI policy and both relevant entries were checked on 2026-10-23.
-The publicly approved entries retain conjectural wording. The authenticated
-A354766 draft already credits Su's October 12 contribution. Our additional
-comment and links were saved as revision 54, followed by proposed revision
-55, on October 22 EDT / October 23 local time. Earlier contributor credits
-were preserved. A278085 revisions 48–49 are also proposed for review.
-No editorial acceptance or endorsement of this manuscript, or external human mathematical review is
-claimed. Human submission responsibility and prohibited AI comment/Pink Box practices are stated in the project README and the
-repository's CONTRIBUTING.md. The manuscript discloses AI assistance.
+The publicly approved entries retain conjectural wording. Our A354766
+comment and links were submitted in revisions 54–55, then reverted by
+Andrew Howroyd in revisions 56–57 because another contributor's edit was
+already pending. He asked us to wait until that draft is complete; no
+further edit or discussion reply was posted. The current A354766 proposal
+retains Su's earlier contributions but not our additions. A278085 revisions
+48–49 remain proposed for review. No editorial acceptance, endorsement or
+external human review is claimed. Human submission responsibility and
+prohibited AI comment/Pink Box practices are stated in the project README
+and repository CONTRIBUTING.md. The manuscript discloses AI assistance.
 
 Code and build tools use MIT; original content and documentation use CC BY
 4.0 under the repository's existing license files. External mathematical
