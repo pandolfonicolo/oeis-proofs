@@ -1,0 +1,305 @@
+{
+  "checked_at_utc": "2026-10-23T00:25:36.908954+00:00",
+  "checker": "existing persistent Lean LSP; exact complete joined dependency source",
+  "lsp_version": 19,
+  "busy": false,
+  "errors": 0,
+  "joined_sha256": "5b4876d49c76cd3d73d764baf38cb48d7d63c3853de5245ce9ee38439ff4db9b",
+  "line_count": 7462,
+  "sources": [
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/SmallIntegralLattices.lean",
+      "sha256": "e409413ccaaa77142a209f3057454fc473e06592cb3b3bc9c12aca0db08bf539",
+      "generated_first_line": 52,
+      "source_first_line": 1,
+      "line_count": 554
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/NeighborRealification.lean",
+      "sha256": "7353570155c73406ba3c109c2adb482639da4f2b78bc787f8e762a10888566d5",
+      "generated_first_line": 609,
+      "source_first_line": 1,
+      "line_count": 90
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/NeighborTopology.lean",
+      "sha256": "1be5b8620b4c46fcd2f83495ae7d13302d1943a20078b53070425522505608b3",
+      "generated_first_line": 702,
+      "source_first_line": 1,
+      "line_count": 101
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/NeighborConstruction.lean",
+      "sha256": "93d0fc979864fc619b63a919d20ffff95db121d822084f7783c82a10c71c465a",
+      "generated_first_line": 806,
+      "source_first_line": 1,
+      "line_count": 569
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/StandardRealLattice.lean",
+      "sha256": "4051d906412f5da4ac376ad1dc3b06225c3997b02e1573c968ba91bb72c808eb",
+      "generated_first_line": 1378,
+      "source_first_line": 1,
+      "line_count": 152
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/PrimitiveTransport.lean",
+      "sha256": "e613b6f4ded4977410d60e9f1e8b169e1842470e8152fdb5afd88db18d435b5f",
+      "generated_first_line": 1533,
+      "source_first_line": 1,
+      "line_count": 173
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/PrimitiveVectorModel.lean",
+      "sha256": "1fc568bfc0f399d939dfc12a9e689174b8181dd85347220e89889947cdb53759",
+      "generated_first_line": 1709,
+      "source_first_line": 1,
+      "line_count": 86
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/ShellEquivalence.lean",
+      "sha256": "6f22989c4d2e58f84235596f1e63087d7c55abc00cb4093a2949219a20c1fc96",
+      "generated_first_line": 1798,
+      "source_first_line": 1,
+      "line_count": 63
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/PrimitiveNeighborAlgebra.lean",
+      "sha256": "bc2d5e99979919d56de3632c3caad7dc90cad8c5783f81a9f5300a58db4b18e8",
+      "generated_first_line": 1864,
+      "source_first_line": 1,
+      "line_count": 320
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/NeighborShellCounts.lean",
+      "sha256": "0944ea685c71127a6d97cc299c39a0d1887da93d50cdf452abb13407852ddc5b",
+      "generated_first_line": 2187,
+      "source_first_line": 1,
+      "line_count": 102
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/IsotropicLift.lean",
+      "sha256": "031068bf1eefcb903c46c4e050bc6109eefaf5a1324b008a2be1f923fb8701ba",
+      "generated_first_line": 2292,
+      "source_first_line": 1,
+      "line_count": 120
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/IsotropicLines.lean",
+      "sha256": "f04c5217b33c0fc5ec5df8ed5e91b7c6c59690a87d6661e71be9f1789143a34b",
+      "generated_first_line": 2415,
+      "source_first_line": 1,
+      "line_count": 484
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/NormalizedNeighborFamily.lean",
+      "sha256": "91206f6dbac2d397638d93040c7cc964fbe8f1add0de7e13a996493572f3d1fc",
+      "generated_first_line": 2902,
+      "source_first_line": 1,
+      "line_count": 208
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/InsideContentClassification.lean",
+      "sha256": "ed5ac581066bf0b1552680e030e348cc173549e1921cf36d4035c7b259f46461",
+      "generated_first_line": 3113,
+      "source_first_line": 1,
+      "line_count": 79
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/InsideShellPartition.lean",
+      "sha256": "07c82c13ef3c2ffb86c216b5e42ba4c8133c2796bff3915e85d42e04e3b75c69",
+      "generated_first_line": 3195,
+      "source_first_line": 1,
+      "line_count": 98
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/ShellPartitions.lean",
+      "sha256": "ea254e9c6880afb197ee0f9c956c01ba1a81d70387f9e0198354b13f82855e55",
+      "generated_first_line": 3296,
+      "source_first_line": 1,
+      "line_count": 110
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/MinusThreeCharacter.lean",
+      "sha256": "1323bb5fe272bc806139a9e1f5ae50e7d5de8101c1f9c4ad4e540ece9c59ee86",
+      "generated_first_line": 3409,
+      "source_first_line": 1,
+      "line_count": 53
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/CharacterScaling.lean",
+      "sha256": "f1f72a23154d26ad6a8666e86519ba66d849711937871659a0f15bbedfe7ba8d",
+      "generated_first_line": 3465,
+      "source_first_line": 1,
+      "line_count": 44
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/PrimitiveResidue.lean",
+      "sha256": "686ca82dec7c762ba7540ee330b7f465f9d8adf6e64e568fdc2bc3cd0e089232",
+      "generated_first_line": 3512,
+      "source_first_line": 1,
+      "line_count": 131
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/ExteriorNeighborCount.lean",
+      "sha256": "2e85db136707cc449fb4da6320a4b5a2afa8c7d2b111477aa50279be4000d78c",
+      "generated_first_line": 3646,
+      "source_first_line": 1,
+      "line_count": 170
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/EulerProductFromRecurrence.lean",
+      "sha256": "52f61e009285c096270cffd05ed6a56175dda379b3dee43923a240431211d541",
+      "generated_first_line": 3819,
+      "source_first_line": 1,
+      "line_count": 148
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/geometry-integration-inputs/KernelBase.lean",
+      "sha256": "c577890033e8f075bc73d58ceab633c31f90afa7678e1e7fe774a53ecc75d448",
+      "generated_first_line": 3970,
+      "source_first_line": 1,
+      "line_count": 14
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/NeighborFiberCounts.lean",
+      "sha256": "b77e5e6a07dc92551f617f6b912396541a06fdda015b0493af156c095c68cb2a",
+      "generated_first_line": 3987,
+      "source_first_line": 1,
+      "line_count": 194
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/InsideNeighborSums.lean",
+      "sha256": "a79fd6e54bd12e4c3ba5e31d0f3f8ad6582e0a6c2439253bcb8c4046a779eff4",
+      "generated_first_line": 4184,
+      "source_first_line": 1,
+      "line_count": 318
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/PrimitiveNeighborCount.lean",
+      "sha256": "0d416fb799e6499d1b59914c813255014bc5ca0735660e31e1d1a3ce767a8a3e",
+      "generated_first_line": 4505,
+      "source_first_line": 1,
+      "line_count": 168
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/Bridge.lean",
+      "sha256": "8c79894bb481ee095edb1429c08e6132824c98fe362753e8f9a9a67f8b08052f",
+      "generated_first_line": 4676,
+      "source_first_line": 1,
+      "line_count": 127
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/HadamardBridge.lean",
+      "sha256": "5be5a4de689f77c1ebe904beef1ff048f52fcb76a1af7c144fe928bbb4666bbc",
+      "generated_first_line": 4806,
+      "source_first_line": 1,
+      "line_count": 213
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/ParityBridge.lean",
+      "sha256": "a966e0deac2abc3137edc18cafa2e33a905df9c38957193edb2843b0e596a4f4",
+      "generated_first_line": 5022,
+      "source_first_line": 1,
+      "line_count": 168
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/OddCountingBridge.lean",
+      "sha256": "08a29615f56dc8649d0188fa5f5836062cea48eff3b8dbe9de84f401b2acb335",
+      "generated_first_line": 5193,
+      "source_first_line": 1,
+      "line_count": 121
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/PrimitivityBridge.lean",
+      "sha256": "96b782fa7501d97ef51ce3f9c6bf6912ebb1ec13f32e0128fc45d694e15afbf6",
+      "generated_first_line": 5317,
+      "source_first_line": 1,
+      "line_count": 174
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/PrimitiveOddCounting.lean",
+      "sha256": "3c5a44de4068ce17c2c457f787f80375e62a22e60e495db88b7a83fed901fd30",
+      "generated_first_line": 5494,
+      "source_first_line": 1,
+      "line_count": 138
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/DoublingBridge.lean",
+      "sha256": "ccb637d70da71cd985d39b51c8e812a30386d91bc5d0279c52a2e11877e72da6",
+      "generated_first_line": 5635,
+      "source_first_line": 1,
+      "line_count": 348
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/ContentDecomposition.lean",
+      "sha256": "119115b203948879bc9bc5105eb4c424dcac0e5c7d9fcbc2efc6c54c2942b304",
+      "generated_first_line": 5986,
+      "source_first_line": 1,
+      "line_count": 260
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SignOrbit.lean",
+      "sha256": "5ebd9da372d964a52b84ac7ae9654d784dba52548da3b6b9aaf2da560f43af56",
+      "generated_first_line": 6249,
+      "source_first_line": 1,
+      "line_count": 195
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NormalizedDecomposition.lean",
+      "sha256": "28b36f426184458031f9ca5a956e47e95783c88cbe0e781d73d509de9c7ccfe6",
+      "generated_first_line": 6447,
+      "source_first_line": 1,
+      "line_count": 18
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/A278085Complement.lean",
+      "sha256": "a43c2011f16e371c95ef1ef3b6e0f50e6438cc4282dba5376f0835ce6dab1e48",
+      "generated_first_line": 6468,
+      "source_first_line": 1,
+      "line_count": 190
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/Blueprint.lean",
+      "sha256": "07461a8fc9000da7a63f5dc4d44be3d20dfad4b1b85459f433fd82703979a718",
+      "generated_first_line": 6661,
+      "source_first_line": 1,
+      "line_count": 779
+    },
+    {
+      "file": "/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/FinalAxioms.lean",
+      "sha256": "ff1172614b05482f6269e46a04dd70150c910134d1536358d7ef7a130fb8d4f1",
+      "generated_first_line": 7443,
+      "source_first_line": 1,
+      "line_count": 19
+    }
+  ],
+  "compiled_local_imports": [
+    "A354766.Elementary",
+    "A354766.FiniteCounts",
+    "A354766.DensityLimit"
+  ],
+  "final_axiom_audits": [
+    "'A354766Neighbors.actual_odd_prime_recurrences' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766Neighbors.primitive_three_squares_euler_product' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.cooper_hirschhorn_specialization' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.primitive_quad_count_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.multiplicative_conclusion' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.P_prime_pow_mod_six_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.P_prime_pow_mod_six_five' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.P_three_pow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.T_prime_pow_mod_six_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.T_prime_pow_mod_three' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.equality_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.equalitySet_density_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.A278085Primary_eq_P' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'A354766.A278085Primary_multiplicative' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sorryAx": false,
+  "compiler_trust_axioms": false
+}

@@ -1,0 +1,49 @@
+# SPDX-License-Identifier: MIT
+name: Lean proof
+
+on:
+  pull_request:
+    paths:
+      - 'projects/a354766-integer-quadruples/**'
+      - '.github/workflows/lean.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'projects/a354766-integer-quadruples/**'
+      - '.github/workflows/lean.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kernel-verification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Stage proof sources without changing recorded evidence
+        working-directory: projects/a354766-integer-quadruples
+        run: python3 verification/prepare_formal.py
+      - name: Install pinned Lean and fetch Mathlib cache
+        uses: leanprover/lean-action@24581d74d674803a25a81b10b059c5c0cdd344c6 # v1
+        with:
+          lake-package-directory: projects/a354766-integer-quadruples/verification/current/formal
+          auto-config: 'false'
+          build: 'false'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'true'
+          use-github-cache: 'false'
+      - name: Compile every public module and audit actual final dependencies
+        working-directory: projects/a354766-integer-quadruples/verification/current/formal
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/compile_modules.py 2>&1 | tee /tmp/a354766-lean.log
+          python3 tools/audit_no_admissions.py --axioms-log /tmp/a354766-lean.log
+      - name: Confirm recorded evidence and proof sources did not change
+        run: git diff --exit-code

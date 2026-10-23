@@ -1,0 +1,18 @@
+# Fresh verification and dependency/build artifacts
+verification/current/
+lean/.lake/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Preserve release compilation records despite the repository-wide *.log rule.
+!lean/verification/*.log
+
+# LaTeX intermediates; retain the public PDF
+manuscript/*.aux
+manuscript/*.fdb_latexmk
+manuscript/*.fls
+manuscript/*.log
+manuscript/*.out
+manuscript/*.synctex.gz
+manuscript/*.toc

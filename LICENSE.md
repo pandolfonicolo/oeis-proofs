@@ -6,7 +6,7 @@ This repository uses two licenses:
 
 - Source code and build automation are licensed under the
   [MIT License](LICENSES/MIT.txt), SPDX identifier `MIT`. This includes Python
-  programs, Makefiles, and GitHub Actions workflows.
+  programs, original Lean source files, Makefiles, and GitHub Actions workflows.
 - Manuscripts, compiled PDFs, mathematical exposition, OEIS working notes,
   documentation, metadata, generated tables, and recorded verification output
   are licensed under the

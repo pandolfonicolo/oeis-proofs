@@ -1,4 +1,8 @@
-# Release and publication checklist
+# Original A242239 release checklist
+
+This historical checklist records the first family release. Current scope and
+publication status across all three families are tracked in
+[publication_status.md](publication_status.md).
 
 ## Completed
 

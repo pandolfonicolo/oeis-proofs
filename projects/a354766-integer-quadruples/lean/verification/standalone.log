@@ -1,0 +1,122 @@
+Lean (version 4.27.0, arm64-apple-darwin24.6.0, commit db93fe1608548721853390a10cd40580fe7d22ae, Release) 
+Mathlib a3a10db0e9d66acbebf76c5e6a135066525ac900
+REUSE A354766.Elementary
+REUSE A354766.FiniteCounts
+CHECK A354766.Bridge
+RESULT A354766.Bridge 0 16.014
+CHECK A354766.HadamardBridge
+RESULT A354766.HadamardBridge 0 4.497
+CHECK A354766.ParityBridge
+RESULT A354766.ParityBridge 0 2.056
+CHECK A354766.OddCountingBridge
+RESULT A354766.OddCountingBridge 0 1.812
+CHECK A354766.PrimitivityBridge
+RESULT A354766.PrimitivityBridge 0 3.303
+CHECK A354766.PrimitiveOddCounting
+RESULT A354766.PrimitiveOddCounting 0 1.964
+CHECK A354766.DoublingBridge
+RESULT A354766.DoublingBridge 0 4.337
+CHECK A354766.ContentDecomposition
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/ContentDecomposition.lean:57:4: warning: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/ContentDecomposition.lean:63:4: warning: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/ContentDecomposition.lean:162:38: warning: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/ContentDecomposition.lean:224:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+RESULT A354766.ContentDecomposition 0 6.888
+CHECK A354766.SignOrbit
+RESULT A354766.SignOrbit 0 3.414
+CHECK A354766.NormalizedDecomposition
+RESULT A354766.NormalizedDecomposition 0 1.725
+REUSE A354766.BadPrimeSieve
+REUSE A354766.DensityLimit
+REUSE A354766.PrimitiveTransport
+REUSE A354766.PrimitiveVectorModel
+REUSE A354766.ShellEquivalence
+REUSE A354766.PrimitiveNeighborAlgebra
+REUSE A354766.IsotropicLines
+REUSE A354766.IsotropicLift
+REUSE A354766.NeighborConstruction
+REUSE A354766.NormalizedNeighborFamily
+REUSE A354766.PrimitiveResidue
+REUSE A354766.MinusThreeCharacter
+REUSE A354766.CharacterScaling
+CHECK A354766.NeighborFiberCounts
+'A354766Neighbors.family_inside_one_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.family_inside_zero_div_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.family_inside_one_card_at_level' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.family_inside_zero_nondiv_card_at_level' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.NeighborFiberCounts 0 43.914
+REUSE A354766.SmallIntegralLattices
+REUSE A354766.NeighborRealification
+REUSE A354766.NeighborTopology
+REUSE A354766.StandardRealLattice
+REUSE A354766.NeighborShellCounts
+REUSE A354766.InsideContentClassification
+REUSE A354766.InsideShellPartition
+REUSE A354766.ShellPartitions
+REUSE A354766.ExteriorNeighborCount
+CHECK A354766.InsideNeighborSums
+'A354766Neighbors.sigma_card_from_constant_fibers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.inside_family_card_of_not_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.inside_family_card_of_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.InsideNeighborSums 0 49.965
+REUSE A354766.EulerProductFromRecurrence
+CHECK A354766.KernelBase
+'A354766Research.primitive_three_base_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.KernelBase 0 10.248
+CHECK A354766.PrimitiveNeighborCount
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/PrimitiveNeighborCount.lean:71:14: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/PrimitiveNeighborCount.lean:99:14: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/PrimitiveNeighborCount.lean:113:14: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'A354766Neighbors.total_family_shell_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.total_family_shell_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.family_count_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.primitive_neighbor_first_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.primitive_neighbor_repeated_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.actual_odd_prime_recurrences' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.primitive_three_squares_euler_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.PrimitiveNeighborCount 0 49.476
+CHECK A354766.A278085Complement
+'A354766.a278085_quad_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.A278085ComplementTotal_eq_normalized_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.complement_primitive_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.a278085_primitive_quad_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.A278085Primary_eq_normalized_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.A278085Complement 0 12.92
+CHECK A354766.Blueprint
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/Blueprint.lean:417:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+RESULT A354766.Blueprint 0 45.129
+CHECK A354766
+RESULT A354766 0 42.25
+CHECK A354766.FinalAxioms
+'A354766Neighbors.actual_odd_prime_recurrences' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.primitive_three_squares_euler_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.cooper_hirschhorn_specialization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.primitive_quad_count_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.multiplicative_conclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.P_prime_pow_mod_six_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.P_prime_pow_mod_six_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.P_three_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.T_prime_pow_mod_six_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.T_prime_pow_mod_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.equality_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.equalitySet_density_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.A278085Primary_eq_P' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766.A278085Primary_multiplicative' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.FinalAxioms 0 62.271
+All selected modules passed.

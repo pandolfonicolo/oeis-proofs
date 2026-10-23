@@ -1,0 +1,2121 @@
+{
+  "uri": "file:///Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/formal-neighbors/SmallIntegralLattices.lean",
+  "version": 19,
+  "digest": "5b4876d49c76cd3d73d764baf38cb48d7d63c3853de5245ce9ee38439ff4db9b",
+  "busy": false,
+  "diagnostics": [
+    {
+      "fullRange": {
+        "end": {
+          "character": 8,
+          "line": 160
+        },
+        "start": {
+          "character": 0,
+          "line": 151
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `SmallIntegralLattices.exists_integral_orthogonal_remainder`:\n  [FiniteDimensional ℝ E]\n  [MeasurableSpace E]\n  [BorelSpace E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 152
+        },
+        "start": {
+          "character": 0,
+          "line": 151
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 59,
+          "line": 176
+        },
+        "start": {
+          "character": 8,
+          "line": 175
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `SmallIntegralLattices.mem_orthogonalSlice`:\n  [FiniteDimensional ℝ E]\n  [MeasurableSpace E]\n  [BorelSpace E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 176
+        },
+        "start": {
+          "character": 8,
+          "line": 175
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 24,
+          "line": 181
+        },
+        "start": {
+          "character": 0,
+          "line": 178
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `SmallIntegralLattices.orthogonalSlice_integral`:\n  [FiniteDimensional ℝ E]\n  [MeasurableSpace E]\n  [BorelSpace E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 179
+        },
+        "start": {
+          "character": 0,
+          "line": 178
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 27,
+          "line": 212
+        },
+        "start": {
+          "character": 0,
+          "line": 203
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `SmallIntegralLattices.span_unit_inf_orthogonalSlice`:\n  [FiniteDimensional ℝ E]\n  [MeasurableSpace E]\n  [BorelSpace E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 204
+        },
+        "start": {
+          "character": 0,
+          "line": 203
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 24,
+          "line": 316
+        },
+        "start": {
+          "character": 8,
+          "line": 312
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `SmallIntegralLattices.unitPerpMap_apply_perp`:\n  [FiniteDimensional ℝ E]\n  [MeasurableSpace E]\n  [BorelSpace E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 313
+        },
+        "start": {
+          "character": 8,
+          "line": 312
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 59,
+          "line": 325
+        },
+        "start": {
+          "character": 0,
+          "line": 318
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `SmallIntegralLattices.unitPerpMap_mem_lattice`:\n  [FiniteDimensional ℝ E]\n  [MeasurableSpace E]\n  [BorelSpace E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 319
+        },
+        "start": {
+          "character": 0,
+          "line": 318
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 32,
+          "line": 360
+        },
+        "start": {
+          "character": 0,
+          "line": 357
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `SmallIntegralLattices.perpendicularLattice_integral`:\n  [FiniteDimensional ℝ E]\n  [MeasurableSpace E]\n  [BorelSpace E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 358
+        },
+        "start": {
+          "character": 0,
+          "line": 357
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 7,
+          "line": 498
+        },
+        "start": {
+          "character": 0,
+          "line": 488
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `SmallIntegralLattices.unitPerp_finrank`:\n  [MeasurableSpace E]\n  [BorelSpace E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [MeasurableSpace E] [BorelSpace E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 489
+        },
+        "start": {
+          "character": 0,
+          "line": 488
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 57,
+          "line": 585
+        },
+        "start": {
+          "character": 0,
+          "line": 570
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `SmallIntegralLattices.orthonormal_integral_coordinates_norm`:\n  [MeasurableSpace E]\n  [BorelSpace E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [MeasurableSpace E] [BorelSpace E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 571
+        },
+        "start": {
+          "character": 0,
+          "line": 570
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 36,
+          "line": 2457
+        },
+        "start": {
+          "character": 6,
+          "line": 2457
+        }
+      },
+      "message": "Try `simp at this` instead of `simpa using this`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+      "range": {
+        "end": {
+          "character": 36,
+          "line": 2457
+        },
+        "start": {
+          "character": 6,
+          "line": 2457
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 36,
+          "line": 2461
+        },
+        "start": {
+          "character": 6,
+          "line": 2461
+        }
+      },
+      "message": "Try `simp at this` instead of `simpa using this`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+      "range": {
+        "end": {
+          "character": 36,
+          "line": 2461
+        },
+        "start": {
+          "character": 6,
+          "line": 2461
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 44,
+          "line": 2489
+        },
+        "start": {
+          "character": 16,
+          "line": 2489
+        }
+      },
+      "message": "Try `simp at h0` instead of `simpa using h0`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+      "range": {
+        "end": {
+          "character": 44,
+          "line": 2489
+        },
+        "start": {
+          "character": 16,
+          "line": 2489
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 85,
+          "line": 3334
+        },
+        "start": {
+          "character": 0,
+          "line": 3311
+        }
+      },
+      "message": "automatically included section variable(s) unused in theorem `A354766Neighbors.insideOutsideMap_bijective`:\n  [CommRing R]\n  [IsDomain R]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CommRing R] [IsDomain R] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+      "range": {
+        "end": {
+          "character": 0,
+          "line": 3312
+        },
+        "start": {
+          "character": 0,
+          "line": 3311
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 57,
+          "line": 310
+        },
+        "start": {
+          "character": 49,
+          "line": 310
+        }
+      },
+      "message": "This simp argument is unused:\n  mul_comm\n\nHint: Omit it from the simp argument list.\n  simp [inner_smul_right, smul_sub, smul_smul,̵ ̵m̵u̵l̵_̵c̵o̵m̵m̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 57,
+          "line": 310
+        },
+        "start": {
+          "character": 49,
+          "line": 310
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 49,
+          "line": 654
+        },
+        "start": {
+          "character": 46,
+          "line": 654
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 49,
+          "line": 654
+        },
+        "start": {
+          "character": 46,
+          "line": 654
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 27,
+          "line": 960
+        },
+        "start": {
+          "character": 23,
+          "line": 960
+        }
+      },
+      "message": "this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+      "range": {
+        "end": {
+          "character": 27,
+          "line": 960
+        },
+        "start": {
+          "character": 23,
+          "line": 960
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 27,
+          "line": 960
+        },
+        "start": {
+          "character": 23,
+          "line": 960
+        }
+      },
+      "message": "'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+      "range": {
+        "end": {
+          "character": 27,
+          "line": 960
+        },
+        "start": {
+          "character": 23,
+          "line": 960
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 64,
+          "line": 992
+        },
+        "start": {
+          "character": 51,
+          "line": 992
+        }
+      },
+      "message": "This simp argument is unused:\n  Pi.smul_apply\n\nHint: Omit it from the simp argument list.\n  simp only [dot3, castVec, liftVec, Pi.add_apply, P̵i̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵zsmul_eq_mul, Int.cast_add, Int.cast_mul,\n  ̲  ̲ ̲ ̲Pi.mul_apply, Pi.intCast_def, Pi.natCast_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 64,
+          "line": 992
+        },
+        "start": {
+          "character": 51,
+          "line": 992
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 76,
+          "line": 993
+        },
+        "start": {
+          "character": 62,
+          "line": 993
+        }
+      },
+      "message": "This simp argument is unused:\n  Pi.natCast_def\n\nHint: Omit it from the simp argument list.\n  simp only [dot3, castVec, liftVec, Pi.add_apply, Pi.smul_apply, zsmul_eq_mul, Int.cast_add,\n  ̲  ̲ ̲ ̲Int.cast_mul, Pi.mul_apply, P̵i̵.̵i̵n̵t̵C̵a̵s̵t̵_̵d̵e̵f̵,̵ ̵P̵i̵.̵n̵a̵t̵C̵a̵s̵t̵_̵d̵e̵f̵]̵P̲i̲.̲i̲n̲t̲C̲a̲s̲t̲_̲d̲e̲f̲]̲\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 76,
+          "line": 993
+        },
+        "start": {
+          "character": 62,
+          "line": 993
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 27,
+          "line": 1016
+        },
+        "start": {
+          "character": 23,
+          "line": 1016
+        }
+      },
+      "message": "this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+      "range": {
+        "end": {
+          "character": 27,
+          "line": 1016
+        },
+        "start": {
+          "character": 23,
+          "line": 1016
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 27,
+          "line": 1016
+        },
+        "start": {
+          "character": 23,
+          "line": 1016
+        }
+      },
+      "message": "'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+      "range": {
+        "end": {
+          "character": 27,
+          "line": 1016
+        },
+        "start": {
+          "character": 23,
+          "line": 1016
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 26,
+          "line": 1035
+        },
+        "start": {
+          "character": 23,
+          "line": 1035
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 26,
+          "line": 1035
+        },
+        "start": {
+          "character": 23,
+          "line": 1035
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 45,
+          "line": 1073
+        },
+        "start": {
+          "character": 30,
+          "line": 1073
+        }
+      },
+      "message": "This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  simp [dot3,̵ ̵P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 45,
+          "line": 1073
+        },
+        "start": {
+          "character": 30,
+          "line": 1073
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 28,
+          "line": 1089
+        },
+        "start": {
+          "character": 24,
+          "line": 1089
+        }
+      },
+      "message": "this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+      "range": {
+        "end": {
+          "character": 28,
+          "line": 1089
+        },
+        "start": {
+          "character": 24,
+          "line": 1089
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 28,
+          "line": 1089
+        },
+        "start": {
+          "character": 24,
+          "line": 1089
+        }
+      },
+      "message": "'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+      "range": {
+        "end": {
+          "character": 28,
+          "line": 1089
+        },
+        "start": {
+          "character": 24,
+          "line": 1089
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 31,
+          "line": 1152
+        },
+        "start": {
+          "character": 27,
+          "line": 1152
+        }
+      },
+      "message": "this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+      "range": {
+        "end": {
+          "character": 31,
+          "line": 1152
+        },
+        "start": {
+          "character": 27,
+          "line": 1152
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 31,
+          "line": 1152
+        },
+        "start": {
+          "character": 27,
+          "line": 1152
+        }
+      },
+      "message": "'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+      "range": {
+        "end": {
+          "character": 31,
+          "line": 1152
+        },
+        "start": {
+          "character": 27,
+          "line": 1152
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 51,
+          "line": 1171
+        },
+        "start": {
+          "character": 35,
+          "line": 1171
+        }
+      },
+      "message": "This simp argument is unused:\n  Int.zsmul_eq_mul\n\nHint: Omit it from the simp argument list.\n  simp [̵I̵n̵t̵.̵z̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵z̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]̵[̲z̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲]̲\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 51,
+          "line": 1171
+        },
+        "start": {
+          "character": 35,
+          "line": 1171
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 64,
+          "line": 1177
+        },
+        "start": {
+          "character": 43,
+          "line": 1177
+        }
+      },
+      "message": "This simp argument is unused:\n  ZMod.natCast_zmod_val\n\nHint: Omit it from the simp argument list.\n  simp [intCastMod,̵ ̵Z̵M̵o̵d̵.̵n̵a̵t̵C̵a̵s̵t̵_̵z̵m̵o̵d̵_̵v̵a̵l̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 64,
+          "line": 1177
+        },
+        "start": {
+          "character": 43,
+          "line": 1177
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 58,
+          "line": 1293
+        },
+        "start": {
+          "character": 45,
+          "line": 1293
+        }
+      },
+      "message": "This simp argument is unused:\n  Pi.smul_apply\n\nHint: Omit it from the simp argument list.\n  simp only [castVec, liftVec, Pi.add_apply, P̵i̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵zsmul_eq_mul, Int.cast_add, Int.cast_mul,\n  ̲  ̲ ̲ ̲Int.cast_natCast, Pi.mul_apply, Pi.intCast_def, Pi.natCast_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 58,
+          "line": 1293
+        },
+        "start": {
+          "character": 45,
+          "line": 1293
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 22,
+          "line": 1296
+        },
+        "start": {
+          "character": 19,
+          "line": 1296
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 22,
+          "line": 1296
+        },
+        "start": {
+          "character": 19,
+          "line": 1296
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 52,
+          "line": 1753
+        },
+        "start": {
+          "character": 41,
+          "line": 1753
+        }
+      },
+      "message": "This simp argument is unused:\n  smul_eq_mul\n\nHint: Omit it from the simp argument list.\n  simp [Pi.smul_apply, s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵ha, hb, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 52,
+          "line": 1753
+        },
+        "start": {
+          "character": 41,
+          "line": 1753
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 23,
+          "line": 2571
+        },
+        "start": {
+          "character": 20,
+          "line": 2571
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 23,
+          "line": 2571
+        },
+        "start": {
+          "character": 20,
+          "line": 2571
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 70,
+          "line": 2606
+        },
+        "start": {
+          "character": 47,
+          "line": 2606
+        }
+      },
+      "message": "This simp argument is unused:\n  Matrix.cons_val_fin_one\n\nHint: Omit it from the simp argument list.\n  simp only [toSplit, standardNorm, LinearMap.coe_mk, AddHom.coe_mk, Matrix.cons_val_zero,\n  ̲  ̲ ̲ ̲Matrix.cons_val_one, M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵f̵i̵n̵_̵o̵n̵e̵,̵Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 70,
+          "line": 2606
+        },
+        "start": {
+          "character": 47,
+          "line": 2606
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 67,
+          "line": 2683
+        },
+        "start": {
+          "character": 64,
+          "line": 2683
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 67,
+          "line": 2683
+        },
+        "start": {
+          "character": 64,
+          "line": 2683
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 23,
+          "line": 2690
+        },
+        "start": {
+          "character": 20,
+          "line": 2690
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 23,
+          "line": 2690
+        },
+        "start": {
+          "character": 20,
+          "line": 2690
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 23,
+          "line": 2694
+        },
+        "start": {
+          "character": 20,
+          "line": 2694
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 23,
+          "line": 2694
+        },
+        "start": {
+          "character": 20,
+          "line": 2694
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 70,
+          "line": 2831
+        },
+        "start": {
+          "character": 47,
+          "line": 2831
+        }
+      },
+      "message": "This simp argument is unused:\n  Matrix.cons_val_fin_one\n\nHint: Omit it from the simp argument list.\n  simp only [splitPolar, standardDot, toSplit, LinearMap.coe_mk, AddHom.coe_mk,\n      Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_f̵i̵n̵_̵o̵n̵e̵,̵\n  ̵ ̵ ̵ ̵ ̵M̵a̵tr̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵t̵wo, Matrix.head_cons,\n  ̲  ̲ ̲ ̲Matrix.tail_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 70,
+          "line": 2831
+        },
+        "start": {
+          "character": 47,
+          "line": 2831
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 45,
+          "line": 2990
+        },
+        "start": {
+          "character": 24,
+          "line": 2990
+        }
+      },
+      "message": "This simp argument is unused:\n  ZMod.natCast_zmod_val\n\nHint: Omit it from the simp argument list.\n  simp [reduceVec, z,̵ ̵Z̵M̵o̵d̵.̵n̵a̵t̵C̵a̵s̵t̵_̵z̵m̵o̵d̵_̵v̵a̵l̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 45,
+          "line": 2990
+        },
+        "start": {
+          "character": 24,
+          "line": 2990
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 72,
+          "line": 3040
+        },
+        "start": {
+          "character": 51,
+          "line": 3040
+        }
+      },
+      "message": "This simp argument is unused:\n  ZMod.natCast_zmod_val\n\nHint: Omit it from the simp argument list.\n  simp [az,̵ ̵Z̵M̵o̵d̵.̵n̵a̵t̵C̵a̵s̵t̵_̵z̵m̵o̵d̵_̵v̵a̵l̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 72,
+          "line": 3040
+        },
+        "start": {
+          "character": 51,
+          "line": 3040
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 92,
+          "line": 3578
+        },
+        "start": {
+          "character": 80,
+          "line": 3578
+        }
+      },
+      "message": "This simp argument is unused:\n  Pi.mul_apply\n\nHint: Omit it from the simp argument list.\n  simp only [rationalNorm, dot3, Pi.smul_apply, zsmul_eq_mul, Int.cast_natCast, P̵i̵.̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵Pi.intCast_def,\n  ̲  ̲ ̲ ̲Pi.natCast_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 92,
+          "line": 3578
+        },
+        "start": {
+          "character": 80,
+          "line": 3578
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 108,
+          "line": 3578
+        },
+        "start": {
+          "character": 94,
+          "line": 3578
+        }
+      },
+      "message": "This simp argument is unused:\n  Pi.intCast_def\n\nHint: Omit it from the simp argument list.\n  simp only [rationalNorm, dot3, Pi.smul_apply, zsmul_eq_mul, Int.cast_natCast, Pi.mul_apply,\n  ̲ P̵i̵.̵i̵n̵t̵C̵a̵s̵t̵_̵d̵e̵f̵,̵  ̲ ̲Pi.natCast_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 108,
+          "line": 3578
+        },
+        "start": {
+          "character": 94,
+          "line": 3578
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 124,
+          "line": 3578
+        },
+        "start": {
+          "character": 110,
+          "line": 3578
+        }
+      },
+      "message": "This simp argument is unused:\n  Pi.natCast_def\n\nHint: Omit it from the simp argument list.\n  simp only [rationalNorm, dot3, Pi.smul_apply, zsmul_eq_mul, Int.cast_natCast, Pi.mul_apply,\n  ̲ P̵i̵.̵i̵n̵t̵C̵a̵s̵t̵_̵d̵e̵f̵,̵  ̲ ̲Pi.i̲na̵tCast_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 124,
+          "line": 3578
+        },
+        "start": {
+          "character": 110,
+          "line": 3578
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4175
+        },
+        "start": {
+          "character": 0,
+          "line": 4175
+        }
+      },
+      "message": "'A354766Neighbors.family_inside_one_card' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4175
+        },
+        "start": {
+          "character": 0,
+          "line": 4175
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4176
+        },
+        "start": {
+          "character": 0,
+          "line": 4176
+        }
+      },
+      "message": "'A354766Neighbors.family_inside_zero_div_card' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4176
+        },
+        "start": {
+          "character": 0,
+          "line": 4176
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4177
+        },
+        "start": {
+          "character": 0,
+          "line": 4177
+        }
+      },
+      "message": "'A354766Neighbors.family_inside_one_card_at_level' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4177
+        },
+        "start": {
+          "character": 0,
+          "line": 4177
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4178
+        },
+        "start": {
+          "character": 0,
+          "line": 4178
+        }
+      },
+      "message": "'A354766Neighbors.family_inside_zero_nondiv_card_at_level' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4178
+        },
+        "start": {
+          "character": 0,
+          "line": 4178
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4498
+        },
+        "start": {
+          "character": 0,
+          "line": 4498
+        }
+      },
+      "message": "'A354766Neighbors.sigma_card_from_constant_fibers' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4498
+        },
+        "start": {
+          "character": 0,
+          "line": 4498
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4499
+        },
+        "start": {
+          "character": 0,
+          "line": 4499
+        }
+      },
+      "message": "'A354766Neighbors.inside_family_card_of_not_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4499
+        },
+        "start": {
+          "character": 0,
+          "line": 4499
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4500
+        },
+        "start": {
+          "character": 0,
+          "line": 4500
+        }
+      },
+      "message": "'A354766Neighbors.inside_family_card_of_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4500
+        },
+        "start": {
+          "character": 0,
+          "line": 4500
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 17,
+          "line": 4574
+        },
+        "start": {
+          "character": 14,
+          "line": 4574
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 17,
+          "line": 4574
+        },
+        "start": {
+          "character": 14,
+          "line": 4574
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 17,
+          "line": 4602
+        },
+        "start": {
+          "character": 14,
+          "line": 4602
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 17,
+          "line": 4602
+        },
+        "start": {
+          "character": 14,
+          "line": 4602
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 17,
+          "line": 4616
+        },
+        "start": {
+          "character": 14,
+          "line": 4616
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 17,
+          "line": 4616
+        },
+        "start": {
+          "character": 14,
+          "line": 4616
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4665
+        },
+        "start": {
+          "character": 0,
+          "line": 4665
+        }
+      },
+      "message": "'A354766Neighbors.total_family_shell_card' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4665
+        },
+        "start": {
+          "character": 0,
+          "line": 4665
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4666
+        },
+        "start": {
+          "character": 0,
+          "line": 4666
+        }
+      },
+      "message": "'A354766Neighbors.total_family_shell_partition' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4666
+        },
+        "start": {
+          "character": 0,
+          "line": 4666
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4667
+        },
+        "start": {
+          "character": 0,
+          "line": 4667
+        }
+      },
+      "message": "'A354766Neighbors.family_count_balance' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4667
+        },
+        "start": {
+          "character": 0,
+          "line": 4667
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4668
+        },
+        "start": {
+          "character": 0,
+          "line": 4668
+        }
+      },
+      "message": "'A354766Neighbors.primitive_neighbor_first_step' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4668
+        },
+        "start": {
+          "character": 0,
+          "line": 4668
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4669
+        },
+        "start": {
+          "character": 0,
+          "line": 4669
+        }
+      },
+      "message": "'A354766Neighbors.primitive_neighbor_repeated_step' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4669
+        },
+        "start": {
+          "character": 0,
+          "line": 4669
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4670
+        },
+        "start": {
+          "character": 0,
+          "line": 4670
+        }
+      },
+      "message": "'A354766Neighbors.actual_odd_prime_recurrences' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4670
+        },
+        "start": {
+          "character": 0,
+          "line": 4670
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 4671
+        },
+        "start": {
+          "character": 0,
+          "line": 4671
+        }
+      },
+      "message": "'A354766Neighbors.primitive_three_squares_euler_product' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 4671
+        },
+        "start": {
+          "character": 0,
+          "line": 4671
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 46,
+          "line": 6208
+        },
+        "start": {
+          "character": 6,
+          "line": 6208
+        }
+      },
+      "message": "try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+      "range": {
+        "end": {
+          "character": 46,
+          "line": 6208
+        },
+        "start": {
+          "character": 6,
+          "line": 6208
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 13,
+          "line": 6041
+        },
+        "start": {
+          "character": 4,
+          "line": 6041
+        }
+      },
+      "message": "'push_cast' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+      "range": {
+        "end": {
+          "character": 13,
+          "line": 6041
+        },
+        "start": {
+          "character": 4,
+          "line": 6041
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 13,
+          "line": 6047
+        },
+        "start": {
+          "character": 4,
+          "line": 6047
+        }
+      },
+      "message": "'push_cast' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+      "range": {
+        "end": {
+          "character": 13,
+          "line": 6047
+        },
+        "start": {
+          "character": 4,
+          "line": 6047
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 40,
+          "line": 6146
+        },
+        "start": {
+          "character": 38,
+          "line": 6146
+        }
+      },
+      "message": "unused variable `hn`\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+      "range": {
+        "end": {
+          "character": 40,
+          "line": 6146
+        },
+        "start": {
+          "character": 38,
+          "line": 6146
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4",
+      "tags": [
+        1
+      ]
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 6652
+        },
+        "start": {
+          "character": 0,
+          "line": 6652
+        }
+      },
+      "message": "'A354766.a278085_quad_count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 6652
+        },
+        "start": {
+          "character": 0,
+          "line": 6652
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 6653
+        },
+        "start": {
+          "character": 0,
+          "line": 6653
+        }
+      },
+      "message": "'A354766.A278085ComplementTotal_eq_normalized_count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 6653
+        },
+        "start": {
+          "character": 0,
+          "line": 6653
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 6654
+        },
+        "start": {
+          "character": 0,
+          "line": 6654
+        }
+      },
+      "message": "'A354766.complement_primitive_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 6654
+        },
+        "start": {
+          "character": 0,
+          "line": 6654
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 6655
+        },
+        "start": {
+          "character": 0,
+          "line": 6655
+        }
+      },
+      "message": "'A354766.a278085_primitive_quad_count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 6655
+        },
+        "start": {
+          "character": 0,
+          "line": 6655
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 6656
+        },
+        "start": {
+          "character": 0,
+          "line": 6656
+        }
+      },
+      "message": "'A354766.A278085Primary_eq_normalized_count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 6656
+        },
+        "start": {
+          "character": 0,
+          "line": 6656
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 19,
+          "line": 7076
+        },
+        "start": {
+          "character": 6,
+          "line": 7076
+        }
+      },
+      "message": "try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+      "range": {
+        "end": {
+          "character": 19,
+          "line": 7076
+        },
+        "start": {
+          "character": 6,
+          "line": 7076
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7447
+        },
+        "start": {
+          "character": 0,
+          "line": 7447
+        }
+      },
+      "message": "'A354766Neighbors.actual_odd_prime_recurrences' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7447
+        },
+        "start": {
+          "character": 0,
+          "line": 7447
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7448
+        },
+        "start": {
+          "character": 0,
+          "line": 7448
+        }
+      },
+      "message": "'A354766Neighbors.primitive_three_squares_euler_product' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7448
+        },
+        "start": {
+          "character": 0,
+          "line": 7448
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7449
+        },
+        "start": {
+          "character": 0,
+          "line": 7449
+        }
+      },
+      "message": "'A354766.cooper_hirschhorn_specialization' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7449
+        },
+        "start": {
+          "character": 0,
+          "line": 7449
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7450
+        },
+        "start": {
+          "character": 0,
+          "line": 7450
+        }
+      },
+      "message": "'A354766.primitive_quad_count_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7450
+        },
+        "start": {
+          "character": 0,
+          "line": 7450
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7451
+        },
+        "start": {
+          "character": 0,
+          "line": 7451
+        }
+      },
+      "message": "'A354766.multiplicative_conclusion' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7451
+        },
+        "start": {
+          "character": 0,
+          "line": 7451
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7452
+        },
+        "start": {
+          "character": 0,
+          "line": 7452
+        }
+      },
+      "message": "'A354766.P_prime_pow_mod_six_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7452
+        },
+        "start": {
+          "character": 0,
+          "line": 7452
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7453
+        },
+        "start": {
+          "character": 0,
+          "line": 7453
+        }
+      },
+      "message": "'A354766.P_prime_pow_mod_six_five' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7453
+        },
+        "start": {
+          "character": 0,
+          "line": 7453
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7454
+        },
+        "start": {
+          "character": 0,
+          "line": 7454
+        }
+      },
+      "message": "'A354766.P_three_pow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7454
+        },
+        "start": {
+          "character": 0,
+          "line": 7454
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7455
+        },
+        "start": {
+          "character": 0,
+          "line": 7455
+        }
+      },
+      "message": "'A354766.T_prime_pow_mod_six_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7455
+        },
+        "start": {
+          "character": 0,
+          "line": 7455
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7456
+        },
+        "start": {
+          "character": 0,
+          "line": 7456
+        }
+      },
+      "message": "'A354766.T_prime_pow_mod_three' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7456
+        },
+        "start": {
+          "character": 0,
+          "line": 7456
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7457
+        },
+        "start": {
+          "character": 0,
+          "line": 7457
+        }
+      },
+      "message": "'A354766.equality_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7457
+        },
+        "start": {
+          "character": 0,
+          "line": 7457
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7458
+        },
+        "start": {
+          "character": 0,
+          "line": 7458
+        }
+      },
+      "message": "'A354766.equalitySet_density_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7458
+        },
+        "start": {
+          "character": 0,
+          "line": 7458
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7459
+        },
+        "start": {
+          "character": 0,
+          "line": 7459
+        }
+      },
+      "message": "'A354766.A278085Primary_eq_P' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7459
+        },
+        "start": {
+          "character": 0,
+          "line": 7459
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 7460
+        },
+        "start": {
+          "character": 0,
+          "line": 7460
+        }
+      },
+      "message": "'A354766.A278085Primary_multiplicative' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 7460
+        },
+        "start": {
+          "character": 0,
+          "line": 7460
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    }
+  ],
+  "messages": [
+    "$/lean/fileProgress",
+    "$/lean/fileProgress",
+    "textDocument/publishDiagnostics",
+    "$/lean/fileProgress",
+    "$/lean/fileProgress",
+    "$/lean/fileProgress",
+    "$/lean/fileProgress",
+    "$/lean/fileProgress"
+  ]
+}

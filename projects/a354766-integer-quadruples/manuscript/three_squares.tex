@@ -1,0 +1,234 @@
+Write $Q(x)=x\cdot x$ on $\R^3$. A Euclidean lattice is called integral when
+all its inner products are integers; its covolume is the volume of a
+fundamental parallelepiped. A vector of a lattice is primitive when it is
+not in $qL$ for any rational prime $q$.
+
+\begin{lemma}[Small unimodular lattices]\label[lemma]{lem:small-lattices}
+Every integral positive definite Euclidean lattice of rank $1\le r\le3$ and
+covolume one has an orthonormal $\Z$-basis.
+\end{lemma}
+\begin{proof}
+For $r=3$, the open ball of radius $4/3$ has volume
+$256\pi/81>8$. Minkowski's theorem~\cite{minkowski} gives a nonzero lattice vector of
+squared length less than $16/9<2$. Its squared length is a positive
+integer, so it equals one. The analogous ball in rank two has area
+$16\pi/9>4$, and in rank one has length $8/3>2$, so the same reasoning
+applies in those ranks.
+
+If $u\in L$ has squared length one, integrality implies
+$x\cdot u\in\Z$ for every $x\in L$. Therefore
+\[
+ L=\Z u\mathbin{\perp}L',\qquad L'=L\cap u^\perp,
+\]
+because $x-(x\cdot u)u\in L'$. Orthogonal splitting preserves covolume
+when the first factor has length one; thus $L'$ is integral of covolume
+one. Induction on rank completes the proof.
+\end{proof}
+
+\begin{lemma}[Isotropic lines over an odd prime field]\label[lemma]{lem:isotropic-lines}
+Let $p$ be an odd prime and let $\mathcal C$ be the set of isotropic
+one-dimensional subspaces of $(\F_p^3,Q)$. Then $|\mathcal C|=p+1$.
+For nonzero $\bar x\in\F_p^3$, the number of $\ell\in\mathcal C$ with
+$\ell\subseteq\bar x^\perp$ is
+\[
+ 1+\left(\frac{-Q(\bar x)}p\right).
+\]
+For $\bar x=0$, that number is $p+1$.
+\end{lemma}
+\begin{proof}
+There is a nonzero isotropic vector: the sets of squares and of numbers
+$-1-y^2$ each have $(p+1)/2$ elements and therefore intersect. This gives
+a vector $(x,y,1)$ of norm zero.
+
+Fix a nonzero isotropic vector $u$. Nondegeneracy gives $v$ with
+$u\cdot v=1$, and $w=v-Q(v)u/2$ then satisfies
+$Q(w)=0$ and $u\cdot w=1$. The span of $u,w$ is nondegenerate;
+its one-dimensional orthogonal complement has a generator $e$ with
+$Q(e)=c\ne0$. Thus the form in this basis is $2ab+ct^2$.
+Replacing $a$ by $a'=-2a/c$ turns its zero equation into $a'b=t^2$.
+This conic is parametrized bijectively by
+$[u:v]\mapsto[u^2:v^2:uv]$. Explicitly, when its first coordinate
+is nonzero, rescale to $(1,s^2,s)$; its only point with first
+coordinate zero is $[0:1:0]$. It therefore has $p+1$ points.
+
+If $Q(\bar x)=0$, use the same hyperbolic basis with $u=\bar x$.
+Its orthogonal plane is spanned by $u,e$, with norm $ct^2$ on
+$au+te$. Thus its sole isotropic line is $\F_p\bar x$.
+
+If $Q(\bar x)\ne0$, the orthogonal plane is nondegenerate. Its Gram
+determinant has square class $Q(\bar x)^{-1}$: adjoining $\bar x$ to
+any basis of the plane gives Gram determinant $Q(\bar x)$ times the
+plane determinant, whereas change of basis in the standard ternary
+space changes determinant by a square. A nondegenerate binary form
+has two isotropic lines when the negative of its determinant is a
+square, and no isotropic lines otherwise. To see this explicitly,
+diagonalize it as $As^2+Bt^2$, with $A,B\ne0$ (characteristic is
+odd). An isotropic line has $t\ne0$, and $s/t$ must be a root of
+$X^2=-B/A$. There are two or zero roots according as the negative
+determinant $-AB$ is a square or a nonsquare. The square classes of
+$-Q(\bar x)^{-1}$ and $-Q(\bar x)$ coincide. The asserted expression
+follows in both cases.
+\end{proof}
+
+\begin{lemma}[The neighbors of $\Z^3$]\label[lemma]{lem:neighbors}
+Put $L=\Z^3$. For each $\ell\in\mathcal C$ there is an integral
+covolume-one lattice $L_\ell$ satisfying
+\[
+ \begin{gathered}
+ L\cap L_\ell=M_\ell
+    :=\{x\in L:x\bmod p\in\ell^\perp\},\\
+ [L:M_\ell]=[L_\ell:M_\ell]=p,\\
+ pL\subseteq M_\ell,\qquad pL_\ell\subseteq M_\ell\subseteq L.
+ \end{gathered}
+\]
+If $v\in L\setminus pL$ and $p^2\mid Q(v)$, then $v/p$ belongs
+to exactly one of these lattices, namely $L_{\F_p(v\bmod p)}$.
+\end{lemma}
+\begin{proof}
+Choose a lift $u\in L$ of a nonzero vector of $\ell$. It can be chosen
+with $p^2\mid Q(u)$. Indeed, starting with any lift, replacing it by
+$u+pz$ changes $Q(u)/p$ modulo $p$ by $2u\cdot z$. The linear
+functional $z\mapsto u\cdot z\pmod p$ is nonzero, hence surjective,
+so a correction $z$ with the required value exists.
+
+Set
+\[
+ L_\ell=M_\ell+\Z\frac up.
+\]
+All inner products are integral, since $u\cdot M_\ell\subseteq p\Z$
+and $Q(u)\in p^2\Z$. The functional defining $M_\ell$ is surjective
+modulo $p$, so its index in $L$ is $p$. The class of $u/p$ modulo
+$M_\ell$ has order $p$, since $u\notin pL$ and $u\in M_\ell$.
+Consequently $L_\ell$ has covolume one. If $m+tu/p\in L$, then
+$p\mid t$, proving the intersection assertion. All other inclusions
+follow from the definition. Each $L_\ell$ is isometric as a lattice
+to $\Z^3$ by the preceding small-lattice lemma.
+
+For the last assertion, membership forces the line of $v\bmod p$
+to equal $\ell$. Conversely write $v=tu+pz$ with $p\nmid t$.
+The divisibility of $Q(v)$ and $Q(u)$ by $p^2$ gives
+$2t(u\cdot z)\equiv0\pmod p$. Thus $z\in M_\ell$ and
+$v/p=tu/p+z\in L_\ell$.
+\end{proof}
+
+The construction is independent of the normalized lift: if another lift
+is $tu+pz$ with $t\not\equiv0\pmod p$ and norm divisible by $p^2$,
+the calculation in the last paragraph shows $z\in M_\ell$; the two
+generators then generate the same cyclic extension of $M_\ell$.
+
+\paragraph{Primitivity away from $p$.}
+In the double count below, passage between $L$ and $L_\ell$ preserves
+primitivity at every prime $q\ne p$. This can be checked without using
+localization. A common vector $x\in M_\ell$ is in $qL$ if and only
+if it is in $qL_\ell$. Indeed, if $x=qz$ with $z\in L$, reduction
+modulo $p$ shows $z\in M_\ell$. If instead $z\in L_\ell$, its
+class in the group $L_\ell/M_\ell$ of order $p$ is annihilated by
+$q$ and hence is zero; again $z\in M_\ell$. For an
+outside vector $y=v/p\in L_\ell\setminus L$, the corresponding
+statement is $y\in qL_\ell$ if and only if $v\in qL$. In the latter
+direction, write $v=qz$. Since $v\in M_\ell$ and $q$ is invertible
+modulo $p$, $z\in M_\ell$. Choose integers $a,b$ with $aq+bp=1$;
+then $z/p=ay+bz\in L_\ell$. The converse follows by multiplying by
+$p$, since $pL_\ell\subseteq L$.
+
+Recall that $F(m)$ is the number of primitive vectors of norm $3m^2$ in
+$L$. These sets are finite by coordinate bounds. All the lattices
+$L_\ell$ have exactly $F(m)$ such vectors, because they are
+isometric to $L$ by a bijective $\Z$-linear isometry. Let
+$\chi_p=\bigl(\frac{-3}{p}\bigr)$.
+
+\begin{lemma}[Primitive double count]\label[lemma]{lem:double-count}
+Let $p$ be an odd prime and let $m$ be positive and odd.
+If $p\nmid m$, then
+\[
+ F(pm)=(p-\chi_p)F(m).
+\]
+If $p\mid m$, then
+\[
+ F(pm)=(p+1)F(m)-
+ \left(p-\left(\frac{-3(m/p)^2}{p}\right)\right)F(m/p).
+\]
+\end{lemma}
+\begin{proof}
+Count pairs $(\ell,y)$ where $y$ is primitive in $L_\ell$ and has
+norm $3m^2$. Their total number is $(p+1)F(m)$.
+
+First count the pairs with $y\notin L$. The vector $v=py$ is in
+$L\setminus pL$ and has norm $3p^2m^2$. Conversely every primitive
+such $v$ gives exactly one outside pair by the neighbor lemma.
+Primitivity away from $p$ is preserved as just proved. An outside
+$y$ is automatically primitive at $p$, because $y\in pL_\ell$
+would imply $v\in p^2L_\ell\subseteq pL$. Thus the outside pairs
+number exactly $F(pm)$.
+
+Suppose first that $p\nmid m$. The integer $3m^2$ is not divisible
+by $p^2$, including at $p=3$. Therefore every vector of this norm
+in an integral lattice is primitive at $p$. Inside pairs are precisely
+primitive $x\in L$ with $\ell\subseteq(x\bmod p)^\perp$.
+The finite-field lemma gives $1+\chi_p$ choices of $\ell$ for each
+such $x$: for $p\ne3$ the factor $m^2$ is a nonzero square, and for
+$p=3$ both Legendre symbols are zero. Therefore
+$(p+1)F(m)=F(pm)+(1+\chi_p)F(m)$, giving the first formula.
+
+Now suppose $p\mid m$. An inside vector that is primitive away
+from $p$ has the unique form $x=p^az$ with $a\ge0$ and $z$
+primitive in $L$. If $a=0$, then $x\bmod p$ is nonzero and
+isotropic. Its unique orthogonal isotropic line is its own line;
+for this neighbor $x/p\in L_\ell$ by the last part of the neighbor
+lemma. Hence $x$ is not primitive in that neighbor and contributes
+nothing. If $a\ge2$, then $x/p\in pL\subseteq L_\ell$ for every
+neighbor, so again it contributes nothing.
+
+Only $a=1$ contributes. Write $x=pz$, with $z$ primitive of norm
+$3(m/p)^2$. The vector $x$ belongs to all $p+1$ neighbors. It fails
+to be primitive at $p$ precisely when $z\in L_\ell$, or equivalently
+when $\ell\subseteq(z\bmod p)^\perp$. The finite-field lemma shows
+that the number of remaining choices is
+$p-\bigl(\frac{-3(m/p)^2}{p}\bigr)$. Counting these pairs yields
+the second formula.
+\end{proof}
+
+\begin{theorem}[Primitive three-square product]\label[theorem]{thm:three-squares}
+For every positive odd $m$,
+\[
+ F(m)=8m\prod_{p\mid m}\left(1-\frac{\chi_p}{p}\right).
+\]
+\end{theorem}
+\begin{proof}
+First $F(1)=8$, since the vectors of norm three are precisely
+$(\pm1,\pm1,\pm1)$.
+
+Fix an odd prime $p$ and a positive odd $b$ with $p\nmid b$.
+The first double-counting identity gives
+$F(pb)=(p-\chi_p)F(b)$. Apply the second identity at $m=pb$.
+Its Legendre symbol is $\chi_p$, so
+\[
+ F(p^2b)=(p+1)(p-\chi_p)F(b)-(p-\chi_p)F(b)
+        =p(p-\chi_p)F(b).
+\]
+For exponent $a\ge2$, the same identity at $m=p^ab$ has zero
+Legendre symbol, since $p\mid p^{a-1}b$. Induction therefore gives
+\[
+ F(p^{a+1}b)=(p+1)F(p^ab)-pF(p^{a-1}b)
+            =p^a(p-\chi_p)F(b).
+\]
+Removing the prime-power factors of $m$ one at a time now gives
+\[
+ F(m)=8\prod_{p^a\parallel m}p^{a-1}(p-\chi_p)
+     =8m\prod_{p\mid m}(1-\chi_p/p).
+\]
+The local symbol agrees with the mod-six character by quadratic
+reciprocity, as proved explicitly in Section~\ref{sec:character}.
+\end{proof}
+\paragraph{The prime three.}
+No use has been made of $p\nmid3$ in the neighbor argument. The
+underlying Gram matrix of $L$ is the identity and stays nondegenerate
+modulo every odd prime, including three. If $3\nmid m$, the norm
+$3m^2$ has valuation exactly one, so inside vectors are still
+primitive at three and the isotropic-line count is one. This gives
+$F(3m)=3F(m)$. If $3\mid m$, the symbol in the second recurrence is
+always zero; it gives
+$F(3m)=4F(m)-3F(m/3)$, whose induction again yields $3F(m)$.
+Thus the prime three contributes its full power through $m$, while
+its Euler factor is one.
+

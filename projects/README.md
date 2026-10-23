@@ -12,3 +12,7 @@ Current projects:
 - [`a242322-two-slack-covering-words`](a242322-two-slack-covering-words/) —
   triangular last-occurrence automaton and stable quartic rows; draft for
   independent mathematical review.
+
+- [`a354766-integer-quadruples`](a354766-integer-quadruples/) — integer quadruples,
+  primitive three-square counts, prime-power formulas, equality cases, and
+  density zero, with a complete Lean proof and conventional manuscript.
