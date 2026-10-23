@@ -1,0 +1,25 @@
+title: Integer quadruples and primitive three-square representations
+primary_oeis_entry: A354766
+related_oeis_entries:
+  - A278085
+author: Nicolò Pandolfo
+status: public-manuscript-and-formal-proof-package
+claim_status: primitive-product-arithmetic-equality-and-density-formally-proved
+review_status: internal-review-complete-external-human-review-pending
+version: 0.1.0
+revision_date: 2026-10-23
+repository: https://github.com/pandolfonicolo/oeis-proofs
+licenses:
+  code: MIT
+  content: CC-BY-4.0
+manuscript: manuscript/main.pdf
+formal_library: lean/A354766.lean
+source_manifest: lean/joint-source-manifest.json
+lean_version: 4.27.0
+mathlib_commit: a3a10db0e9d66acbebf76c5e6a135066525ac900
+local_proof_modules: 43
+final_axiom_reports: 14
+recorded_numerical_max_n: 300
+verification: verification/verify_package.py
+ai_assistance: disclosed-in-manuscript
+oeis_submission_status: no-accepted-update-claimed

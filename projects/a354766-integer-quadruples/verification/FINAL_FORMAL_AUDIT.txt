@@ -1,0 +1,45 @@
+Source graph: 43 modules, no admissions or added axioms.
+Final conclusions: 14 actual reports, only standard kernel axioms.
+
+A354766/A278085 — completion on October 23, 2026
+
+The mathematical proof and Lean formalization of the stated results are
+complete. All 43 modules in the public source graph passed separate
+compilation. The 14 final reports list only propext, Classical.choice and
+Quot.sound. No sorryAx, added axiom or native compiler checking assumption
+is a dependency of the final conclusions.
+
+A354766 is T, the normalized total count. A278085 is P, the normalized
+primitive count. The primary definition of A278085 (sum 3n, norm 3n²) is
+formally connected to the standard model by an involution that preserves
+primitivity, including the case of the prime 3.
+
+Proved results include the primitive three-square product; the correct
+counting bridge for odd n, n = 2 mod 4 and 4 | n; divisibility by 4;
+multiplicativity of P and T; prime-power values; the exact characterization
+of T(n) = n; and natural density zero of that set. This disproves the OEIS
+positive-density conjecture. No representation formula or counting
+recurrence is assumed: both are derived from concrete lattices.
+
+For reproduction, read lean/README.md. Lean 4.27.0 and the Mathlib commit
+are pinned. Historical incomplete sources are retained separately in the
+recovered snapshot; they are not included as proofs in this release.
+
+The cloud session supplied the algebraic product module (checked in both
+environments), an independent audit of the separate minimality project,
+and exact numerical checks of both counting models through n = 300.
+Numerical checks are finite consistency tests, not proof steps. The
+transferred CSV files match their original SHA256 digests. The unrelated
+minimality audit is excluded from this publication package.
+
+No proof step remains open within the stated scope. External human review
+and editorial acceptance remain separate stages. The proof was developed
+and checked with AI assistance, disclosed in the manuscript. No external
+human review is claimed.
+
+Source graph: lean/joint-source-manifest.json
+Separate compilation: lean/verification/standalone-results.json and standalone.log
+Complete joined check: lean/verification/CompleteConclusions.CHECKED.*
+
+This English publication summary translates the release summary. Actual
+compiler logs, source files and machine-readable evidence are unchanged.

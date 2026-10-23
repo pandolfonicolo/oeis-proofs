@@ -1,0 +1,2 @@
+Source graph: 43 modules, no admissions or added axioms.
+Final conclusions: 14 actual reports, only standard kernel axioms.

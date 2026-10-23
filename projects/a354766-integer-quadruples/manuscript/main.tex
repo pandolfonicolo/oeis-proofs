@@ -1,0 +1,569 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=29mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\N}{\mathbb N}
+\newcommand{\R}{\mathbb R}
+\newcommand{\leg}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\pp}{\operatorname{pq}}
+\newcommand{\ttq}{\operatorname{tq}}
+\newcommand{\B}{\mathcal B}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+
+\hypersetup{
+  pdftitle={Integer quadruples and primitive three-square representations},
+  pdfauthor={Nicolo Pandolfo},
+  pdfsubject={Conventional proofs and Lean-certified arithmetic for OEIS A354766 and A278085},
+  pdfkeywords={integer quadruples, primitive three squares, lattice neighbors, multiplicativity, natural density}
+}
+
+\title{\textbf{Integer quadruples and primitive three-square representations}\\
+\large Product formulas, equality cases, and density zero for A354766/A278085}
+\author{Nicol\`o Pandolfo}
+\date{October 23, 2026\\\small Draft for independent human mathematical review}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Status and scope.}
+This is a conventional mathematical proof, with its standard inputs stated
+explicitly. A companion Lean development also verifies the representation
+formula and the arithmetic, equality, and density conclusions without proof
+admissions. Its final dependency audits use only the standard axioms
+\texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+Independent external human mathematical review is pending.
+
+\begin{abstract}
+We count ordered integer quadruples whose sum is a positive integer $n$ and
+whose sum of squares is $n^2$. A Hadamard transformation gives a precise
+primitive-counting bridge, including the different normalizations for odd
+$n$ and for $n\equiv2\pmod4$. We prove the needed primitive three-square
+product by an explicit lattice-neighbor double count. The only
+non-elementary standard inputs are Minkowski's convex-body theorem and
+quadratic reciprocity; no three-square counting formula is assumed. The
+resulting normalized primitive and total counts are multiplicative, with
+explicit prime-power values. We characterize exactly when the total count
+equals $n$ and prove that this equality set has natural density zero by a
+finite arithmetic sieve. The sieve requires no theorem about reciprocal
+primes in an arithmetic progression.
+\end{abstract}
+
+\section{Definitions and proof dependencies}
+
+For $n\geq1$, let $\mathcal Q_n$ be the set of ordered quadruples
+$(h,i,j,k)\in\Z^4$ satisfying
+\begin{equation}\label{eq:quad}
+ h+i+j+k=n,\qquad h^2+i^2+j^2+k^2=n^2.
+\end{equation}
+Signs and coordinate orders are counted separately. Define the content of a
+quadruple to be $\gcd(|h|,|i|,|j|,|k|)$; a quadruple is \emph{primitive}
+when its content is one. Put
+\[
+ \ttq(n)=|\mathcal Q_n|,\qquad
+ \pp(n)=|\{q\in\mathcal Q_n:q\text{ is primitive}\}|.
+\]
+These sets are finite: every coordinate has absolute value at most $n$.
+Following the normalization of the OEIS pair~\cite{oeis-total,oeis-primitive},
+put initially as rational numbers
+\begin{equation}\label{eq:normalized}
+ T(n)=\frac{\ttq(n)}4,\qquad P(n)=\frac{\pp(n)}4.
+\end{equation}
+We will prove divisibility of both raw counts by four before using these as
+integer-valued arithmetic functions.
+
+For a positive integer $M$, let $r_3^{\mathrm{prim}}(M)$ count ordered
+integer triples $(x,y,z)$ with $x^2+y^2+z^2=M$ and
+$\gcd(|x|,|y|,|z|)=1$. In particular, define
+\[
+ F(m)=r_3^{\mathrm{prim}}(3m^2)\qquad(m\geq1).
+\]
+All these sets are finite by the same coordinate bound. For an odd prime
+$p$, let $\chi_p=\leg{-3}{p}$ be the Legendre symbol, with value zero when
+$p=3$.
+
+The lattice construction below is the classical neighbor construction of
+Kneser~\cite{kneser}; Voight~\cite{voight}, Proposition~3.13 and
+Corollary~3.15, provide background. We prove the particular constructions,
+low-rank classification, and representation double count needed here.
+Cooper--Hirschhorn~\cite{cooper-hirschhorn} give an independent published
+cross-check of the product formula, but their representation theorem is not
+an input to this proof.
+
+The standard inputs used without reproof are Minkowski's theorem in the
+following form: a centrally symmetric convex open set in $\R^r$ of volume
+strictly greater than $2^r$ times a lattice's covolume contains a nonzero
+lattice vector~\cite{minkowski}; and quadratic reciprocity with the
+supplementary law for $-1$~\cite{gauss}. We also use elementary integer
+factorization, the Chinese remainder theorem, finite-dimensional linear
+algebra, and finite sums and products. No additional representation formula
+or analytic assertion about primes is assumed.
+
+\section{The corrected Hadamard counting bridge}
+
+For a quadruple satisfying \eqref{eq:quad}, put
+\[
+ x=h+i-j-k,\quad y=h-i+j-k,\quad z=h-i-j+k.
+\]
+Expansion gives
+\[
+ x^2+y^2+z^2+(h+i+j+k)^2=4(h^2+i^2+j^2+k^2),
+\]
+so $x^2+y^2+z^2=3n^2$. Conversely, the inverse expressions are
+\begin{equation}\label{eq:inverse}
+ \begin{aligned}
+ 4h&=n+x+y+z,&4i&=n+x-y-z,\\
+ 4j&=n-x+y-z,&4k&=n-x-y+z.
+ \end{aligned}
+\end{equation}
+Whenever their right sides are divisible by four, these expressions give
+an integer quadruple satisfying \eqref{eq:quad}. Indeed, their sum is $4n$;
+the same Hadamard norm identity gives the sum of squares $n^2$. Thus these
+linear maps are inverse bijections after the integrality condition is imposed.
+
+\begin{lemma}[A common divisor]\label[lemma]{lem:valuation}
+If $d,m$ are positive integers and $d^2\mid3m^2$, then $d\mid m$.
+\end{lemma}
+\begin{proof}
+For every prime $p$, write $a=v_p(d)$ and $b=v_p(m)$. If $p\neq3$,
+the divisibility gives $2a\leq2b$. For $p=3$ it gives
+$2a\leq1+2b$, which also implies $a\leq b$ because both are integers.
+This proves the assertion prime by prime.
+\end{proof}
+
+The primary definition of A278085 uses primitive quadruples of sum $3n$
+and squared norm $3n^2$. Its equivalence with $P(n)$ is explicit: the map
+\[
+ (h,i,j,k)\longmapsto(n-h,n-i,n-j,n-k)
+\]
+is an involution interchanging these quadruples with those in $\mathcal Q_n$.
+Expansion proves the two sum and norm identities. It preserves content:
+the content of a quadruple in $\mathcal Q_n$ divides $n$ by its sum, while
+the content $d$ of a quadruple in the other family satisfies
+$d^2\mid3n^2$, hence $d\mid n$ by \cref{lem:valuation}. In each direction
+a common divisor therefore divides the complemented coordinates as well.
+Thus the primitive subsets correspond bijectively.
+
+\begin{theorem}[Primitive counting bridge]\label[theorem]{thm:bridge}
+For every $n\geq1$,
+\begin{equation}\label{eq:bridge}
+ \pp(n)=
+ \begin{cases}
+ \frac12F(n),&n\text{ odd},\\[1mm]
+ \frac12F(n/2),&n\equiv2\pmod4,\\[1mm]
+ 0,&4\mid n.
+ \end{cases}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Suppose first that $n$ is odd. A square is $0,1$, or $4$ modulo eight,
+and three squares summing to $3n^2\equiv3\pmod8$ must all be one modulo
+eight. Thus $x,y,z$ are odd. The four numerators in \eqref{eq:inverse} are
+congruent modulo four, so integrality is equivalent to
+\[
+ n+x+y+z\equiv0\pmod4.
+\]
+Pair a triple with its negative. If $S=x+y+z$, then $n,S$ are odd, and
+$n+S$ and $n-S$ are even residues whose sum is $2\pmod4$; exactly one is
+zero modulo four. No triple is its own negative because its norm is positive.
+Hence exactly one member of every sign pair gives an integer quadruple.
+
+Primitivity is preserved for each integral inverse. A common divisor of the
+quadruple divides $x,y,z$. Conversely, the gcd $d$ of $x,y,z$ is odd and
+satisfies $d^2\mid3n^2$, so $d\mid n$ by \cref{lem:valuation}.
+Since four is invertible modulo $d$, \eqref{eq:inverse} implies that $d$
+divides all four coordinates. This proves the first line of \eqref{eq:bridge}.
+
+Now let $n=2m$ with $m$ odd. From $x^2+y^2+z^2=12m^2\equiv0\pmod4$,
+all three coordinates are even: the number of odd coordinates would otherwise
+be one, two, or three, none of which gives zero modulo four. Write
+$x=2X,y=2Y,z=2Z$. Then $X^2+Y^2+Z^2=3m^2$, and $X,Y,Z$ are odd by the
+preceding modulo-eight argument. The inverse formulas become
+\begin{equation}\label{eq:inverse-even}
+ \begin{aligned}
+ h&=(m+X+Y+Z)/2,&i&=(m+X-Y-Z)/2,\\
+ j&=(m-X+Y-Z)/2,&k&=(m-X-Y+Z)/2.
+ \end{aligned}
+\end{equation}
+They are integers, and any two coordinates differ by a sum of two odd
+numbers, so the four coordinates have the same parity. Negating the triple
+gives another quadruple whose corresponding coordinates sum with the first
+to $m$. Since $m$ is odd, one of the two quadruples is entirely odd and the
+other entirely even.
+
+If $(X,Y,Z)$ is primitive, the odd quadruple is primitive: an odd prime
+dividing all four coordinates would divide $X,Y,Z$, and two does not divide
+the odd coordinates. The even quadruple is not primitive. If the normalized
+triple has gcd $d>1$, then $d$ is odd, $d\mid m$ by
+\cref{lem:valuation}, and \eqref{eq:inverse-even}, using that two is
+invertible modulo $d$, makes both quadruples divisible by $d$.
+Thus each primitive sign pair of normalized triples contributes exactly one
+primitive quadruple. This proves the second line. In particular, the count
+is $F(m)/2$, not a count of primitive \emph{unnormalized} triples of norm
+$12m^2$.
+
+Finally, if $4\mid n$, the number of odd coordinates of a quadruple is even
+because their sum is even. Exactly two odd coordinates are impossible modulo
+four, since their squares would sum to $2\pmod4$. Four odd coordinates are
+impossible modulo eight, since their squares would sum to $4\pmod8$ whereas
+$n^2\equiv0\pmod8$. All coordinates are therefore even, so no quadruple
+is primitive.
+\end{proof}
+
+\section{An explicit lattice proof of the primitive product}\label{sec:lattice}
+
+\input{three_squares}
+
+\section{Identification of the local character}\label{sec:character}
+
+\begin{lemma}\label[lemma]{lem:character}
+For every odd prime $p$,
+\[
+ \chi_p=\leg{-3}{p}=
+ \begin{cases}
+ 0,&p=3,\\
+ 1,&p\equiv1\pmod6,\\
+ -1,&p\equiv5\pmod6.
+ \end{cases}
+\]
+\end{lemma}
+\begin{proof}
+The value at three is zero by definition. If $p\neq3$ is odd, quadratic
+reciprocity and its supplementary law~\cite{gauss} give explicitly
+\[
+ \leg{-1}{p}=(-1)^{(p-1)/2},\qquad
+ \leg{3}{p}\leg{p}{3}=(-1)^{(p-1)/2}.
+\]
+Since $\leg{p}{3}\in\{1,-1\}$, multiplication yields
+$\leg{-3}{p}=\leg{p}{3}$. The nonzero squares modulo three consist only of
+one. Thus this symbol is one when $p\equiv1\pmod3$ and minus one when
+$p\equiv2\pmod3$. An odd prime different from three is $1$ or $5$ modulo
+six, giving the displayed cases.
+\end{proof}
+
+\section{Divisibility, multiplicativity, and prime-power formulas}
+
+\begin{theorem}[The primitive arithmetic function]\label[theorem]{thm:primitive}
+Write $n=2^\alpha m$, with $m$ odd. Then $\pp(n)$ is divisible by four,
+and the integer $P(n)=\pp(n)/4$ is given by
+\begin{equation}\label{eq:P-product}
+ P(n)=
+ \begin{cases}
+ \displaystyle\prod_{p^a\parallel m}p^{a-1}(p-\chi_p),&\alpha=0\text{ or }1,\\[2mm]
+ 0,&\alpha\geq2.
+ \end{cases}
+\end{equation}
+In particular $P(1)=1$, $P$ is multiplicative, and, for $a\geq1$,
+\begin{equation}\label{eq:P-local}
+ \begin{aligned}
+ P(2)&=1,&P(2^a)&=0&& (a\geq2),\\
+ P(3^a)&=3^a,\\
+ P(p^a)&=p^{a-1}(p-1)&&&(p\equiv1\pmod6),\\
+ P(p^a)&=p^{a-1}(p+1)&&&(p\equiv5\pmod6).
+ \end{aligned}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The product theorem in \cref{thm:three-squares} can be written
+\[
+ F(m)=8\prod_{p^a\parallel m}p^{a-1}(p-\chi_p).
+\]
+Its right side is eight times an integer, including for $m=1$, where the
+product is empty. The bridge \eqref{eq:bridge} therefore proves divisibility
+of $\pp(n)$ by four and gives \eqref{eq:P-product}. Coprime positive
+integers have disjoint prime factors. Their odd parts therefore give a
+product of disjoint local factors, and their powers of two multiply according
+to the local function with values $1,1,0,0,\ldots$. At most one of two
+coprime integers is even, so this local function is multiplicative as well.
+This proves multiplicativity of $P$, with $P(1)=1$. The local formulas follow
+from \cref{lem:character}, including $p=3$ where $\chi_3=0$.
+\end{proof}
+
+\begin{lemma}[Content decomposition]\label[lemma]{lem:content}
+For every $n\geq1$,
+\begin{equation}\label{eq:raw-divisor}
+ \ttq(n)=\sum_{d\mid n}\pp(d).
+\end{equation}
+\end{lemma}
+\begin{proof}
+A quadruple for positive $n$ is not the zero quadruple, so its content $c$ is
+positive. Since $c$ divides the sum of its coordinates, it divides $n$.
+Dividing all four coordinates by $c$ gives a primitive quadruple for $n/c$.
+Conversely, scaling a primitive quadruple for a divisor $d\mid n$ by $n/d$
+gives a quadruple of content exactly $n/d$. These constructions are mutually
+inverse, and distinct contents give disjoint sets. Counting proves the formula.
+\end{proof}
+
+\begin{theorem}[The total arithmetic function]\label[theorem]{thm:total}
+For every $n\geq1$, the raw count $\ttq(n)$ is divisible by four, and
+\begin{equation}\label{eq:T-divisor}
+ T(n)=\sum_{d\mid n}P(d).
+\end{equation}
+The function $T$ is multiplicative and, for every prime $p$ and $a\geq1$,
+\begin{equation}\label{eq:T-local}
+ \begin{aligned}
+ T(2^a)&=2,\\
+ T(3^a)&=(3^{a+1}-1)/2,\\
+ T(p^a)&=p^a&& (p\equiv1\pmod6),\\
+ T(p^a)&=p^a+2\frac{p^a-1}{p-1}&& (p\equiv5\pmod6).
+ \end{aligned}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Every summand in \eqref{eq:raw-divisor} is divisible by four by
+\cref{thm:primitive}. Hence the raw total count is divisible by four, and
+division of this finite sum proves \eqref{eq:T-divisor} as an identity of
+integers. There is no interchange of a rounded division with a sum.
+
+If $a,b$ are coprime, every divisor of $ab$ factors uniquely as $d_1d_2$,
+with $d_1\mid a$ and $d_2\mid b$. Multiplicativity of $P$ gives
+\[
+ T(ab)=\sum_{d_1\mid a}\sum_{d_2\mid b}P(d_1d_2)
+       =\Bigl(\sum_{d_1\mid a}P(d_1)\Bigr)
+        \Bigl(\sum_{d_2\mid b}P(d_2)\Bigr)=T(a)T(b).
+\]
+Also $T(1)=P(1)=1$. For a prime power,
+$T(p^a)=\sum_{j=0}^aP(p^j)$. At two the only nonzero summands are
+$P(1)=P(2)=1$. At three the sum is $1+3+\cdots+3^a$. If
+$p\equiv1\pmod6$, the sum is
+$1+(p-1)\sum_{j=0}^{a-1}p^j=p^a$; if $p\equiv5\pmod6$, it is
+$1+(p+1)\sum_{j=0}^{a-1}p^j=p^a+2(p^a-1)/(p-1)$.
+These finite geometric sums give \eqref{eq:T-local}.
+\end{proof}
+
+\section{The equality cases}
+
+\begin{theorem}[Exact classification]\label[theorem]{thm:equality}
+For every positive integer $n$,
+\begin{equation}\label{eq:equality}
+ T(n)=n
+ \quad\Longleftrightarrow\quad
+ n=2^\varepsilon m,\quad \varepsilon\in\{0,1\},\quad m\text{ odd},
+ \quad p\mid m\Longrightarrow p\equiv1\pmod6
+\end{equation}
+where the last condition ranges over prime divisors. The empty factorization
+of $m=1$ is allowed, so both $n=1$ and $n=2$ are equality cases.
+\end{theorem}
+\begin{proof}
+Write $n=2^\alpha m$ with $m$ odd. First, for every odd prime $p$ and every
+$a\geq1$, the local formulas imply $T(p^a)\equiv1\pmod3$. For $p=3$ this
+follows from the geometric sum. For $p\equiv1\pmod6$ it follows from
+$p^a\equiv1\pmod3$. For $p\equiv5\pmod6$, write
+\[
+ T(p^a)=1+(p+1)(1+p+\cdots+p^{a-1});
+\]
+here $p+1$ is divisible by three. Thus $T(m)\equiv1\pmod3$ by
+multiplicativity. Since $T(2^\alpha)$ is one for $\alpha=0$ and two for
+$\alpha\geq1$, $T(n)$ is never divisible by three. Consequently equality
+is impossible if $3\mid m$.
+
+Assume $3\nmid m$. Every local factor $T(p^a)$ for $p\mid m$ is odd:
+it is either $p^a$ or $p^a$ plus an even integer. Hence $T(m)$ is odd.
+If $\alpha\geq1$, then $T(n)=2T(m)$ has exact two-adic valuation one,
+whereas $n$ has valuation $\alpha$. Equality therefore forces $\alpha=1$.
+This rules out compensating a higher power of two by larger odd-prime factors.
+
+For $\alpha=0$ or $1$, equality is equivalent to $T(m)=m$. By
+\eqref{eq:T-local}, every local ratio $T(p^a)/p^a$ for $p\mid m$ is at
+least one, with equality exactly when $p\equiv1\pmod6$; the ratio is
+strictly larger for $p\equiv5\pmod6$. The product of these positive ratios
+equals one precisely when every ratio does. This proves necessity and
+sufficiency in \eqref{eq:equality}, including $m=1$.
+\end{proof}
+
+\section{A finite sieve proving density zero}\label{sec:density}
+
+Let $\B$ be the primes congruent to five modulo six. Call a positive integer
+$q$ \emph{admissible} when every prime divisor of $q$ belongs to $\B$.
+Such a $q$ is coprime to six. Define
+\[
+ a(q)=\frac{\varphi(q)}q,\qquad b(q)=\frac q{\varphi(q)}.
+\]
+Both are positive and $a(q)b(q)=1$, since $q\geq1$ gives
+$\varphi(q)\geq1$.
+
+\begin{lemma}[Finite descent of the sieve density]\label[lemma]{lem:sieve-step}
+For every admissible $q$, there is an explicitly finite admissible extension
+$q'$ with $b(q')\geq b(q)+1/6$.
+\end{lemma}
+\begin{proof}
+Define finite sets
+\[
+ \begin{aligned}
+ C(q)&=\{n:1\leq n\leq6q,\ n\equiv5\pmod6,\ \gcd(n,q)=1\},\\
+ G(q)&=\{p\in\B:p\leq6q,\ p\nmid q\}.
+ \end{aligned}
+\]
+There are exactly $\varphi(q)$ elements of $C(q)$. Indeed, for each
+invertible residue $r$ modulo $q$, the Chinese remainder theorem, using
+$\gcd(6,q)=1$, gives exactly one residue modulo $6q$ with residue five
+modulo six and residue $r$ modulo $q$. Its representative in $[1,6q]$ is
+positive and coprime to $q$; this parametrizes $C(q)$ bijectively.
+
+Every positive integer $n\equiv5\pmod6$ has a prime divisor in $\B$.
+It is divisible by neither two nor three, so all its prime factors are one
+or five modulo six. If all were one, their product with multiplicities would
+be one modulo six, a contradiction. For $n\in C(q)$, such a divisor cannot
+divide $q$ and is at most $n\leq6q$. It therefore belongs to $G(q)$.
+
+The union bound and the exact count of positive multiples of $p$ give
+\[
+ \varphi(q)=|C(q)|
+ \leq\sum_{p\in G(q)}\left\lfloor\frac{6q}p\right\rfloor
+ \leq6q\sum_{p\in G(q)}\frac1p.
+\]
+Consequently
+\begin{equation}\label{eq:finite-reciprocal-bound}
+ \sum_{p\in G(q)}\frac1p\geq\frac{a(q)}6.
+\end{equation}
+Set $q'=q\prod_{p\in G(q)}p$. The new primes are distinct and coprime
+to $q$, so $q'$ is admissible and multiplicativity of the totient gives
+\[
+ b(q')=b(q)\prod_{p\in G(q)}\frac p{p-1}.
+\]
+Each factor is at least $1+1/p$. For nonnegative numbers $x_p$, expanding
+a finite product gives $\prod(1+x_p)\geq1+\sum x_p$. Using
+\eqref{eq:finite-reciprocal-bound}, we conclude
+\[
+ b(q')\geq b(q)\left(1+\sum_{p\in G(q)}\frac1p\right)
+ \geq b(q)\left(1+\frac{a(q)}6\right)=b(q)+\frac16.
+\]
+All prime sets in this construction are bounded by $6q$ and finite.
+\end{proof}
+
+\begin{corollary}[Arbitrarily small finite sieve products]\label[corollary]{cor:small-sieve}
+For every real $\delta>0$, an admissible $q$ satisfies $\varphi(q)/q<\delta$.
+\end{corollary}
+\begin{proof}
+Starting with $q_0=1$, apply \cref{lem:sieve-step} repeatedly. Each step
+constructs a finite positive integer, and induction gives
+\[
+ b(q_t)\geq1+t/6,\qquad a(q_t)\leq\frac6{t+6}.
+\]
+Choose an integer $t>6/\delta$. Then $a(q_t)<\delta$.
+\end{proof}
+
+\begin{theorem}[Elementary density-zero sieve]\label[theorem]{thm:sieve-density}
+Let $E$ be a set of positive integers, none of which has a prime divisor
+congruent to five modulo six. Then
+\[
+ \lim_{N\to\infty}\frac{|E\cap[1,N]|}N=0.
+\]
+\end{theorem}
+\begin{proof}
+Every member of $E$ is coprime to every admissible $q$. Each complete block
+of $q$ consecutive integers contains exactly $\varphi(q)$ integers coprime
+to $q$. The final incomplete block contains at most that many. Therefore
+\[
+ |E\cap[1,N]|\leq\varphi(q)\bigl(\lfloor N/q\rfloor+1\bigr)
+ \leq\frac{\varphi(q)}qN+\varphi(q).
+\]
+Given $\epsilon>0$, use \cref{cor:small-sieve} to choose an admissible $q$
+with $\varphi(q)/q<\epsilon/2$. For every integer
+$N>2\varphi(q)/\epsilon$, division of the preceding inequality by $N$
+gives
+\[
+ 0\leq\frac{|E\cap[1,N]|}N<\epsilon.
+\]
+This proves the asserted limit; existence of the density was not assumed.
+\end{proof}
+
+\begin{corollary}[Density of the equality set]\label[corollary]{cor:equality-density}
+The set $\{n\geq1:T(n)=n\}$ has natural density zero.
+\end{corollary}
+\begin{proof}
+By \cref{thm:equality}, every such $n$ has no prime divisor congruent to
+five modulo six. Apply \cref{thm:sieve-density}.
+\end{proof}
+
+In particular, the positive-asymptotic-density conjecture recorded in
+A354766 is false: the density exists and equals zero.
+
+\section{Verification and formalization boundary}
+
+The representation product in \cref{thm:three-squares} is proved here from
+the explicitly constructed neighbors, their elementary low-rank lattice
+classification, and a double count. The published
+Cooper--Hirschhorn formula agrees with it, including the prime-three factor,
+but is only a cross-check. The density argument is a finite construction
+followed by an explicit epsilon bound; reciprocal-prime divergence is not
+one of its assumptions.
+
+The recovered verification program independently enumerates the original
+quadruples and the Hadamard inverse triples for $1\leq n\leq150$. It checks
+the corrected bridge, primitive and total counts, local product formulas,
+and divisibility of both raw counts by four. Those checks passed after
+recovery, and the resulting CSV agrees with the saved historical audit.
+An independent cloud computation additionally checked both defining
+quadruple models through $n=300$ and primitive three-square counts at all
+38 odd levels through $75$, with no discrepancy.
+Finite computations are consistency checks, not proof steps in this paper.
+
+The companion Lean 4.27.0 development implements the lattice
+classification, normalized neighbors, finite conic counts, primitive-vector
+double count, prime-power recurrences, and Euler product. It also verifies
+the primitive A278085 complement bijection and the finite density sieve.
+The default dependency graph has 43 local modules with no proof admissions
+or added axioms. All 14 concluding dependency reports contain only
+\texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}; neither
+an assumed representation formula nor native-compiler reduction is a
+dependency of those conclusions. The sources pin Mathlib commit
+\texttt{a3a10db0e9d66acbebf76c5e6a135066525ac900} and include the checks.
+
+The mathematical derivations have undergone internal adversarial checking.
+This document remains a draft for independent human mathematical review.
+AI systems assisted exploration, checking, and drafting; that assistance
+is disclosed and is not itself evidence of correctness.
+
+\begin{thebibliography}{9}
+
+\bibitem{oeis-total}
+OEIS Foundation Inc., \emph{A354766},
+\url{https://oeis.org/A354766}.
+
+\bibitem{oeis-primitive}
+OEIS Foundation Inc., \emph{A278085},
+\url{https://oeis.org/A278085}.
+
+\bibitem{minkowski}
+H. Minkowski, \emph{Geometrie der Zahlen}, B. G. Teubner, Leipzig, 1896.
+The centrally symmetric convex-body lattice-point theorem.
+
+\bibitem{gauss}
+C. F. Gauss, \emph{Disquisitiones Arithmeticae}, Leipzig, 1801,
+Article 131 (quadratic reciprocity), with the supplementary law for $-1$.
+
+\bibitem{kneser}
+M. Kneser, \emph{Klassenzahlen definiter quadratischer Formen},
+Arch. Math. \textbf{8} (1957), 241--250.
+
+\bibitem{voight}
+J. Voight, \emph{Kneser's method of neighbors}, April 30, 2024,
+Proposition 3.13 and Corollary 3.15,
+\url{https://jvoight.github.io/articles/kneser-033024.pdf}.
+
+\bibitem{cooper-hirschhorn}
+S. Cooper and M. D. Hirschhorn,
+\emph{On the number of primitive representations of integers as sums of squares},
+Ramanujan J. \textbf{13} (2007), 7--25,
+\href{https://doi.org/10.1007/s11139-006-0240-6}{doi:10.1007/s11139-006-0240-6}.
+
+\end{thebibliography}
+
+\end{document}

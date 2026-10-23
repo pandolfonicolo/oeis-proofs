@@ -1,0 +1,307 @@
+{
+  "lean": "Lean (version 4.27.0, arm64-apple-darwin24.6.0, commit db93fe1608548721853390a10cd40580fe7d22ae, Release)",
+  "mathlib": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+  "modules": [
+    {
+      "module": "A354766.Elementary",
+      "source_sha256": "a77ca3e9fdd691248f00da3ba0b3846fbb5258789e161412e3fe60ca7042de2c",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "e5375b29d72992ec7d636551931397d57d01708c29d04e71ddc46323816b16fe"
+    },
+    {
+      "module": "A354766.FiniteCounts",
+      "source_sha256": "d4372b71fe4afd40714aadc7c774706049fe342b7d256128fcdf2a50ed6c8890",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "736af278e5a1be45338a185fda704a107c2552689f2fe57335864a28aa4c3d2f"
+    },
+    {
+      "module": "A354766.Bridge",
+      "source_sha256": "8c79894bb481ee095edb1429c08e6132824c98fe362753e8f9a9a67f8b08052f",
+      "exit_code": 0,
+      "seconds": 16.014,
+      "artifact_sha256": "620107ce51cc51b46e451c17b903f1459331c04512bd692d4963e035097bf170"
+    },
+    {
+      "module": "A354766.HadamardBridge",
+      "source_sha256": "5be5a4de689f77c1ebe904beef1ff048f52fcb76a1af7c144fe928bbb4666bbc",
+      "exit_code": 0,
+      "seconds": 4.497,
+      "artifact_sha256": "41d943d425856a4b73a43a30b70c23bc5e3b53eb048c3f5fa31b2adc1c2333de"
+    },
+    {
+      "module": "A354766.ParityBridge",
+      "source_sha256": "a966e0deac2abc3137edc18cafa2e33a905df9c38957193edb2843b0e596a4f4",
+      "exit_code": 0,
+      "seconds": 2.056,
+      "artifact_sha256": "016f9203df8db8432bc3553e0796ed564ad48b109271c6edb0deb73882a02494"
+    },
+    {
+      "module": "A354766.OddCountingBridge",
+      "source_sha256": "08a29615f56dc8649d0188fa5f5836062cea48eff3b8dbe9de84f401b2acb335",
+      "exit_code": 0,
+      "seconds": 1.812,
+      "artifact_sha256": "b5a4570c196c2353645f32771fc309e426505031ea23639ad060776d40a984a9"
+    },
+    {
+      "module": "A354766.PrimitivityBridge",
+      "source_sha256": "96b782fa7501d97ef51ce3f9c6bf6912ebb1ec13f32e0128fc45d694e15afbf6",
+      "exit_code": 0,
+      "seconds": 3.303,
+      "artifact_sha256": "b6d7885429163eace28c333e92c748998644a133bcbb17c09d34230c922bfd6a"
+    },
+    {
+      "module": "A354766.PrimitiveOddCounting",
+      "source_sha256": "3c5a44de4068ce17c2c457f787f80375e62a22e60e495db88b7a83fed901fd30",
+      "exit_code": 0,
+      "seconds": 1.964,
+      "artifact_sha256": "b6e9e6cfa4affde1611ea7a8a9c5fa81fc2673ee3fd6833e92f705a731831aea"
+    },
+    {
+      "module": "A354766.DoublingBridge",
+      "source_sha256": "ccb637d70da71cd985d39b51c8e812a30386d91bc5d0279c52a2e11877e72da6",
+      "exit_code": 0,
+      "seconds": 4.337,
+      "artifact_sha256": "ce5768f2244b9c48e0829cabcbd8baf31e93ae0862dddbd57bde7eaee7d96339"
+    },
+    {
+      "module": "A354766.ContentDecomposition",
+      "source_sha256": "119115b203948879bc9bc5105eb4c424dcac0e5c7d9fcbc2efc6c54c2942b304",
+      "exit_code": 0,
+      "seconds": 6.888,
+      "artifact_sha256": "6ce475481685bedb5d72ce2d66b9bbd653bcfb4c2e655db2cd92181df01d61b6"
+    },
+    {
+      "module": "A354766.SignOrbit",
+      "source_sha256": "5ebd9da372d964a52b84ac7ae9654d784dba52548da3b6b9aaf2da560f43af56",
+      "exit_code": 0,
+      "seconds": 3.414,
+      "artifact_sha256": "2c329051dd800db3720788d2acf443d101c670e93cd3c095bdfc11de3c0cccc1"
+    },
+    {
+      "module": "A354766.NormalizedDecomposition",
+      "source_sha256": "28b36f426184458031f9ca5a956e47e95783c88cbe0e781d73d509de9c7ccfe6",
+      "exit_code": 0,
+      "seconds": 1.725,
+      "artifact_sha256": "1dc2f5fe8cf02d57324dcc8da444d5a954e854b3544a559243412af9185b4e90"
+    },
+    {
+      "module": "A354766.BadPrimeSieve",
+      "source_sha256": "f25cc01efe32cc02b3221a222b951a4d3a5e1984db901f589d41bd96172518eb",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "a07cd8aaccba37b39e320c7a9bec54fbe0bbaa16f04ab41e1ad643be6e0a4531"
+    },
+    {
+      "module": "A354766.DensityLimit",
+      "source_sha256": "72ef3511168fc35ab3d8c6c7945795eedde0e41282442f4ea498e558df812bc8",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "c467d00304416eed9585e98b39c100aa6c0da3feb8bab5b4ab9b5e4b41efe5be"
+    },
+    {
+      "module": "A354766.PrimitiveTransport",
+      "source_sha256": "e613b6f4ded4977410d60e9f1e8b169e1842470e8152fdb5afd88db18d435b5f",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "f22336202bf7587d6a26afaaeb2d96faf5e463d25b0cdeee0c5b8ae58a50673b"
+    },
+    {
+      "module": "A354766.PrimitiveVectorModel",
+      "source_sha256": "1fc568bfc0f399d939dfc12a9e689174b8181dd85347220e89889947cdb53759",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "8911d71681263b95d014364943bc86c8b19666246698399fbec3dc3ff8cf8087"
+    },
+    {
+      "module": "A354766.ShellEquivalence",
+      "source_sha256": "77888e32f671cc77b6e09880e7b770dbbb6d27888e42f3e17d17b05971b3c8cb",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "f88a8eca6ecd2c47ceb4c7816f7f47ac438426fbde2fc9759afa6b6ff5294321"
+    },
+    {
+      "module": "A354766.PrimitiveNeighborAlgebra",
+      "source_sha256": "bc2d5e99979919d56de3632c3caad7dc90cad8c5783f81a9f5300a58db4b18e8",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "4f881292b7ec677dc4fcef410ea1e6d2a719185de2d618020145aac85638736b"
+    },
+    {
+      "module": "A354766.IsotropicLines",
+      "source_sha256": "f04c5217b33c0fc5ec5df8ed5e91b7c6c59690a87d6661e71be9f1789143a34b",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "4b1ba222e1935603aee51db4f728868b21662ca94eb72de7bb54b8d285e1ef15"
+    },
+    {
+      "module": "A354766.IsotropicLift",
+      "source_sha256": "031068bf1eefcb903c46c4e050bc6109eefaf5a1324b008a2be1f923fb8701ba",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "1ab1ecd121397a7ecd4d08b439bea9e2833cd212f7e12518f1e34d7cb2fd6592"
+    },
+    {
+      "module": "A354766.NeighborConstruction",
+      "source_sha256": "93d0fc979864fc619b63a919d20ffff95db121d822084f7783c82a10c71c465a",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "df3949b7933b7fdcfa08186891d9697901890d6ec2fd61d5c7798d4b08d8bb54"
+    },
+    {
+      "module": "A354766.NormalizedNeighborFamily",
+      "source_sha256": "91206f6dbac2d397638d93040c7cc964fbe8f1add0de7e13a996493572f3d1fc",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "2287fd571460c5271859691f46bb8a06b2b8653ed5e78a6b1bb4ce12b7752405"
+    },
+    {
+      "module": "A354766.PrimitiveResidue",
+      "source_sha256": "686ca82dec7c762ba7540ee330b7f465f9d8adf6e64e568fdc2bc3cd0e089232",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "610f11c7b3d7a41b50b52c2a8de0a8ab4880ef184b7e46e98a943cc78876bb38"
+    },
+    {
+      "module": "A354766.MinusThreeCharacter",
+      "source_sha256": "1323bb5fe272bc806139a9e1f5ae50e7d5de8101c1f9c4ad4e540ece9c59ee86",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "9e16343525f9c6a3411b53765dc7d8e1429dd8aed271225f7e694e6f07fb8fe7"
+    },
+    {
+      "module": "A354766.CharacterScaling",
+      "source_sha256": "f1f72a23154d26ad6a8666e86519ba66d849711937871659a0f15bbedfe7ba8d",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "6a11436e3d139aeff87436295ab3bd2ff427f3538da0f9854b65beb3daf504a6"
+    },
+    {
+      "module": "A354766.NeighborFiberCounts",
+      "source_sha256": "b77e5e6a07dc92551f617f6b912396541a06fdda015b0493af156c095c68cb2a",
+      "exit_code": 0,
+      "seconds": 43.914,
+      "artifact_sha256": "f294d277193efa555fba170919ba89c09aa738ad6b5ad0559bcdba9797c3768b"
+    },
+    {
+      "module": "A354766.SmallIntegralLattices",
+      "source_sha256": "e409413ccaaa77142a209f3057454fc473e06592cb3b3bc9c12aca0db08bf539",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "d5f296dfaebdec2d8294cb289279fd9db88fa38c37d9cf7ee7b086b877e76165"
+    },
+    {
+      "module": "A354766.NeighborRealification",
+      "source_sha256": "7353570155c73406ba3c109c2adb482639da4f2b78bc787f8e762a10888566d5",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "299c34f7ced7b534949e8bcd8a1c732deb57fd95f300f66b8c9f2fd62319f451"
+    },
+    {
+      "module": "A354766.NeighborTopology",
+      "source_sha256": "1be5b8620b4c46fcd2f83495ae7d13302d1943a20078b53070425522505608b3",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "fd02a0ff92fd6693ca06a0dbd439c62b0b2060305ff2a9e0c56deb390bdbdfa5"
+    },
+    {
+      "module": "A354766.StandardRealLattice",
+      "source_sha256": "4051d906412f5da4ac376ad1dc3b06225c3997b02e1573c968ba91bb72c808eb",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "742fbbcb1f4ab67f89450773edf5ff822de912d7144588c7fa5fc4862c6bed77"
+    },
+    {
+      "module": "A354766.NeighborShellCounts",
+      "source_sha256": "0944ea685c71127a6d97cc299c39a0d1887da93d50cdf452abb13407852ddc5b",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "e3729e2dc517f6191b9b8035d4f7dd5a082281cd2ed498553b2dd9adf7dc1347"
+    },
+    {
+      "module": "A354766.InsideContentClassification",
+      "source_sha256": "ed5ac581066bf0b1552680e030e348cc173549e1921cf36d4035c7b259f46461",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "fcc6cc56764df3e3b7032b754374d0765b44e0fbe76435c8248673ac2cf994bc"
+    },
+    {
+      "module": "A354766.InsideShellPartition",
+      "source_sha256": "07c82c13ef3c2ffb86c216b5e42ba4c8133c2796bff3915e85d42e04e3b75c69",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "e91b55a430c4aa7c85032e504a938bd93a7a28c7919d66c573fc2c10a80e09bd"
+    },
+    {
+      "module": "A354766.ShellPartitions",
+      "source_sha256": "ea254e9c6880afb197ee0f9c956c01ba1a81d70387f9e0198354b13f82855e55",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "c9bf28eb08092321dca21ca79130bc09b16e532872a4f8961e8dda48760c96cf"
+    },
+    {
+      "module": "A354766.ExteriorNeighborCount",
+      "source_sha256": "2e85db136707cc449fb4da6320a4b5a2afa8c7d2b111477aa50279be4000d78c",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "da5072f844827ddd2d37bd2bc03416e161f0648d5fd5f0141b08839a80468b8c"
+    },
+    {
+      "module": "A354766.InsideNeighborSums",
+      "source_sha256": "a79fd6e54bd12e4c3ba5e31d0f3f8ad6582e0a6c2439253bcb8c4046a779eff4",
+      "exit_code": 0,
+      "seconds": 49.965,
+      "artifact_sha256": "9b705b5576439fc27fdfbde3b15d4d26a9f4916d1861661721047ed88b8fbfd2"
+    },
+    {
+      "module": "A354766.EulerProductFromRecurrence",
+      "source_sha256": "52f61e009285c096270cffd05ed6a56175dda379b3dee43923a240431211d541",
+      "exit_code": 0,
+      "reused": true,
+      "artifact_sha256": "47037f286359923b61ce937a6416b6bd02307284833847612657a40c0698de72"
+    },
+    {
+      "module": "A354766.KernelBase",
+      "source_sha256": "c577890033e8f075bc73d58ceab633c31f90afa7678e1e7fe774a53ecc75d448",
+      "exit_code": 0,
+      "seconds": 10.248,
+      "artifact_sha256": "7dc1da9cfffa64105885344fe358495ba2ca5e23f6e400bf95a0ddfe0a89ed75"
+    },
+    {
+      "module": "A354766.PrimitiveNeighborCount",
+      "source_sha256": "0d416fb799e6499d1b59914c813255014bc5ca0735660e31e1d1a3ce767a8a3e",
+      "exit_code": 0,
+      "seconds": 49.476,
+      "artifact_sha256": "89c12fd6d5645627b9ca4789b7489f2c7db00c924e48a870b4d59a9f9998cc19"
+    },
+    {
+      "module": "A354766.A278085Complement",
+      "source_sha256": "a43c2011f16e371c95ef1ef3b6e0f50e6438cc4282dba5376f0835ce6dab1e48",
+      "exit_code": 0,
+      "seconds": 12.92,
+      "artifact_sha256": "943f27669a7a1abf0441837dcd3cbb253d0cd55c93c532bf401adc94791df06e"
+    },
+    {
+      "module": "A354766.Blueprint",
+      "source_sha256": "07461a8fc9000da7a63f5dc4d44be3d20dfad4b1b85459f433fd82703979a718",
+      "exit_code": 0,
+      "seconds": 45.129,
+      "artifact_sha256": "1dd6e8357f355183454014be238887194348b1389f078c23bc8e5183b1f265b3"
+    },
+    {
+      "module": "A354766",
+      "source_sha256": "cb5ff831687b2b237b617729fe393ad615f6524ac2f3b9c13228c0663a436ac9",
+      "exit_code": 0,
+      "seconds": 42.25,
+      "artifact_sha256": "941a69cf0c235161008e7ca4cdde5ba04c732a03753f7ac6262c7d286a3509f5"
+    },
+    {
+      "module": "A354766.FinalAxioms",
+      "source_sha256": "ff1172614b05482f6269e46a04dd70150c910134d1536358d7ef7a130fb8d4f1",
+      "exit_code": 0,
+      "seconds": 62.271,
+      "artifact_sha256": "6626627b8bcf45a7bbed06f3db1f2ad4a35882d7fd6dd350621a0636331c14a9"
+    }
+  ]
+}

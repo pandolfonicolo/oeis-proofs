@@ -1,0 +1,51 @@
+INTERNAL MATHEMATICAL NOTES — NOT OEIS SUBMISSION PROSE
+
+Primary entries: A354766 and A278085.
+
+These notes require personal human verification. The human contributor must
+write the final comments and editorial replies independently under the
+current policy: https://oeis.org/wiki/Use_of_AI_for_OEIS_Submissions
+
+Let tq(n) and pq(n) be the raw total and primitive counts of ordered integer
+quadruples with sum n and sum of squares n^2. Signs and order are counted.
+T(n)=tq(n)/4=A354766(n), P(n)=pq(n)/4=A278085(n).
+The alternative primary definition of A278085, using primitive quadruples
+of sum3n and norm3n^2, is equivalent by q -> (n,n,n,n)-q, preserving content.
+
+For odd n,
+P(n)=Product_{p^k||n} p^(k-1)*(p-chi(p)),
+where chi(3)=0, chi(p)=1 for p==1 mod6, chi(p)=-1 for p==5 mod6.
+The empty product is1. P(2*n)=P(n) for odd n; P(4*n)=0 for n>=1.
+P is multiplicative.
+
+T(n)=Sum_{d|n} P(d), and T is multiplicative.
+For prime p and k>=1:
+- T(2^k)=2;
+- T(3^k)=(3^(k+1)-1)/2;
+- p==1 mod6: T(p^k)=p^k;
+- p==5 mod6: T(p^k)=p^k+2*(p^k-1)/(p-1).
+
+T(n)=n iff n=2^e*m, where e=0 or1, m is odd, and every prime divisor of m
+is1 mod6; m=1 is allowed. The set of these positive indices has natural
+density zero. Thus the OEIS positive-density conjecture is false.
+
+The corrected primitive bridge uses the primitive three-square count at
+norm3*n^2 for odd n and norm3*(n/2)^2 for n==2 mod4; it is zero for4|n.
+The count is proved by concrete prime-neighbor lattices, including p=3.
+
+Proof: ../manuscript/main.pdf and ../lean/A354766/FinalAxioms.lean.
+43public source modules have compiled;14final dependency reports contain
+only propext, Classical.choice and Quot.sound. No representation-count
+formula or recurrence is assumed by the final theorem.
+
+Editorial checklist for the human contributor:
+- Add stable manuscript/source links to both entries and consider mult.
+- Mark the arithmetic conjectures as proved with the proof reference.
+- Correct the raw-count/normalized-count ambiguity in the Mallows block and
+  its repeated pq(q) typo; preserve the historical attribution.
+- Replace the positive-density conjecture with the proved equality criterion
+  and density-zero result using personally written prose.
+- Do not change sequence definitions, data, offsets, or original authors.
+
+This is an AI-assisted preprint and formalization. External human review and
+OEIS editorial acceptance remain separate; neither is claimed here.

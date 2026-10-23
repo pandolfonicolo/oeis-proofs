@@ -1,0 +1,368 @@
+REUSE A354766.PrimitiveTransport
+REUSE A354766.Elementary
+REUSE A354766.FiniteCounts
+REUSE A354766.PrimitiveVectorModel
+CHECK A354766.ShellEquivalence
+'A354766Neighbors.linearEquiv_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.primitiveShell_card_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.ShellEquivalence 0 22.319
+CHECK A354766.PrimitiveNeighborAlgebra
+'A354766Neighbors.exterior_primitive_scaled_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.inside_one_primitive_iff_not_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.inside_two_or_more_not_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.outsidePrimitiveShellEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.not_divisibleIn_of_norm_three_mul_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.card_inside_one_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.insideZeroNondivFiberEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.card_inside_two_or_more_fiber_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.PrimitiveNeighborAlgebra 0 30.526
+CHECK A354766.InsideContentClassification
+'A354766Neighbors.inside_primitive_cases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.inside_primitive_iff_content_cases' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.InsideContentClassification 0 18.619
+CHECK A354766.InsideShellPartition
+'A354766Neighbors.insidePrimitiveShellEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.InsideShellPartition 0 37.516
+CHECK A354766.ShellPartitions
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/ShellPartitions.lean:17:0: warning: automatically included section variable(s) unused in theorem `A354766Neighbors.insideOutsideMap_bijective`:
+  [CommRing R]
+  [IsDomain R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CommRing R] [IsDomain R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'A354766Neighbors.insideOutsideShellEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.ambientPrimitiveShell_card_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.insidePrimitiveShell_card_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.ShellPartitions 0 37.183
+CHECK A354766.SmallIntegralLattices
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:101:0: warning: automatically included section variable(s) unused in theorem `SmallIntegralLattices.exists_integral_orthogonal_remainder`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:125:8: warning: automatically included section variable(s) unused in theorem `SmallIntegralLattices.mem_orthogonalSlice`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:128:0: warning: automatically included section variable(s) unused in theorem `SmallIntegralLattices.orthogonalSlice_integral`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:153:0: warning: automatically included section variable(s) unused in theorem `SmallIntegralLattices.span_unit_inf_orthogonalSlice`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:260:49: warning: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  simp [inner_smul_right, smul_sub, smul_smul,̵ ̵m̵u̵l̵_̵c̵o̵m̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:262:8: warning: automatically included section variable(s) unused in theorem `SmallIntegralLattices.unitPerpMap_apply_perp`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:268:0: warning: automatically included section variable(s) unused in theorem `SmallIntegralLattices.unitPerpMap_mem_lattice`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:307:0: warning: automatically included section variable(s) unused in theorem `SmallIntegralLattices.perpendicularLattice_integral`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:438:0: warning: automatically included section variable(s) unused in theorem `SmallIntegralLattices.unitPerp_finrank`:
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/SmallIntegralLattices.lean:520:0: warning: automatically included section variable(s) unused in theorem `SmallIntegralLattices.orthonormal_integral_coordinates_norm`:
+  [MeasurableSpace E]
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace E] [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'SmallIntegralLattices.exists_unit_vector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmallIntegralLattices.perpendicularLattice_covolume_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmallIntegralLattices.classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmallIntegralLattices.exists_norm_preserving_integral_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RESULT A354766.SmallIntegralLattices 0 70.057
+CHECK A354766.NeighborRealification
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborRealification.lean:47:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'A354766Neighbors.rationalToReal_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.inner_rationalToReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.realify_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.NeighborRealification 0 60.013
+CHECK A354766.NeighborTopology
+'A354766Neighbors.discrete_of_prime_multiple_inclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.isZLattice_of_prime_multiple_inclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.covolume_eq_of_common_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.NeighborTopology 0 77.926
+CHECK A354766.NeighborConstruction
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:156:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:156:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:188:51: warning: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [dot3, castVec, liftVec, Pi.add_apply, P̵i̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵zsmul_eq_mul, Int.cast_add, Int.cast_mul,
+  ̲  ̲ ̲ ̲Pi.mul_apply, Pi.intCast_def, Pi.natCast_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:189:62: warning: This simp argument is unused:
+  Pi.natCast_def
+
+Hint: Omit it from the simp argument list.
+  simp only [dot3, castVec, liftVec, Pi.add_apply, Pi.smul_apply, zsmul_eq_mul, Int.cast_add,
+  ̲  ̲ ̲ ̲Int.cast_mul, Pi.mul_apply, P̵i̵.̵i̵n̵t̵C̵a̵s̵t̵_̵d̵e̵f̵,̵ ̵P̵i̵.̵n̵a̵t̵C̵a̵s̵t̵_̵d̵e̵f̵]̵P̲i̲.̲i̲n̲t̲C̲a̲s̲t̲_̲d̲e̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:212:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:212:23: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:231:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:269:30: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [dot3,̵ ̵P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:285:24: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:285:24: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:348:27: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:348:27: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:367:35: warning: This simp argument is unused:
+  Int.zsmul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp [̵I̵n̵t̵.̵z̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵z̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]̵[̲z̲s̲m̲u̲l̲_̲e̲q̲_̲m̲u̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:373:43: warning: This simp argument is unused:
+  ZMod.natCast_zmod_val
+
+Hint: Omit it from the simp argument list.
+  simp [intCastMod,̵ ̵Z̵M̵o̵d̵.̵n̵a̵t̵C̵a̵s̵t̵_̵z̵m̵o̵d̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:489:45: warning: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [castVec, liftVec, Pi.add_apply, P̵i̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵zsmul_eq_mul, Int.cast_add, Int.cast_mul,
+  ̲  ̲ ̲ ̲Int.cast_natCast, Pi.mul_apply, Pi.intCast_def, Pi.natCast_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NeighborConstruction.lean:492:19: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'A354766Research.Neighbor.standard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.p_smul_standard_mem_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.p_smul_neighbor_mem_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.neighbor_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.standard_inf_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.dotMod_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.card_standard_quotient_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.smul_liftVec_mem_midpoint_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.card_neighbor_quotient_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.midpoint_relIndex_standard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.midpoint_relIndex_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.Neighbor.midpoint_condition_of_isotropic_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'A354766Research.Neighbor.decomposition_of_divided_mem_neighbor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'A354766Research.Neighbor.exterior_neighbor_membership_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.NeighborConstruction 0 28.516
+CHECK A354766.StandardRealLattice
+'A354766Neighbors.realify_standard_covolume_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.realified_neighbor_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.neighbor_integral_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.StandardRealLattice 0 78.071
+CHECK A354766.NeighborShellCounts
+'A354766Neighbors.rationalPrimitiveVectorShellEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.coordinatePrimitiveShell_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.actual_neighbor_shell_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.actual_neighbor_shell_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.actual_neighbor_shell_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.NeighborShellCounts 0 76.849
+CHECK A354766.IsotropicLift
+'A354766Research.exists_isotropic_coordinate_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.exists_normalized_isotropic_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.IsotropicLift 0 18.675
+CHECK A354766.IsotropicLines
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/IsotropicLines.lean:44:6: warning: Try `simp at this` instead of `simpa using this`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/IsotropicLines.lean:48:6: warning: Try `simp at this` instead of `simpa using this`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/IsotropicLines.lean:76:16: warning: Try `simp at h0` instead of `simpa using h0`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/IsotropicLines.lean:158:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/IsotropicLines.lean:193:47: warning: This simp argument is unused:
+  Matrix.cons_val_fin_one
+
+Hint: Omit it from the simp argument list.
+  simp only [toSplit, standardNorm, LinearMap.coe_mk, AddHom.coe_mk, Matrix.cons_val_zero,
+  ̲  ̲ ̲ ̲Matrix.cons_val_one, M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵f̵i̵n̵_̵o̵n̵e̵,̵Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/IsotropicLines.lean:270:64: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/IsotropicLines.lean:277:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/IsotropicLines.lean:281:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/IsotropicLines.lean:418:47: warning: This simp argument is unused:
+  Matrix.cons_val_fin_one
+
+Hint: Omit it from the simp argument list.
+  simp only [splitPolar, standardDot, toSplit, LinearMap.coe_mk, AddHom.coe_mk,
+      Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_f̵i̵n̵_̵o̵n̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵M̵a̵tr̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵t̵wo, Matrix.head_cons,
+  ̲  ̲ ̲ ̲Matrix.tail_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'A354766Research.IsotropicLines.card_standardConic_zmod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.IsotropicLines.card_standardPerpConic_zmod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.IsotropicLines.card_standardPerpConic_zmod_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RESULT A354766.IsotropicLines 0 52.653
+CHECK A354766.NormalizedNeighborFamily
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NormalizedNeighborFamily.lean:90:24: warning: This simp argument is unused:
+  ZMod.natCast_zmod_val
+
+Hint: Omit it from the simp argument list.
+  simp [reduceVec, z,̵ ̵Z̵M̵o̵d̵.̵n̵a̵t̵C̵a̵s̵t̵_̵z̵m̵o̵d̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/NormalizedNeighborFamily.lean:140:51: warning: This simp argument is unused:
+  ZMod.natCast_zmod_val
+
+Hint: Omit it from the simp argument list.
+  simp [az,̵ ̵Z̵M̵o̵d̵.̵n̵a̵t̵C̵a̵s̵t̵_̵z̵m̵o̵d̵_̵v̵a̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'A354766Research.NeighborFamily.exists_normalized_representative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'A354766Research.NeighborFamily.exterior_mem_family_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.NeighborFamily.inside_mem_family_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.NormalizedNeighborFamily 0 57.651
+CHECK A354766.PrimitiveResidue
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/PrimitiveResidue.lean:68:80: warning: This simp argument is unused:
+  Pi.mul_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [rationalNorm, dot3, Pi.smul_apply, zsmul_eq_mul, Int.cast_natCast, P̵i̵.̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵Pi.intCast_def,
+  ̲  ̲ ̲ ̲Pi.natCast_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/PrimitiveResidue.lean:68:94: warning: This simp argument is unused:
+  Pi.intCast_def
+
+Hint: Omit it from the simp argument list.
+  simp only [rationalNorm, dot3, Pi.smul_apply, zsmul_eq_mul, Int.cast_natCast, Pi.mul_apply,
+  ̲ P̵i̵.̵i̵n̵t̵C̵a̵s̵t̵_̵d̵e̵f̵,̵  ̲ ̲Pi.natCast_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/nicolopandolfo/Documents/Codex/2026-10-22/what/work/research-next/lean/A354766/PrimitiveResidue.lean:68:110: warning: This simp argument is unused:
+  Pi.natCast_def
+
+Hint: Omit it from the simp argument list.
+  simp only [rationalNorm, dot3, Pi.smul_apply, zsmul_eq_mul, Int.cast_natCast, Pi.mul_apply,
+  ̲ P̵i̵.̵i̵n̵t̵C̵a̵s̵t̵_̵d̵e̵f̵,̵  ̲ ̲Pi.i̲na̵tCast_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'A354766Neighbors.divisibleIn_standard_castVec_iff_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'A354766Neighbors.primitiveIn_standard_castVec_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.primitive_reduction_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.primitive_square_residue_isotropic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.rationalNorm_prime_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.family_standard_inf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.family_norm_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.PrimitiveResidue 0 73.009
+REUSE A354766.MinusThreeCharacter
+CHECK A354766.CharacterScaling
+'A354766Research.legendre_neg_three_mul_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.residueCharacter_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.legendre_neg_three_mul_square_at_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.CharacterScaling 0 93.623
+CHECK A354766.ExteriorNeighborCount
+'A354766Neighbors.scaledVectorCast_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.divisible_family_iff_residue_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.outside_family_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.outside_family_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Neighbors.outside_family_sum_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.ExteriorNeighborCount 0 35.494
+CHECK A354766.EulerProductFromRecurrence
+'A354766Research.prime_power_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.euler_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A354766Research.euler_product_rat' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT A354766.EulerProductFromRecurrence 0 3.157

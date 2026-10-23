@@ -17,6 +17,8 @@ keywords:
   - enumerative combinatorics
   - reproducible research
   - generating functions
+  - number theory
+  - Lean formal verification
 preferred-citation:
   type: unpublished
   title: Window-covering words and a bouquet of cycles

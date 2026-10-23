@@ -10,3 +10,7 @@ __pycache__/
 *.out
 *.synctex.gz
 *.toc
+
+# Local Lean packages and fresh verification output.
+.lake/
+projects/a354766-integer-quadruples/verification/current/
