@@ -32,7 +32,8 @@ jobs:
             projects/a242239-window-covering-words/manuscript/generated_numerators.tex \
             projects/a242239-window-covering-words/verification/verification_output.txt \
             projects/a242322-two-slack-covering-words/verification/feasibility_output.txt \
-            projects/a242322-two-slack-covering-words/verification/verification_output.txt
+            projects/a242322-two-slack-covering-words/verification/verification_output.txt \
+            projects/a242322-two-slack-covering-words/verification/minimality_output.txt
 
       - name: Validate artifact checksums
         run: make check

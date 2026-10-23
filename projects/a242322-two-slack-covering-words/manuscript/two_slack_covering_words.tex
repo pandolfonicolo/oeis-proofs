@@ -14,7 +14,7 @@
 \hypersetup{
   pdftitle={Two-slack window-covering words and a triangular age automaton},
   pdfauthor={Nicolo Pandolfo},
-  pdfsubject={Exact transfer enumeration of OEIS A242322},
+  pdfsubject={Exact transfer enumeration and minimal recurrences for OEIS A242322},
   pdfkeywords={combinatorics on words, finite automata, transfer matrices, OEIS A242322}
 }
 
@@ -32,7 +32,8 @@
 \title{\textbf{Two-slack window-covering words}\\
 \large A triangular last-occurrence automaton for OEIS A242322}
 \author{Nicol\`o Pandolfo}
-\date{July 23, 2026\\\small Draft for independent mathematical review}
+\date{Revised October 23, 2026\\
+\small Original version July 23, 2026; draft for independent mathematical review}
 
 \begin{document}
 \maketitle
@@ -53,8 +54,10 @@ If $w_k$ is an explicit initial vector, then
  \sum_{n\geq1}T(n,k)x^n
  =xw_k^{\mathsf T}(I-xA_k)^{-1}\one.
 \]
-The matrix is unimodular, so its characteristic recurrence has order exactly
-$\binom{k+2}{2}$.  We also prove the stable-row formula
+We prove that the least homogeneous constant-coefficient scalar recurrence order is exactly
+$\binom{k+2}{2}$ for every $k$, even for recurrences required to hold only
+eventually.  The proof combines a boundary generating-polynomial identity
+with a unimodular time-reversal form.  We also prove the stable-row formula
 \[
  T(n,k)=\frac{a_n}{8}k^4+\frac{b_n}{12}k^3
        +\frac{c_n}{8}k^2+\frac{12n+19}{12}k+1
@@ -105,6 +108,13 @@ automaton.  It also retains enough structure to evaluate all fixed rows in the
 stable range.  The resulting proofs use only finite-state enumeration, exact
 linear algebra, and finite sums.
 
+The revised version also proves that the triangular order is minimal for
+every alphabet size.  This is stronger than the characteristic recurrence
+bound: an exact transfer matrix can have states that cancel from its scalar
+generating function.  \Cref{thm:minimality} excludes every such cancellation
+by proving both cyclicity of the terminal vector and observability by the
+initial vector.
+
 \section{Relabeling and last-occurrence ages}
 
 Put
@@ -113,7 +123,7 @@ Put
 \]
 The alphabet has $q=r-1$ symbols and the required window length is $r+1$.
 
-\begin{lemma}[Relabeling orbits]\label{lem:orbits}
+\begin{lemma}[Relabeling orbits]\label[lemma]{lem:orbits}
 Every valid labelled word uses all $q$ symbols.  Relabeling by the symmetric
 group $S_q$ acts freely, and every orbit contains exactly one canonical word.
 Consequently, canonical words may be counted as labelled words divided by
@@ -134,7 +144,7 @@ For a valid prefix ending at position $t$, let
 be the \emph{age} of symbol $s$.  The ages are distinct, age zero is present,
 and validity is equivalent to $\alpha_t(s)\leq r$ for every symbol.
 
-\begin{lemma}[Triangular state space]\label{lem:states}
+\begin{lemma}[Triangular state space]\label[lemma]{lem:states}
 After the first complete window, the age set has the form
 \[
  \{0,1,\ldots,r\}\setminus\{i,j\},
@@ -153,7 +163,7 @@ $r+1$ integers $0,\ldots,r$, and zero occurs as the age of the final symbol.
 Their complement therefore consists of exactly two positive integers.
 \end{proof}
 
-\begin{lemma}[Transitions]\label{lem:transitions}
+\begin{lemma}[Transitions]\label[lemma]{lem:transitions}
 The successors of $(i,j)\in\E_r$ are as follows.
 \begin{enumerate}
 \item If $j<r$, the unique successor is $(i+1,j+1)$.
@@ -185,7 +195,7 @@ Let $A_k$ be the $\binom r2$ square matrix indexed by $\E_r$, with
  \end{cases}
 \]
 
-\begin{lemma}[Initial vector]\label{lem:initial}
+\begin{lemma}[Initial vector]\label[lemma]{lem:initial}
 The number of canonical first windows whose terminal age state is $(i,j)$ is
 \[
  w_k(i,j)=i(j-1).
@@ -205,7 +215,7 @@ There are therefore $q!i(j-1)$ labelled windows.  Divide by $q!$ using
 
 \section{Exact transfer formula and column recurrences}
 
-\begin{theorem}[Exact transfer enumeration]\label{thm:transfer}
+\begin{theorem}[Exact transfer enumeration]\label[theorem]{thm:transfer}
 For all $n,k\geq1$,
 \begin{equation}\label{eq:transfer}
  T(n,k)=w_k^{\mathsf T}A_k^{\,n-1}\one,
@@ -231,7 +241,7 @@ Define
  \qquad N=\binom{k+2}{2}.
 \]
 
-\begin{proposition}[Unimodularity]\label{prop:unimodular}
+\begin{proposition}[Unimodularity]\label[proposition]{prop:unimodular}
 The matrix $A_k$ is unimodular.  In particular,
 $d_{k,0}=1$, $|d_{k,N}|=1$, and $D_k$ has degree exactly $N$.
 \end{proposition}
@@ -249,7 +259,7 @@ lower-right block is therefore an identity matrix.  The reordered matrix is
 block lower triangular with unimodular diagonal blocks.
 \end{proof}
 
-\begin{corollary}[Triangular-order recurrence]\label{cor:recurrence}
+\begin{corollary}[Triangular-order recurrence]\label[corollary]{cor:recurrence}
 For every $k\geq1$, the column $T(n,k)$ satisfies
 \begin{equation}\label{eq:recurrence}
  \sum_{\ell=0}^{N}d_{k,\ell}T(n-\ell,k)=0
@@ -269,9 +279,9 @@ Multiplication by the initial and terminal vectors gives
 \end{proof}
 
 \begin{remark}
-The result asserts a recurrence with nonzero endpoints and order $N$; it does
-not require a claim that $N$ is the minimal scalar order for every $k$.
-Exact computation shows no scalar cancellation for $1\leq k\leq10$.
+Unimodularity alone does not prove scalar minimality.  The stronger statement
+that $N$ is the least possible order for every $k$ is proved separately in
+\cref{thm:minimality}; it is not inferred from finite computations.
 \end{remark}
 
 For example, exact characteristic-polynomial calculation gives
@@ -281,6 +291,251 @@ For example, exact characteristic-polynomial calculation gives
  D_3(x)&=1-x-2x^2-3x^3-5x^4-6x^5+x^6+x^7+x^9+x^{10}.
 \end{align*}
 The first two agree with the recurrences printed on A242322.
+
+\section{Minimality of the scalar recurrence}
+
+Throughout this section, write $A=A_k$, $w=w_k$, $u=\one$, and
+$m=r-1=k+1$.  We work over $\mathbb C$; excluding a shorter recurrence over
+$\mathbb C$ also excludes one over $\mathbb Q$ or $\mathbb Z$.
+The proof does not use a conjectured closed formula for a determinant.
+
+\subsection{Boundary reduction}
+
+Let $b(i,j)=[j=r]$, where brackets denote an indicator.  The row sums in
+\cref{lem:transitions} give
+\begin{equation}\label{eq:input-relation}
+ (A-I)u=kb.
+\end{equation}
+Use gap and boundary-distance coordinates
+\[
+ d=j-i,\qquad s=r-j,\qquad
+ 1\leq d\leq m,\quad 0\leq s\leq m-d.
+\]
+The boundary coordinates are $(d,0)$.  At an interior coordinate, the equation
+$(I-zA)f=g$ reads
+\[
+ f_{d,s}-zf_{d,s-1}=g_{d,s}\qquad(s\geq1).
+\]
+Consequently its interior block is triangular with diagonal ones and can be
+eliminated for every $z$.  With zero interior forcing, this elimination gives
+$f_{d,s}=z^s f_{d,0}$.  The boundary Schur complement is
+\begin{equation}\label{eq:boundary-M}
+ M_m(z)=I-K_m(z),\qquad
+ K_m(z)_{d,e}=[e\leq m+1-d]z^d+[e<d]z^{d-e}.
+\end{equation}
+
+To verify \eqref{eq:boundary-M}, start at $(r-d,r)$ and put $v=r-d+1$.
+A successor is the pair incident with $v$ and a chosen $a\neq v$.
+If $a<v$, its gap is $e=v-a$, its boundary distance is $d-1$, and its next
+return to the boundary takes $d$ steps; the possible gaps are
+$1\leq e\leq m+1-d$.  If $a>v$, its gap is $e=a-v$, its boundary distance is
+$d-1-e$, and the return takes $d-e$ steps; here $1\leq e<d$.
+These are exactly the two terms in \eqref{eq:boundary-M}, including the
+multiplicity when both types have the same gap.
+
+\begin{lemma}[Boundary nullvectors]\label[lemma]{lem:boundary-nullvector}
+Suppose $m\geq3$ and $z\neq0$.  If a row vector $v\in\mathbb C^m$
+satisfies $vM_m(z)=0$ and $v\one=0$, then $v=0$.
+\end{lemma}
+
+\begin{proof}
+Write $v=(v_1,\ldots,v_m)$ and $V(t)=\sum_{d=1}^m v_dt^d$.
+The $e$th component of $vM_m(z)=0$ is
+\begin{equation}\label{eq:left-null-components}
+ v_e=\sum_{d\leq m+1-e}v_dz^d
+       +\sum_{d>e}v_dz^{d-e}.
+\end{equation}
+Multiply by $t^e$ and sum over $e$.  The finite geometric sums give, in
+the rational-function field $\mathbb C(t)$,
+\[
+ V(t)=\frac{t}{1-t}\bigl(V(z)-t^{m+1}V(z/t)\bigr)
+       +\frac{tV(z)-zV(t)}{z-t}.
+\]
+After multiplying by $(1-t)(z-t)$ and collecting terms, this is
+\begin{equation}\label{eq:reflection}
+ a(t)V(t)=c(t)V(z)+h(t)V(z/t),
+\end{equation}
+where
+\[
+ a(t)=(1-t)(2z-t),\qquad
+ h(t)=-t^{m+2}(z-t),\qquad
+ c(t)=t(z+1-2t).
+\]
+All divisions above are in the indeterminate $t$, so no assumption
+$t\neq1$ or $t\neq z$ is imposed on a later evaluation of a polynomial
+identity.
+
+Replace $t$ by $z/t$ in \eqref{eq:reflection} and eliminate $V(z/t)$:
+\begin{equation}\label{eq:reflected-elimination}
+ \bigl(a(t)a(z/t)-h(t)h(z/t)\bigr)V(t)
+ =\bigl(c(t)a(z/t)+h(t)c(z/t)\bigr)V(z).
+\end{equation}
+Direct multiplication gives
+\begin{align}
+ a(t)a(z/t)-h(t)h(z/t)
+ &=\frac{z(1-t)(t-z)}{t^2}Q_z(t),\label{eq:reflection-Q}\\
+ Q_z(t)&=-2t^2+(4z+1-z^{m+2})t-2z.\notag
+\end{align}
+Since $z\neq0$ and the leading coefficient of $Q_z$ is $-2$, the rational
+function in \eqref{eq:reflection-Q} is nonzero.  Thus
+\eqref{eq:reflected-elimination} implies
+\begin{equation}\label{eq:Vz-nonzero}
+ v\neq0\quad\Longrightarrow\quad V(z)\neq0:
+\end{equation}
+if $V(z)=0$, that equation forces $V(t)=0$ in the integral domain
+$\mathbb C(t)$, so every $v_d$ is zero.
+
+The other factor in \eqref{eq:reflected-elimination} is
+\begin{align}
+ c(t)a(z/t)+h(t)c(z/t)&=\frac{z(t-z)}t R_z(t),\notag\\
+ R_z(t)&=(z+1-2t)(2t-1)
+          +t^{m+1}\bigl((z+1)t-2z\bigr).\label{eq:reflection-R}
+\end{align}
+Cancel the nonzero rational function $z(t-z)/t^2$ to obtain the polynomial
+identity
+\begin{equation}\label{eq:polynomial-identity}
+ (1-t)Q_z(t)V(t)=tR_z(t)V(z).
+\end{equation}
+From \eqref{eq:reflection-R},
+\[
+ R_z(1)=0,\qquad R_z'(1)=(m-2)(1-z).
+\]
+Differentiate \eqref{eq:polynomial-identity} and evaluate at $t=1$:
+\begin{equation}\label{eq:key-boundary-identity}
+ (2z-1-z^{m+2})V(1)=(m-2)(z-1)V(z).
+\end{equation}
+There is no division by $Q_z(1)$, so the identity also applies when that
+number vanishes.  If $v\neq0$ and $v\one=V(1)=0$, then
+\eqref{eq:Vz-nonzero}, \eqref{eq:key-boundary-identity}, and $m\geq3$ force
+$z=1$.
+
+It remains to exclude a nonzero left nullvector of $M_m(1)$.  Every row of
+$K_m(1)$ has sum $m$, so
+$M_m(1)\one=(1-m)\one$.  A left nullvector therefore has
+$\sum_dv_d=0$, since $m\geq2$.  Put $S_e=\sum_{d=1}^e v_d$, with
+$S_0=S_m=0$.  Equation \eqref{eq:left-null-components} at $z=1$ becomes
+\[
+ 2S_e-S_{e-1}=S_{m+1-e}\qquad(1\leq e\leq m).
+\]
+If $S_{j-1}=S_{m+1-j}=0$, the equation with $e=j$ gives $S_j=0$;
+the equation with $e=m+1-j$ then gives $S_{m-j}=0$.  Starting at $j=1$
+and proceeding inward proves that all $S_e$ vanish.  Hence every
+$v_d=S_d-S_{d-1}$ is zero, as required.
+\end{proof}
+
+\begin{proposition}[Cyclicity]\label[proposition]{prop:cyclicity}
+For every $k\geq1$, the matrix
+\[
+ C_k=[u,A_ku,\ldots,A_k^{N-1}u],\qquad N=\binom{k+2}{2},
+\]
+is invertible.
+\end{proposition}
+
+\begin{proof}
+First suppose $k\geq2$.  If the Krylov span of $u$ were a proper invariant
+subspace, its annihilator would be a nonzero invariant subspace of the dual
+space.  Over $\mathbb C$, it contains a nonzero left eigenvector $\ell$:
+\[
+ \ell A=\lambda\ell,\qquad \ell u=0.
+\]
+Unimodularity in \cref{prop:unimodular} excludes $\lambda=0$.
+Equation \eqref{eq:input-relation} gives $\ell b=0$ because $k\neq0$.
+Put $z=1/\lambda$, so $\ell(I-zA)=0$.
+
+Order the boundary coordinates first and write
+\[
+ I-zA=\begin{pmatrix}B&C\\D&E\end{pmatrix},\qquad
+ \ell=(v,h).
+\]
+The interior block $E$ is invertible, as shown above.  Thus
+$h=-vCE^{-1}$, and the other block equation gives
+$v(B-CE^{-1}D)=vM_m(z)=0$.  Moreover, $v\neq0$, since $v=0$ would also
+give $h=0$.  The vector $b$ has all-one boundary part and zero interior
+part, so $\ell b=0$ says $v\one=0$.  This contradicts
+\cref{lem:boundary-nullvector}, because $m=k+1\geq3$ and $z\neq0$.
+The Krylov span is therefore the whole space; Cayley--Hamilton shows that
+the first $N$ vectors already span it.
+
+For $k=1$, in the state order $(1,2),(1,3),(2,3)$,
+\[
+ A_1=\begin{pmatrix}0&0&1\\1&0&1\\0&1&1\end{pmatrix},\qquad
+ C_1=\begin{pmatrix}1&1&2\\1&2&3\\1&2&4\end{pmatrix},
+\]
+and $\det C_1=1$.
+\end{proof}
+
+\subsection{Reversal form and scalar minimality}
+
+\begin{lemma}[Unimodular reversal form]\label[lemma]{lem:reversal}
+Define a matrix indexed by $\E_r$ by
+\begin{equation}\label{eq:reversal-form}
+ J_{(i,j),(a,b)}=[i+a\geq r+1][j+b\geq r+1]
+                 +[i+b\geq r+1][j+a\geq r+1].
+\end{equation}
+Then $J=J^{\mathsf T}$, $\det J=\pm1$, $Ju=w$, and
+$A^{\mathsf T}J=JA$.
+\end{lemma}
+
+\begin{proof}
+Symmetry is immediate.  Reverse each column pair by writing
+$(a,b)=(r+1-q,r+1-p)$, where $p<q$.  Its entry becomes
+\[
+ [i\geq q]+[i\geq p][j\geq q].
+\]
+Both summands vanish unless $(i,j)$ is componentwise at least $(p,q)$,
+and the diagonal entry is one.  In a linear extension of componentwise
+order, the column-reversed matrix is unit lower triangular.  Hence
+$\det J=\pm1$.
+
+For fixed $(i,j)$, summing \eqref{eq:reversal-form} over unordered pairs is
+equivalent to counting ordered distinct pairs $(a,b)$ satisfying
+$a\geq r+1-i$ and $b\geq r+1-j$.  There are $ij-i=i(j-1)$ such pairs,
+which proves $Ju=w$.
+
+Let $e_{i,j}$ denote a coordinate vector.  The transition rule gives
+\[
+ Ae_{1,j}=e_{j-1,r},\qquad
+ Ae_{i,j}=e_{i-1,j-1}+e_{i-1,r}+e_{j-1,r}\quad(i\geq2).
+\]
+Put $L=r+2$.  Substitution in \eqref{eq:reversal-form} gives
+\begin{align*}
+ (JA)_{(i,j),(a,b)}={}&[i+a\geq L][j+b\geq L]
+                    +[i+b\geq L][j+a\geq L]\\
+ &+[i+a\geq L]+[j+a\geq L]+[i+b\geq L]+[j+b\geq L].
+\end{align*}
+This formula includes $a=1$, because every term involving $i+a$ or $j+a$
+then vanishes.  The expression is symmetric under exchange of the two
+pairs.  Thus $JA$ is symmetric, which is $A^{\mathsf T}J=JA$.
+\end{proof}
+
+\begin{theorem}[Minimal triangular order]\label[theorem]{thm:minimality}
+For every $k\geq1$, the least order of a homogeneous constant-coefficient scalar
+recurrence for $T(n,k)$ is exactly $N=\binom{k+2}{2}$.  This remains true
+if the recurrence is required to hold only for all sufficiently large $n$.
+\end{theorem}
+
+\begin{proof}
+Let $C_k$ be as in \cref{prop:cyclicity}, and define
+\[
+ O_k=\begin{pmatrix}
+ w^{\mathsf T}\\w^{\mathsf T}A\\\vdots\\w^{\mathsf T}A^{N-1}
+ \end{pmatrix}.
+\]
+By \cref{lem:reversal}, $O_k^{\mathsf T}=JC_k$.  Both $J$ and $C_k$ are
+invertible, so $O_k$ is invertible as well.  For every integer $s\geq0$,
+the shifted Hankel matrix
+\[
+ H_s=\bigl(T(s+a+b+1,k)\bigr)_{0\leq a,b<N}
+     =O_kA^sC_k
+\]
+is invertible, using \cref{prop:unimodular}.
+
+If a scalar recurrence of order $d<N$ held eventually, choose $s$ large
+enough that it applies to every entry in column $d$ of $H_s$.  That column
+would then be a fixed linear combination of the preceding $d$ columns,
+contradicting invertibility.  No smaller eventual order is possible.
+\Cref{cor:recurrence} supplies a recurrence of order $N$, proving the claim.
+\end{proof}
 
 \section{Stable rows}
 
@@ -301,7 +556,7 @@ transition rules give
  \label{eq:Gboundary}
 \end{align}
 
-\begin{lemma}[Boundary walks]\label{lem:boundary}
+\begin{lemma}[Boundary walks]\label[lemma]{lem:boundary}
 Suppose $s\geq1$ and $r\geq s-1$.  For every $1\leq b\leq r-1$,
 \[
  G_s(b)=
@@ -357,7 +612,7 @@ display with $R=r-b$, gives exactly the stated expression.  The same
 calculation remains valid at the limiting value $r=s-1$, where $R=p-1$.
 \end{proof}
 
-\begin{theorem}[Stable quartic rows]\label{thm:rows}
+\begin{theorem}[Stable quartic rows]\label[theorem]{thm:rows}
 For $n,k\geq1$ with $k\geq\max\{1,n-4\}$,
 \begin{equation}\label{eq:row}
  T(n,k)=\frac{a_n}{8}k^4+\frac{b_n}{12}k^3
@@ -405,7 +660,7 @@ boundary statement.
 \section{Verification, scope, and disclosure}
 
 No proof step depends on fitting numerical data.  Two standard-library-only
-programs accompany the manuscript.  The feasibility verifier implements an
+enumeration programs accompany the manuscript.  The feasibility verifier implements an
 equality-pattern quotient, a raw labelled suffix DFA, and literal
 restricted-growth enumeration.  The theorem verifier independently implements
 the age automaton, exact characteristic polynomials, the boundary-walk lemma,
@@ -419,11 +674,18 @@ and the stable-row formula.  Together they check:
 \item the stable-row theorem by matrix walks through $n=40$, and independently
       by direct summation of the boundary lemma through $n=100$.
 \end{enumerate}
+An additional standard-library-only symbolic checker verifies the reflection
+identities on Laurent polynomials, the boundary Schur complement, and the
+coordinate action of $A_k$ for $m=2,\ldots,10$.  These are regression checks
+on the algebra in the general minimality proof, not a finite-case substitute
+for \cref{thm:minimality}.
 Finite checks support the audit but do not replace the proofs.
 
 The matrix formula is an exact generating function for every column.  The
-paper does not claim a closed coefficient formula for $D_k(x)$, nor does it
-claim that its degree is always the minimal scalar recurrence order.  The
+paper proves that its denominator degree is the minimal scalar recurrence
+order for every $k$.  It does not claim a closed coefficient formula for
+$D_k(x)$ or closed formulas for the controllability determinant or its Smith
+normal form; those stronger arithmetic formulas remain conjectural.  The
 literature search found the empirical statements on A242322 but no prior proof
 of the age-state reduction; this is a qualified status report rather than an
 absolute priority claim.

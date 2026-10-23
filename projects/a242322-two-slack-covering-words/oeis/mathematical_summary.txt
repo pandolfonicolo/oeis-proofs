@@ -21,6 +21,11 @@ det(I-xA_k)=sum_{ell=0}^N d_ell x^ell, then
     sum_{ell=0}^N d_ell T(n-ell,k)=0
 for n>=N+1.
 
+The scalar order N is minimal for every k>=1, even if the recurrence is
+required only eventually. A boundary reflection argument proves cyclicity;
+a unimodular reversal form gives observability, and every shifted Hankel
+matrix is invertible. No conjectured determinant evaluation is assumed.
+
 Stable rows, for k>=max(1,n-4):
     T(n,k)=a_n*k^4/8+b_n*k^3/12+c_n*k^2/8+(12*n+19)*k/12+1,
 where

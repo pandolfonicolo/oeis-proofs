@@ -1,6 +1,6 @@
 # Internal adversarial review
 
-Date: 2026-07-23
+Date: 2026-07-23; minimality revision audited 2026-10-23
 
 Status: no blocking mathematical, computational, or rendering defect found.
 
@@ -24,7 +24,8 @@ This is an internal adversarial audit, not independent peer review.
    permutation block and an identity block on its diagonal.  Its determinant
    is therefore `+1` or `-1`.
 7. Cayley-Hamilton gives the characteristic recurrence from `n=N+1`, where
-   `N=binomial(k+2,2)`.  No general minimality claim is made.
+   `N=binomial(k+2,2)`.  The October revision proves general minimality separately; see
+   `general_minimality_proof.md` and `minimality_audit.md`.
 8. The distance-coordinate recurrence for boundary walks is a direct rewrite
    of the state transitions.  Its closed form follows by strong induction and
    geometric sums, including the limiting case `r=s-1`.
@@ -69,8 +70,8 @@ All checks use integer or rational arithmetic and the Python standard library.
 
 - Independent mathematical review is still pending.
 - The literature search is qualified and cannot establish absolute priority.
-- Minimal scalar recurrence order is computationally verified only for
-  `k=1,...,10`; the theorem claims the characteristic order, not general
-  minimality.
+- General scalar minimality is proved in the October revision by a boundary
+  polynomial argument, reversal duality, and invertible shifted Hankel matrices.
+  The stronger closed determinant and Smith formulas remain conjectures.
 - No OEIS prose should be copied from the internal notes.  The human
   contributor must understand and write any eventual update personally.
