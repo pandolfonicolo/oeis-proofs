@@ -107,15 +107,29 @@ excluded. No dependency cache or generated Lean binary is shipped.
 
 ## OEIS publication and review
 
-The publicly approved entries checked on 2026-10-23 still described the
-relevant arithmetic claims as conjectures. Our A354766 comment and links
-were submitted in revisions 54–55, then reverted by Andrew Howroyd in
-revisions 56–57 because another contributor's edit was already pending.
-He asked us to wait until that draft is complete. The current A354766 draft
-retains Su's earlier contribution and preprint link; our additions are not
-in the current proposal. No further edit or discussion reply was posted.
-A278085 revisions 48–49 remain proposed for review. Mathematical completion
-and kernel checks are distinct from editorial acceptance and external review.
+Status checked against the live OEIS pages and histories on 2026-10-31.
+Our A354766 comment and links were submitted in revisions 54–55, then
+reverted by Andrew Howroyd in revisions 56–57 because another contributor's
+edit was pending. That existing draft was
+[approved as revision 58](https://oeis.org/history/view?seq=A354766&v=58)
+on October 28, 2026 at 23:57 EDT (October 29 at 03:57 UTC). The public
+entry now includes Su's arithmetic formulas, fixed-point classification,
+density-zero result and stronger asymptotic, but not our reverted comment
+or links. The instruction to wait for the existing draft to finish is no
+longer an outstanding timing condition; a separate contribution would still
+require editorial review.
+
+Our A278085 proof comment, formulas, manuscript and complete-Lean/source
+links remain in the [proposed draft](https://oeis.org/draft/A278085).
+Editorial formatting changes have taken it to
+[revision 55](https://oeis.org/history/view?seq=A278085&v=55), dated October 24,
+2026; the approved public entry still contains the older conjecture.
+The draft links our package at `080ebfababba28df63e0696019807741e5c0ea92`
+and preserves Su's citation. No OEIS edit or discussion reply was made
+during this status check. Mathematical completion and kernel checks remain
+distinct from editorial acceptance and independent human review. See the
+[repository publication status](../../docs/publication_status.md) for the
+other sequence families and the boundary of our complementary contribution.
 
 Before submitting any OEIS update, the human contributor must understand and
 personally verify its content and write the final submission prose. Follow
