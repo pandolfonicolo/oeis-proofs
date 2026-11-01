@@ -1,10 +1,10 @@
-# Proof and publication status — 2026-10-31
+# Proof and publication status — 2026-11-01
 
 | Family | Proved scope | Formal verification | Publication |
 | --- | --- | --- | --- |
 | A242239: one extra position | Generating function, column recurrence, stable rows, Mathar identity for A242235 | Written proof and exact Python checks | Existing public manuscript and OEIS manuscript/source links |
 | A242322: two extra positions | Transfer construction and quartic rows; general minimal recurrence order binomial(k+2,2), even eventually; merged in PR #7 | Written proof and exact symbolic checks | Public manuscript with minimality; merged [PR #7](https://github.com/pandolfonicolo/oeis-proofs/pull/7); OEIS revision 26 approved on October 29 EDT / October 30 UTC |
-| A354766/A278085: four integers and three squares | Primitive product, normalized multiplicativity and prime powers, equality characterization, natural density zero; overlapping conclusions previously established by Su | All 43 modules compiled; 14 final dependency reports use only propext, Classical.choice, Quot.sound | Public reproducible project; A278085 revision 55 proposed; A354766 revision 58 approved with Su's contribution, without our reverted additions |
+| A354766/A278085: four integers and three squares | Primitive product, normalized multiplicativity and prime powers, equality characterization, natural density zero; overlapping conclusions previously established by Su | All 43 modules compiled; 14 final dependency reports use only propext, Classical.choice, Quot.sound | Public reproducible project; A278085 revision 57 approved on October 31 EDT / November 1 UTC; A354766 revision 58 approved with Su's contribution, without our reverted additions |
 
 The ten fixed-column sequences attached to the first two general families
 are specializations, not ten additional independent research projects.
@@ -42,7 +42,7 @@ scope.
 
 ## OEIS synchronization
 
-Checked against the live OEIS entries and revision histories on 2026-10-31.
+Checked against the live OEIS entries and revision histories on 2026-11-01.
 Search-engine snapshots can lag behind these pages.
 
 - **A242239:** the public entry retains our manuscript and source links. Its
@@ -53,13 +53,15 @@ Search-engine snapshots can lag behind these pages.
   (October 30 at 00:32 UTC). The public entry credits our comment establishing
   minimal order `(k+1)*(k+2)/2` and stable quartic rows; its manuscript and
   source links are pinned to `fc896fcceae66a180149e05fcd0a8a8e7b0dca4b`.
-- **A278085:** our additions from revisions 48–49 remain in the
-  [current proposed draft](https://oeis.org/draft/A278085), following editorial
-  formatting changes through [revision 55](https://oeis.org/history/view?seq=A278085&v=55)
-  on October 24, 2026. The draft retains our proof comment, multiplicative
-  formulas, manuscript and complete-Lean/source links pinned to
+- **A278085:** our additions from revisions 48–49 were
+  [approved as revision 57](https://oeis.org/history/view?seq=A278085&v=57)
+  by Michael De Vlieger on October 31, 2026 at 20:19:42 EDT
+  (November 1 at 00:19:42 UTC), after Jeff Sponaugle marked revision 56
+  reviewed earlier that day. The [approved public entry](https://oeis.org/A278085)
+  now contains our proof comment, multiplicative formulas, manuscript and
+  complete-Lean/source links pinned to
   `080ebfababba28df63e0696019807741e5c0ea92`, together with Su's citation.
-  The approved public entry still contains the older conjecture.
+  The historical conjecture comment remains alongside the new proof comment.
 - **A354766:** our comment and links from revisions 54–55 were reverted by
   Andrew Howroyd in revisions 56–57 on October 22 EDT because another
   contributor's edit was pending. That existing draft was subsequently
@@ -77,7 +79,7 @@ The current [OEIS AI policy](https://oeis.org/wiki/Use_of_AI_for_OEIS_Submission
 prohibits AI-generated full comments and editorial replies. The submitted
 comments use human-provided English text with notation and
 reference corrections; existing contributor credits are preserved. No
-editorial reply was posted. A278085 remains proposed pending
-OEIS editorial acceptance; A242322's minimality update is approved. Any future
-A354766 contribution should distinguish our alternate derivation and formalization
+editorial reply was posted. A278085's update and A242322's minimality update
+are approved. Any future A354766 contribution should distinguish our
+alternate derivation and formalization
 from the shared results already credited to Su.
