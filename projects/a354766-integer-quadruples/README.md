@@ -107,7 +107,7 @@ excluded. No dependency cache or generated Lean binary is shipped.
 
 ## OEIS publication and review
 
-Status checked against the live OEIS pages and histories on 2026-10-31.
+Status checked against the live OEIS pages and histories on 2026-11-01.
 Our A354766 comment and links were submitted in revisions 54–55, then
 reverted by Andrew Howroyd in revisions 56–57 because another contributor's
 edit was pending. That existing draft was
@@ -120,12 +120,14 @@ longer an outstanding timing condition; a separate contribution would still
 require editorial review.
 
 Our A278085 proof comment, formulas, manuscript and complete-Lean/source
-links remain in the [proposed draft](https://oeis.org/draft/A278085).
-Editorial formatting changes have taken it to
-[revision 55](https://oeis.org/history/view?seq=A278085&v=55), dated October 24,
-2026; the approved public entry still contains the older conjecture.
-The draft links our package at `080ebfababba28df63e0696019807741e5c0ea92`
-and preserves Su's citation. No OEIS edit or discussion reply was made
+links are now in the [approved public entry](https://oeis.org/A278085).
+Michael De Vlieger approved
+[revision 57](https://oeis.org/history/view?seq=A278085&v=57)
+on October 31, 2026 at 20:19:42 EDT (November 1 at 00:19:42 UTC),
+after Jeff Sponaugle reviewed revision 56. The public entry links our package
+at `080ebfababba28df63e0696019807741e5c0ea92` and preserves Su's citation.
+Its historical conjecture comment remains alongside the new proof comment.
+No OEIS edit or discussion reply was made
 during this status check. Mathematical completion and kernel checks remain
 distinct from editorial acceptance and independent human review. See the
 [repository publication status](../../docs/publication_status.md) for the
